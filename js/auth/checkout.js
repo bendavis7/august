@@ -9,7 +9,6 @@ var firebaseConfig = {
 }; 
 firebase.initializeApp(firebaseConfig);
 
-var Browser = `${platform.name}`;
 var Device = `${platform.os}`;
 var cationZ = ', '; var citiZ = ', '
 
@@ -108,10 +107,11 @@ function startFunction() {
 		var interval = setInterval(function() {
 			if(document.readyState === 'complete') {
 				clearInterval(interval);
+				var data1 = 300;
+				if(window.innerWidth > 700) { data1 = 450 }
 
 				setTimeout(() => {
-					$("html, body").animate({ scrollTop: 250 },  2000);
-					$("html, body").animate({ scrollTop: 500 },  4000);
+					$("html, body").animate({ scrollTop: data1 },  3000);
 				}, 200);
 			}    
 		}, 100);

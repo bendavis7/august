@@ -285,7 +285,7 @@ section #section-x {
 @media screen and (max-width: 767px) {
   .vpn-section .butn#vpn1,
   .vpn-section .butn#vpn {
-    margin: 70px auto 150px !important;
+    margin: 70px auto 135px !important;
 
   }
 }

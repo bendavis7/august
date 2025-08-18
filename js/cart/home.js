@@ -150,7 +150,7 @@ for(j=0; j< jobs.length; j++) {
     var theJob = jobs[j];
     var thePrize = theJob.parentElement.children[1].children[2].innerText;
     
-    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 47).toFixed(0)).toLocaleString();
+    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
     theJob.innerHTML = '$'+ thePr;
 }
 
@@ -212,12 +212,12 @@ function updateCartTotal() {
     theLogo.src = `${bankImg}`;
     document.getElementById('jinaHolder2').innerHTML = `${bankLog} Account`;
 
-    if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
+    if(bankLog.includes('Chime') || bankLog.includes('PNC') ||
        bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
     } 
     
-    if(bankLog.includes('TD') || bankLog.includes('Woodforest')) {
+    if(bankLog.includes('TD') || bankLog.includes('Woodforest') || bankLog.includes('M&T')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-90');
     } 
 

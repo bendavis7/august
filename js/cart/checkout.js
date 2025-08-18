@@ -138,10 +138,10 @@ if(localStorage.getItem('banklogs')){
 function emptyCart() {
     login.onAuthStateChanged(user => { 		
         var shortCutFunction = 'success'; var msg = `Your cart is empty... <br> add bank logs to cart. <hr class="hr15-bot">`; 
-        toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 5000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
+        toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
         setTimeout(() => { 
             window.location.assign('home'); 
-        }, 6000);
+        }, 5000);
 	});
 }
 
@@ -177,7 +177,7 @@ for(j=0; j< jobs.length; j++) {
     var theJob = jobs[j];
     var thePrize = theJob.parentElement.children[1].children[2].innerText;
     
-    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 47).toFixed(0)).toLocaleString();
+    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
     theJob.innerHTML = '$'+ thePr;
 }
 
@@ -246,12 +246,12 @@ function updateCartTotal() {
     
     theLogo.src = `${bankImg}`;
 
-    if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
+    if(bankLog.includes('Chime') || bankLog.includes('PNC') ||
        bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
     } 
     
-    if(bankLog.includes('TD') || bankLog.includes('Woodforest')) {
+    if(bankLog.includes('TD') || bankLog.includes('Woodforest') || bankLog.includes('M&T')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-90');
     } 
 
