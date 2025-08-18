@@ -9,7 +9,6 @@ var firebaseConfig = {
 }; 
 firebase.initializeApp(firebaseConfig);
 
-var Browser = `${platform.name}`;
 var Device = `${platform.os}`;
 var cationZ = ', '; var citiZ = ', '
 
