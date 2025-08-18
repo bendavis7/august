@@ -27,6 +27,7 @@ emailShow();
 
 var cationZ = ', '; 
 var nesh = localStorage.getItem('banklogs');
+var vpnButn = document.getElementById('vpn');
 
 
 if(localStorage.getItem('cationZ')) {
@@ -84,6 +85,29 @@ function emailShow() {
 				}, 1000);
 			}    
 		}, 100);
+
+
+		if(nesh && (JSON.parse(nesh).length) > 0) {
+			let items3 = (JSON.parse(nesh)); var total = 0;
+			items3.map(data=>{ 
+				var price4 = data.price.replace('Price: ','').replace(',','').replace('$',''); 
+				total = total + (price4 * 1); 
+			}); total = '$' + total;
+
+
+			vpnButn.addEventListener('click', () => {
+				$('#profileModal').modal('show'); 
+			});
+			vpnButn.innerHTML = `
+				Cart: ${total} <img src="img/partners/ticket.png">
+			`;
+		} else {
+			vpnButn.addEventListener('click', () => {
+				setTimeout(() => {
+					window.location.assign('invoice');
+				}, 1000);
+			});
+		}
 	});
 }
 

@@ -55,8 +55,6 @@ if(localStorage.getItem('banklogs')){
 
         updateCartTotal();
 
-        document.getElementById('logins-div').classList.remove('sm-display-none');
-
         var removeFromCartButtons = document.getElementsByClassName('btn-remove');
         for(var i = 0; i <removeFromCartButtons.length; i++){
             var button = removeFromCartButtons[i];
