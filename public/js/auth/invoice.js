@@ -79,7 +79,7 @@ function emailShow() {
 	auth.onAuthStateChanged(user => { 
 		$("html, body").animate({ scrollTop: 0 }, 600);
 
-		if((JSON.parse(nesh).length) > 0) {
+		if(nesh && (JSON.parse(nesh).length) > 0) {
 			yahooBtn.addEventListener("click", () => {
 				setTimeout(() => {
 					window.location.assign('checkout');
