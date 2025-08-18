@@ -54,11 +54,6 @@ auth.onAuthStateChanged(user => {
 			emailBtn.innerHTML = `Verify - Email`;
 			emailBtn.removeEventListener("click", signInWithGoogle);
 			emailBtn.addEventListener("click", verifyEmails);
-
-			var docRef2 = db.collection("users").doc(user.email);
-			docRef2.get().then((doc) => {
-				return docRef.set({ invoiceID: true });
-			});
 		} 
 
 		emailShow();
