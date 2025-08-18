@@ -28,6 +28,7 @@ emailShow();
 var cationZ = ', '; 
 var nesh = localStorage.getItem('banklogs');
 var vpnButn = document.getElementById('vpn');
+var userCred = 'Anonymous';
 
 
 if(localStorage.getItem('cationZ')) {
@@ -42,6 +43,7 @@ auth.onAuthStateChanged(user => {
 	
 		if(user.email) {
 			theGuy = user.email;
+			userCred = `${user.displayName}`;
 		} 
 
 
@@ -49,7 +51,7 @@ auth.onAuthStateChanged(user => {
 		docRef.get().then((doc) => { 
 			if(!doc.exists) {
 				return docRef.set({ 
-					banks: [banks], location: cationZ
+					banks: [banks], location: cationZ, userCred: userCred
 				});
 			}
 		});
