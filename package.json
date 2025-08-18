@@ -3,14 +3,14 @@
     "firebase": "^11.6.0",
     "gh-pages": "^6.2.0"
   },
-  "name": "master",
+  "name": "august",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages -d public"
   },
   "keywords": [],
-  "homepage": "https://bendavis7.github.io/master",
+  "homepage": "https://bendavis7.github.io/august",
   "author": "",
   "license": "ISC",
   "description": ""
