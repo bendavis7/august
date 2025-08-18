@@ -212,12 +212,12 @@ function updateCartTotal() {
     theLogo.src = `${bankImg}`;
     document.getElementById('jinaHolder2').innerHTML = `${bankLog} Account`;
 
-    if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
+    if(bankLog.includes('Chime') || bankLog.includes('PNC') ||
        bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
     } 
     
-    if(bankLog.includes('TD') || bankLog.includes('Woodforest')) {
+    if(bankLog.includes('TD') || bankLog.includes('Woodforest') || bankLog.includes('M&T')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-90');
     } 
 
