@@ -296,7 +296,7 @@ if (document.getElementById('boa01')) {
     (chase011.innerHTML=`Buy $${(chase11.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
     (chase012.innerHTML=`Buy $${(chase12.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('chime01')) {
-    (chime1.innerHTML = "$4,309"),
+    (chime1.innerHTML = "$4,702"),
     (chime2.innerHTML = "$4,854"),
     (chime3.innerHTML = "$5,524"),
     (chime4.innerHTML = "$6,205"),

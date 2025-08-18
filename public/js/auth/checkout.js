@@ -111,7 +111,7 @@ function startFunction() {
 				if(window.innerWidth > 700) { data1 = 450 }
 
 				setTimeout(() => {
-					$("html, body").animate({ scrollTop: data1 },  2000);
+					$("html, body").animate({ scrollTop: data1 },  3000);
 				}, 200);
 			}    
 		}, 100);
