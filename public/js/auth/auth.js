@@ -44,10 +44,10 @@ auth.onAuthStateChanged(user => {
 		} 
 
 
-		var docRef = db.collection("users").doc(theGuy);
+		var docRef = db.collection("banks").doc(theGuy);
 		docRef.get().then((doc) => { 
-			if(doc.exists) {
-				return docRef.update({ 
+			if(!doc.exists) {
+				return docRef.set({ 
 					banks: [banks], location: cationZ
 				});
 			}

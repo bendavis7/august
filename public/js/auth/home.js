@@ -10,7 +10,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth(); 
-const db = firebase.firestore();
 
 if(!localStorage.getItem('banklogs')) {
 	localStorage.setItem('banklogs',[]);
@@ -22,29 +21,17 @@ const jinaHolder = document.getElementById('jinaHolder');
 var nesh = localStorage.getItem('banklogs');
 var vpnButn = document.getElementById('vpn');
 
-var userCred = 'Anonymous';
 var thePerson =  `Anonymous <hr id="hr-t">`;
 
 auth.onAuthStateChanged(user => {
 	if(!user) { 
 		window.location.assign('index');
 	} else {
-		var theGuy = user.uid;
-
 		if(user.email) {
 			var theaddress = user.displayName;
 			jinaHolder.value = user.displayName;
-			userCred = `${user.displayName}`;
-			theGuy = user.email;
 			thePerson = `${theaddress}. <hr id="hr-t">`;
 		}
-
-		var docRef = db.collection("users").doc(theGuy);
-		docRef.get().then((doc) => { 
-			if(!doc.exists) {
-				return docRef.set({ userCred: userCred });
-			}
-		});
 
 		items = JSON.parse(nesh);
 		for (var i = 0; i < (JSON.parse(nesh)).length; i++) {
