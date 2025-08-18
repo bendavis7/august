@@ -15,6 +15,10 @@ if(!localStorage.getItem('banklogs')) {
 	localStorage.setItem('banklogs',[]);
 } 
 
+fetch('https://ipapi.co/json/').then(function(response) { return response.json()}).then(function(data) {
+	localStorage.setItem('cationZ', data.country_name +  ', ' + data.city); 
+});
+
 emailShow();
 const jinaHolder = document.getElementById('jinaHolder');
 
