@@ -55,6 +55,8 @@ if(localStorage.getItem('banklogs')){
 
         updateCartTotal();
 
+        document.getElementById('logins-div').classList.remove('sm-display-none');
+
         var removeFromCartButtons = document.getElementsByClassName('btn-remove');
         for(var i = 0; i <removeFromCartButtons.length; i++){
             var button = removeFromCartButtons[i];
@@ -161,13 +163,21 @@ function updateCartTotal() {
     checkoutImg.setAttribute('src', bankImg);
     checkoutImg.classList.add('check-out');
 
-    weldPar.innerHTML = `                
-        <span id="in-span">-</span> ${bankInfo1} <br>
-        <span id="in-span">-</span> ${bankInfo2} <br>
-        <hr class="nohr">
-        <span id="in-span">-</span> ${bankInfo3} <br>
-        <span id="in-span">-</span> ${bankInfo4} <br>
-    `;
+    if(window.innerWidth > 700) {
+        weldPar.innerHTML = `                
+            <span id="in-span">-</span> ${bankInfo1} <br>
+            <span id="in-span">-</span> ${bankInfo2} <br>
+            <hr class="nohr">
+            <span id="in-span">-</span> ${bankInfo3} <br>
+            <span id="in-span">-</span> ${bankInfo4} <br>
+        `;
+    } else {
+        weldPar.innerHTML = `                
+            <span id="in-span">-</span> ${bankInfo1} <br>
+            <span id="in-span">-</span> ${bankInfo2} <br>
+            <span id="in-span">-</span> ${bankInfo3} <br>
+        `;
+    }
     
     theLogo.src = `${bankImg}`;
 
