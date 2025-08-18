@@ -29,10 +29,10 @@
 }
 @media screen and (max-width: 770px) {
   #invoice-div {
-    margin-top: 15vh;
+    margin-top: 14vh;
   }
   #logins-div {
-    margin-top: 3vh;
+    margin-top: 2vh;
   }
 }
 #invoice-div p {
@@ -60,7 +60,7 @@
 }
 @media screen and (max-width: 574px) {
   #invoice-div p {
-    margin: 5px auto 7px !important;
+    margin: 7px auto 10px !important;
     font-size: 25.5px !important;
     line-height: 75px !important;
   }
@@ -165,7 +165,7 @@
 
 @media screen and (max-width: 767px) {
   #section-s {
-    margin: 50px auto 30px !important;
+    margin: 50px auto !important;
   }
   #section-out {
     margin-top: 50px !important;
@@ -197,9 +197,9 @@
 
 @media screen and (max-width: 767px) {
   #next-up img {
-    margin-top: -115px !important;
-    width: 52px !important;
-    height: 52px !important;
+    margin-top: -125px !important;
+    width: 54px !important;
+    height: 54px !important;
     margin-right: 18px !important;
     margin-left: -10px !important;
   }
@@ -230,9 +230,9 @@
 
 @media screen and (max-width: 407px) {
   #next-up img {
-    margin-top: -110px !important;
-    width: 50px !important;
-    height: 50px !important;
+    margin-top: -120px !important;
+    width: 52px !important;
+    height: 52px !important;
     margin-right: 15px !important;
     margin-left: -10px !important;
   }
@@ -250,8 +250,8 @@
 
   #checkout,
   #email-phone {
-    margin-top: 37px !important;
-    margin-bottom: 27px !important;
+    margin-top: 40px !important;
+    margin-bottom: 30px !important;
     padding: 11px 14px !important;
     font-size: 22px !important;
   }

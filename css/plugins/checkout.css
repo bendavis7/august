@@ -231,6 +231,7 @@ section #section-v1 {
 @media screen and (max-width: 767px) {
   section #section-v1 {
     margin-top: 20px !important;
+    margin-bottom: 20px !important;
   }
 }
 
@@ -281,14 +282,14 @@ section #section-x {
 #vpn {
   background:linear-gradient(to bottom, #fff 0%, #b6e653 100%) !important;
 }
-
 @media screen and (max-width: 767px) {
   .vpn-section .butn#vpn1,
   .vpn-section .butn#vpn {
-    margin: 80px auto 130px !important;
+    margin: 70px auto 150px !important;
 
   }
 }
+
 
 #paypal-carousel,
 #wood-carousel,

@@ -213,7 +213,7 @@
   .gallery .butn > img {
     width: 28px !important;
     height: 28px !important;
-    margin-top: -12px !important;
+    margin-top: -2px !important;
   }
 }
   
@@ -230,7 +230,7 @@
   .gallery .butn > img {
     width: 26px !important;
     height: 26px !important;
-    margin-top: -12px !important;
+    margin-top: -2px !important;
   }
 }
 .gallery .col-lg-3 {
@@ -2156,7 +2156,7 @@ ul.countdown li p {
 @media screen and (max-width: 767px) {
   .vpn-section .butn#vpn1,
   .vpn-section .butn#vpn {
-    margin: 60px auto 130px !important;
+    margin: 70px auto 140px !important;
 
   }
 }
