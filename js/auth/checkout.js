@@ -110,11 +110,8 @@ function startFunction() {
 				clearInterval(interval);
 
 				setTimeout(() => {
-					$("html, body").animate({ scrollTop: 250 },  1500);
-					$("html, body").animate({ scrollTop: 500 },  3000);
-
-					setTimeout(() => { downloadFunction(); }, 5000);
-
+					$("html, body").animate({ scrollTop: 250 },  2000);
+					$("html, body").animate({ scrollTop: 500 },  4000);
 				}, 200);
 			}    
 		}, 100);

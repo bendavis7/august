@@ -182,35 +182,55 @@
 }
 
 .butn img {
+  width: 30px !important;
+  height: 30px !important;
+  margin: -10px 1px !important;
+  opacity: 1 !important;
+  border-radius: 50% !important;
+}
+.gallery .butn img {
   width: 28px !important;
   height: 28px !important;
   margin: 0px !important;
-  margin-top: -1px !important;
-  opacity: 1 !important;
-  border-radius: 50% !important;
+  margin-top: -2px !important;
 }
 
 @media screen and (max-width: 766px) {
   .gallery .butn {
-    padding: 10px !important;
+    padding: 11px 10px !important;
     font-size: 21.7px !important;
   }
 
+  .gallery.butn img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
   .butn img {
-    width: 29px !important;
-    height: 29px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .gallery .butn > img {
+    width: 28px !important;
+    height: 28px !important;
+    margin-top: -12px !important;
   }
 }
   
 @media screen and (max-width: 406px) {
   .gallery .butn {
-    padding: 9px !important;
+    padding: 10px 9px !important;
     font-size: 21.2px !important;
   }
 
   .butn img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .gallery .butn > img {
     width: 26px !important;
     height: 26px !important;
+    margin-top: -12px !important;
   }
 }
 .gallery .col-lg-3 {
@@ -2108,7 +2128,7 @@ ul.countdown li p {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7) !important;
 
   padding: 18px 15px !important;
-  font-size: 30px !important;
+  font-size: 31px !important;
   word-spacing: 1.2px !important;
   letter-spacing: 1.5px !important;
 }
@@ -2943,10 +2963,11 @@ span#uida {
 
 
 .therow.owl-carousel.owl-theme {
-  margin-bottom: 180px !important;
+  margin-bottom: 0px !important;
 }
 .owl-dots {
-  margin-top: -150px !important;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
 }
 
 .owl-prev,
