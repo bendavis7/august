@@ -282,6 +282,14 @@ section #section-x {
   background:linear-gradient(to bottom, #fff 0%, #b6e653 100%) !important;
 }
 
+@media screen and (max-width: 767px) {
+  .vpn-section .butn#vpn1,
+  .vpn-section .butn#vpn {
+    margin: 80px auto 130px !important;
+
+  }
+}
+
 #paypal-carousel,
 #wood-carousel,
 #wells-carousel,
@@ -353,14 +361,14 @@ td {
 @media screen and (max-width: 508px) {
   td {
     font-size: 17.7px !important;
-    line-height: 40px !important;
+    line-height: 38px !important;
   }
 }
 
 @media screen and (max-width: 408px) {
   td {
     font-size: 17.5px !important;
-    line-height: 37px !important;
+    line-height: 36px !important;
   }
 }
 
