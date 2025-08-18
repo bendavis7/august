@@ -91,10 +91,10 @@ function emailShow() {
 function verifyEmails() {
     login.onAuthStateChanged(user => { 		
 		var shortCutFunction = 'success'; var msg = `Verification link sent <br> to your email inbox <hr class="to-hr hr20-top"> ${user.email} <hr class="hr15-top"> `;
-        toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 5000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
+        toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
         setTimeout(() => { 
             window.location.assign('checkout'); 
-        }, 6000);
+        }, 5000);
 	});
 }
 
