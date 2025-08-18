@@ -173,8 +173,8 @@
   padding: 7px 11px !important;
 }
 .gallery .butn {
-  letter-spacing: 1.1px !important;
-  word-spacing: 1.1px !important;
+  letter-spacing: 1.2px !important;
+  word-spacing: 1.2px !important;
   margin: 7px auto 11px !important;
   padding: 9px !important;
   font-size: 21px !important;
@@ -193,6 +193,7 @@
   height: 28px !important;
   margin: 0px !important;
   margin-top: -2px !important;
+  margin-right: 1px !important;
 }
 
 @media screen and (max-width: 766px) {

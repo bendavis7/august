@@ -37,11 +37,13 @@ auth.onAuthStateChanged(user => {
 			thePerson = `${theaddress}. <hr id="hr-t">`;
 		}
 
-		if(nesh) { items = JSON.parse(nesh); } 
-		for (var i = 0; i < (JSON.parse(nesh)).length; i++) {
-			var userz = `table-id${items.indexOf(items[i])}`;
-			document.getElementById(`${userz}`).innerHTML = `${thePerson}`; 
-		}
+		if(nesh) { 
+			items = JSON.parse(nesh); 
+			for (var i = 0; i < (JSON.parse(nesh)).length; i++) {
+				var userz = `table-id${items.indexOf(items[i])}`;
+				document.getElementById(`${userz}`).innerHTML = `${thePerson}`; 
+			}
+		} 
 	} 
 });
 
