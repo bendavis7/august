@@ -21,10 +21,9 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 var nesh = localStorage.getItem('banklogs');
-const logoHolder = document.getElementById("logo");
 
+const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById('jinaHolder');
-const showToasts = document.getElementById('showtoasts');
 
 const moneButn = document.getElementById('monez');
 const vpnButn = document.getElementById('vpn');
@@ -92,29 +91,14 @@ function emailShow() {
 
 		var docRef = db.collection("users").doc(theGuys);
 		docRef.get().then((doc) => { 
-			if(!doc.exists) {
-				startFunction();
-			} else if(!doc.data().checkOut) {
-				startFunction();
+			if(!doc.exists || !doc.data().downLoad) {
+				if(user.email) {
+					setTimeout(() => { pdfFunction(); }, 3000);
+				} else {
+					setTimeout(() => { pdfFunction(); }, 3000);
+				}
 			}
 		});
-	});
-}
-
-
-function startFunction() {
-	auth.onAuthStateChanged(user => { 
-		var interval = setInterval(function() {
-			if(document.readyState === 'complete') {
-				clearInterval(interval);
-				var data1 = 300;
-				if(window.innerWidth > 700) { data1 = 450 }
-
-				setTimeout(() => {
-					$("html, body").animate({ scrollTop: data1 },  3000);
-				}, 200);
-			}    
-		}, 100);
 	});
 }
 
@@ -142,7 +126,7 @@ const downloadFunction = () => {
 
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
-			return docRef.update({ checkOut: true }); 
+			return docRef.update({ downLoad: true }); 
 		});
 
 		setTimeout(() => {
@@ -155,7 +139,6 @@ const downloadFunction = () => {
 	});
 }
 moneButn.addEventListener('click', downloadFunction);
-showToasts.addEventListener('click', downloadFunction);
 vpnButn.addEventListener('click', downloadFunction);
 vpnButn1.addEventListener('click', downloadFunction);
 
@@ -228,7 +211,7 @@ function pdfFunction() {
 
 		var docRef = db.collection("users").doc(theGuys);
 		docRef.get().then((doc) => { 
-			return docRef.update({ checkOut: true }); 
+			return docRef.update({ downLoad: true }); 
 		});
 
 		let items3 = (JSON.parse(nesh)); var total = 0;

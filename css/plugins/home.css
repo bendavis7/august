@@ -77,3 +77,25 @@ td.burro {
   padding: 20px auto !important;
   margin-bottom: -20px !important;
 }
+
+
+
+
+#bitcoin-logo2 {
+  margin: -10px 0px !important;
+  border-radius: 0 !important;
+}
+#bitcoin-logo2 img {
+  width: 64px !important;
+  height: 64px !important;
+}
+
+@media (max-width: 576px) {
+  #bitcoin-logo2 {
+    margin: -5px 0px !important;
+  }
+  #bitcoin-logo2 img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}

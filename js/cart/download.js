@@ -333,13 +333,7 @@ function frame(){
     width = 900 - timeDifference;
 
     if(width <= 10) {
-        login.onAuthStateChanged(user => { 		
-            if(user.email) {
-                window.location.assign('home');
-            } else {
-                window.location.assign('invoice');
-            }
-        });
+        window.location.assign('invoice');
     } else if(width < 300) {
         elemj.classList.add("bg-danger");
         var minutes = Math.floor(width/60); var seconds = width - minutes * 60;
