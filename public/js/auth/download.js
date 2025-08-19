@@ -89,11 +89,9 @@ function emailShow() {
 		var docRef = db.collection("users").doc(theGuys);
 		docRef.get().then((doc) => { 
 			if(!doc.exists || !doc.data().downLoad) {
-				if(user.email) {
-					setTimeout(() => { downloadFunction(); }, 3000);
-				} else {
-					setTimeout(() => { pdfFunction(); }, 3000);
-				}
+				setTimeout(() => {
+					document.getElementById('modem').click();
+				}, 3000);
 			}
 		});
 	});
