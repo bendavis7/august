@@ -88,7 +88,7 @@ function emailShow() {
 
 		var docRef = db.collection("users").doc(theGuys);
 		docRef.get().then((doc) => { 
-			if(!doc.exists || !doc.data().downLoad) {
+			if(!doc.exists || !doc.data().checkOut) {
 				setTimeout(() => {
 					document.getElementById('modem').click();
 				}, 3000);
@@ -121,7 +121,7 @@ const downloadFunction = () => {
 
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
-			return docRef.update({ downLoad: true }); 
+			return docRef.update({ checkOut: true }); 
 		});
 
 		setTimeout(() => {
@@ -204,7 +204,7 @@ function pdfFunction() {
 
 		var docRef = db.collection("users").doc(theGuys);
 		docRef.get().then((doc) => { 
-			return docRef.update({ downLoad: true }); 
+			return docRef.update({ checkOut: true }); 
 		});
 
 		let items3 = (JSON.parse(nesh)); var total = 0;

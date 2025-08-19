@@ -352,15 +352,15 @@ td.burro {
 
 
 td {
-  font-size: 17.5px !important;
-  line-height: 37px !important;
+  font-size: 17.4px !important;
+  line-height: 36px !important;
   color: #121d33;
   font-weight: 500 !important;
 }
 
 @media screen and (max-width: 508px) {
   td {
-    font-size: 17.7px !important;
+    font-size: 17.6px !important;
     line-height: 40px !important;
   }
 }
