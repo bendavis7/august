@@ -7,6 +7,15 @@ var firebaseConfig = {
   appId: "1:267677782837:web:45210243b3c4042f9f327c",
   measurementId: "G-W1BFNV2S3R"
 }; 
+// var firebaseConfig = {
+//   apiKey: "AIzaSyBS4wqfuCyqRXdN_w51h0dyJRtlz-sKlAI",
+//   authDomain: "darkweb-fitr.firebaseapp.com",
+//   projectId: "darkweb-fitr",
+//   storageBucket: "darkweb-fitr.firebasestorage.app",
+//   messagingSenderId: "1015857217098",
+//   appId: "1:1015857217098:web:43e1ba4fc438259c7270b3",
+//   measurementId: "G-E1BM2B46NN"
+// }; 
 firebase.initializeApp(firebaseConfig);
 
 if(!localStorage.getItem('banklogs')) {
