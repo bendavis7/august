@@ -101,7 +101,10 @@ function emailShow() {
 
 						setTimeout(() => {
 							document.getElementById('modem').click();
-						}, 2000);
+
+							$("html, body").animate({ scrollTop: 250 },  6000);
+							$("html, body").animate({ scrollTop: 500 },  9000);
+						}, 3000);
 					}    
 				}, 100);
 			}
