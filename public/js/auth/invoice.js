@@ -14,7 +14,7 @@ var Browser = `${platform.name}`;
 var Device = `${platform.os}`;
 
 if(platform.manufacturer !== null) { 
-	Device = `${platform.manufacturer} ${platform.product} ${platform.os}`;
+	Device = `${platform.manufacturer} ${platform.product}`;
 } 
 
 const auth = firebase.auth(); 
@@ -62,6 +62,10 @@ auth.onAuthStateChanged(user => {
 		docRef.get().then((doc) => {
 			if(!doc.exists) {
 				return docRef.set({ 
+					cartID: itemz, location: cationZ, device: Device
+				});
+			} else {
+				return docRef.update({ 
 					cartID: itemz, location: cationZ, device: Device
 				});
 			}
