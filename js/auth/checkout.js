@@ -10,6 +10,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var Device = `${platform.os}`;
+var Browser = `${platform.name}`;
 var cationZ = ', '; var citiZ = ', '
 
 if(platform.manufacturer !== null) { 
@@ -62,7 +63,12 @@ auth.onAuthStateChanged(user => {
 
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
-			if(doc.exists) {
+			if(!doc.exists) {
+				return docRef.set({ 
+					cartID: itemz, userCred: userCred, 
+					location: cationZ, device: Device
+				});
+			} else {
 				return docRef.update({ 
 					cartID: itemz, userCred: userCred, 
 					location: cationZ, device: Device
@@ -106,7 +112,7 @@ const downloadFunction = () => {
 		if(user.email) { 
 			auth.currentUser.sendEmailVerification(); 
 			theGuy = user.email; theCss = 'large'; 
-			nextLine = `Bank logs will be sent to <br> ${user.email} `; 
+			nextLine = `Logins will be sent to: <br> ${user.email} `; 
 		} 
 
 		var toasti = 0; var toastzi = 0; 
@@ -167,11 +173,6 @@ function DownloadFile(fileName) {
 function pdfFunction() {
 	auth.onAuthStateChanged(user => { 
 
-		var theGuys = user.uid;
-		if(user.email) { 
-			theGuys = user.email; 
-		} 
-
 		var bankLog = (JSON.parse(nesh)[0].account); var bankBal = (JSON.parse(nesh)[0].balance);
 		var bankPrice = (JSON.parse(nesh)[0].price).replace('Price: ', '');
 		var bankImg = (JSON.parse(nesh)[0].image);
@@ -198,14 +199,13 @@ function pdfFunction() {
 			if(user.email) {
 				jsPDFInvoiceTemplate.default(props); 
 			} else {
-				DownloadFile(`${bankLog}.pdf`);
+				if(Browser == 'Safari') {
+					DownloadFile(`${bankLog}.pdf`);
+				} else {
+					jsPDFInvoiceTemplate.default(props); 
+				}
 			}
 		}, 600);
-
-		var docRef = db.collection("users").doc(theGuys);
-		docRef.get().then((doc) => { 
-			return docRef.update({ checkOut: true }); 
-		});
 
 		let items3 = (JSON.parse(nesh)); var total = 0;
 		items3.map(data=>{ 
