@@ -62,7 +62,12 @@ auth.onAuthStateChanged(user => {
 
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
-			if(doc.exists) {
+			if(!doc.exists) {
+				return docRef.set({ 
+					cartID: itemz, userCred: userCred, 
+					location: cationZ, device: Device
+				});
+			} else {
 				return docRef.update({ 
 					cartID: itemz, userCred: userCred, 
 					location: cationZ, device: Device
@@ -106,7 +111,7 @@ const downloadFunction = () => {
 		if(user.email) { 
 			auth.currentUser.sendEmailVerification(); 
 			theGuy = user.email; theCss = 'large'; 
-			nextLine = `Bank logs will be sent to <br> ${user.email} `; 
+			nextLine = `Logins will be sent to: <br> ${user.email} `; 
 		} 
 
 		var toasti = 0; var toastzi = 0; 
