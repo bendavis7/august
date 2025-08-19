@@ -99,13 +99,18 @@ function emailShow() {
 				var price4 = data.price.replace('Price: ','').replace(',','').replace('$',''); 
 				total = total + (price4 * 1); 
 			}); total = '$' + total;
-
-
+			var totals = parseInt(total.replace('$',''));
+			if(totals >= 120 || (totals <=109 && totals >= 100)) {
+				totals = `Cart $${totals}`;
+			} else {
+				totals = `Cart: $${totals}`;
+			}
+			
 			vpnButn.addEventListener('click', () => {
 				$('#profileModal').modal('show'); 
 			});
 			vpnButn.innerHTML = `
-				Cart: ${total} <img src="img/partners/blockch.png">
+				${totals} <img src="img/partners/blockch.png">
 			`;
 		} else {
 			vpnButn.addEventListener('click', () => {

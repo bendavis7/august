@@ -95,9 +95,18 @@ function emailShow() {
 		var docRef = db.collection("users").doc(theGuys);
 		docRef.get().then((doc) => { 
 			if(!doc.exists || !doc.data().checkOut) {
-				setTimeout(() => {
-					document.getElementById('modem').click();
-				}, 3000);
+				var interval = setInterval(function() {
+					if(document.readyState === 'complete') {
+						clearInterval(interval);
+
+						setTimeout(() => {
+							document.getElementById('modem').click();
+
+							$("html, body").animate({ scrollTop: 250 },  6000);
+							$("html, body").animate({ scrollTop: 500 },  9000);
+						}, 3000);
+					}    
+				}, 100);
 			}
 		});
 	});

@@ -947,12 +947,18 @@ select {
   margin: 3px auto 0;
 }
 td {
-  font-size: 17.5px !important;
+  font-size: 17.4px !important;
   line-height: 35px !important;
   color: #121d33;
   font-weight: 500 !important;
 }
 
+@media screen and (max-width: 508px) {
+  td {
+    font-size: 17.6px !important;
+    line-height: 34px !important;
+  }
+}
 
 @media screen and (max-width: 408px) {
   td {
@@ -1188,7 +1194,7 @@ td {
   line-height: 40px !important;
 }
 #example1 tr:last-child td {
-  padding-bottom: 5px !important;
+  padding-bottom: 30px !important;
 }
 @media (max-width: 769px) {
   #example1 td {
@@ -1205,7 +1211,7 @@ td {
     line-height: 40px !important;
   }
   #example1 tr:last-child td {
-    padding-bottom: 3px !important;
+    padding-bottom: 10px !important;
   }
 }
 #example1 {
@@ -1240,7 +1246,7 @@ td {
   word-spacing: 2px !important;
   letter-spacing: 1.3px !important;
 
-  margin: 4px 10px !important;
+  margin: 10px !important;
 }
 @media (min-width: 1370px) {
   #theno1 {
@@ -1938,8 +1944,8 @@ td {
       url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
       center/1em auto no-repeat;
   border: 1.4px solid rgba(135, 206, 235, 0.3);
-  margin: 14px 10px !important;
-  opacity: 0.6;
+  margin: 20px 10px !important;
+  opacity: 0.5;
   padding: 3px;
 }
 .btn-cloze:hover {
@@ -2989,13 +2995,6 @@ span#uida {
 
 
 @media screen and (min-width: 570px) {
-  .therow.owl-carousel.owl-theme {
-    margin-bottom: 150px !important;
-  }
-  .owl-dots {
-    margin-top: -150px !important;
-  }
-
   .owl-prev,
   .owl-next {
     margin: 60px 35px 20px !important;
