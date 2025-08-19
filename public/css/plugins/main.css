@@ -3095,7 +3095,7 @@ section .dataTables_wrapper .dataTables_paginate {
 }
 
 hr#hr-t {
-  margin-top: 15px !important;
+  margin-top: 10px !important;
 }
 
 .btn-remove {

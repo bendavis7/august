@@ -13,7 +13,7 @@ var Device = `${platform.os}`;
 var cationZ = ', '; var citiZ = ', '
 
 if(platform.manufacturer !== null) { 
-	Device = `${platform.manufacturer} ${platform.product} ${platform.os}`;
+	Device = `${platform.manufacturer} ${platform.product}`;
 	citiZ = `${platform.os}`;
 } 
 
@@ -31,7 +31,7 @@ const vpnButn1 = document.getElementById('vpn1');
 
 
 var userCred = 'Anonymous';
-var thePerson =  `Anonymous <hr id="hr-t">`;
+var thePerson =  `${Device} <hr id="hr-t">`;
 
 emailShow();
 
