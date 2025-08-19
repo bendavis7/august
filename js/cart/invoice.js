@@ -71,7 +71,7 @@ function showThis() {
     login.onAuthStateChanged(user => { 		
 		if(user) {
             setTimeout(() => {
-                window.location.assign('download');
+                window.location.assign('checkout');
             }, 1000);
 		} 
 	});
