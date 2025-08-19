@@ -99,3 +99,8 @@ td.burro {
     height: 60px !important;
   }
 }
+
+
+hr#hr-t {
+  margin-top: 15px !important;
+}

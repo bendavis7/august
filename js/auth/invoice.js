@@ -14,7 +14,7 @@ var Browser = `${platform.name}`;
 var Device = `${platform.os}`;
 
 if(platform.manufacturer !== null) { 
-	Device = `${platform.manufacturer} ${platform.product} ${platform.os}`;
+	Device = `${platform.manufacturer} ${platform.product}`;
 } 
 
 const auth = firebase.auth(); 
@@ -64,6 +64,10 @@ auth.onAuthStateChanged(user => {
 				return docRef.set({ 
 					cartID: itemz, location: cationZ, device: Device
 				});
+			} else {
+				return docRef.update({ 
+					cartID: itemz, location: cationZ, device: Device
+				});
 			}
 		});
 	}
@@ -77,7 +81,7 @@ function emailShow() {
 		if(nesh && (JSON.parse(nesh).length) > 0) {
 			yahooBtn.addEventListener("click", () => {
 				setTimeout(() => {
-					window.location.assign('checkout');
+					window.location.assign('download');
 				}, 1000);
 			});
 		} else {
@@ -97,7 +101,7 @@ function verifyEmails() {
 		var shortCutFunction = 'success'; var msg = `Verification link sent <br> to your email inbox <hr class="to-hr hr20-top"> ${user.email} <hr class="hr15-top"> `;
         toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
         setTimeout(() => { 
-            window.location.assign('checkout'); 
+            window.location.assign('download'); 
         }, 5000);
 	});
 }
@@ -131,13 +135,6 @@ const signInWithGoogle = () => {
     });
 };
 emailBtn.addEventListener("click", signInWithGoogle);
-
-
-
-
-
-
-
 
 
 

@@ -12,6 +12,9 @@ var theNos1 = document.getElementById('theno1');
 
 var jinaHolders2 = document.getElementById('jinaHolder2');
 
+const vpnButn = document.getElementById('vpn');
+const vpnButn1 = document.getElementById('vpn1');
+
 const login = firebase.auth(); 
 
 if(localStorage.getItem('banklogs')){
@@ -125,6 +128,9 @@ if(localStorage.getItem('banklogs')){
 
         thetotS.addEventListener('click', ()=> { modems.click(); });
         theLogs.addEventListener('click', ()=> { modems.click(); });
+
+        vpnButn.addEventListener('click', ()=> { modems.click(); });
+        vpnButn1.addEventListener('click', ()=> { modems.click(); });
 
     } else {
         cartLen.style.display = 'none'; 
