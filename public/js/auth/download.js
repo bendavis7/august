@@ -21,10 +21,9 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 var nesh = localStorage.getItem('banklogs');
-const logoHolder = document.getElementById("logo");
 
+const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById('jinaHolder');
-const showToasts = document.getElementById('showtoasts');
 
 const moneButn = document.getElementById('monez');
 const vpnButn = document.getElementById('vpn');
@@ -92,9 +91,7 @@ function emailShow() {
 
 		var docRef = db.collection("users").doc(theGuys);
 		docRef.get().then((doc) => { 
-			if(!doc.exists) {
-				setTimeout(() => { pdfFunction(); }, 3000);
-			} else if(!doc.data().checkOut) {
+			if(!doc.exists || !doc.data().downLoad) {
 				if(user.email) {
 					setTimeout(() => { pdfFunction(); }, 3000);
 				} else {
@@ -142,7 +139,6 @@ const downloadFunction = () => {
 	});
 }
 moneButn.addEventListener('click', downloadFunction);
-showToasts.addEventListener('click', downloadFunction);
 vpnButn.addEventListener('click', downloadFunction);
 vpnButn1.addEventListener('click', downloadFunction);
 

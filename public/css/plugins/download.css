@@ -215,14 +215,6 @@ div.xzoom {
   }
 }
 
-.vpn-section .butn#vpn1,
-.vpn-section .butn#vpn {
-  padding: 18px 15px !important;
-  font-size: 30px !important;
-  margin: 60px auto !important;
-}
-
-
 section #section-v2,
 section #section-v1 {
   opacity: 0.7 !important;
@@ -282,10 +274,17 @@ section #section-x {
 #vpn {
   background:linear-gradient(to bottom, #fff 0%, #b6e653 100%) !important;
 }
+.vpn-section .butn#vpn1,
+.vpn-section .butn#vpn {
+  padding: 18px 15px !important;
+  font-size: 31px !important;
+  margin: 60px auto !important;
+}
+
 @media screen and (max-width: 767px) {
   .vpn-section .butn#vpn1,
   .vpn-section .butn#vpn {
-    margin: 70px auto 135px !important;
+    margin: 70px auto 100px !important;
 
   }
 }
@@ -369,7 +368,7 @@ td {
 @media screen and (max-width: 408px) {
   td {
     font-size: 17.5px !important;
-    line-height: 37px !important;
+    line-height: 38px !important;
   }
 }
 
