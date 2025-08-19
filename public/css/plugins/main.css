@@ -2941,7 +2941,9 @@ span#uida {
   letter-spacing: 1.5px !important;
   color: #121d33;
   border-width: 1.6px !important;
-  box-shadow: 0 0 0 1.2px rgba(255, 255, 255, 1) !important;
+
+  border: 2px solid rgb(18, 29, 51, 0.7) !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7) !important;
 }
 .butn.money img {
   width: 33px !important;

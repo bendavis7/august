@@ -300,7 +300,7 @@ if (document.getElementById('boa01')) {
     (chime2.innerHTML = "$4,854"),
     (chime3.innerHTML = "$5,524"),
     (chime4.innerHTML = "$6,205"),
-    (chime5.innerHTML = "$6,735"),
+    (chime5.innerHTML = "$6,895"),
     (chime6.innerHTML = "$7,340"),
     (chime7.innerHTML = "$7,632"),
     (chime8.innerHTML = "$7,750"),

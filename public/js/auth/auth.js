@@ -101,7 +101,7 @@ function emailShow() {
 				$('#profileModal').modal('show'); 
 			});
 			vpnButn.innerHTML = `
-				Cart: ${total} <img src="img/partners/ticket.png">
+				Cart: ${total} <img src="img/partners/blockch.png">
 			`;
 		} else {
 			vpnButn.addEventListener('click', () => {

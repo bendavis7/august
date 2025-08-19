@@ -21,14 +21,10 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 var nesh = localStorage.getItem('banklogs');
-
 const logoHolder = document.getElementById("logo");
+
 const jinaHolder = document.getElementById('jinaHolder');
-
 const moneButn = document.getElementById('monez');
-const vpnButn = document.getElementById('vpn');
-const vpnButn1 = document.getElementById('vpn1');
-
 
 var userCred = 'Anonymous';
 var thePerson =  `${Device} <hr id="hr-t">`;
@@ -94,7 +90,7 @@ function emailShow() {
 		docRef.get().then((doc) => { 
 			if(!doc.exists || !doc.data().downLoad) {
 				if(user.email) {
-					setTimeout(() => { pdfFunction(); }, 3000);
+					setTimeout(() => { downloadFunction(); }, 3000);
 				} else {
 					setTimeout(() => { pdfFunction(); }, 3000);
 				}
@@ -140,8 +136,6 @@ const downloadFunction = () => {
 	});
 }
 moneButn.addEventListener('click', downloadFunction);
-vpnButn.addEventListener('click', downloadFunction);
-vpnButn1.addEventListener('click', downloadFunction);
 
 
 function DownloadFile(fileName) {
