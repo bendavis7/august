@@ -155,13 +155,16 @@ function updateCartTotal() {
         <span id="in-span">${bankBal}</span> <br>
     `;
 
-    checkoutBtn.innerHTML = `
-        Checkout $${total}
-    `;
     checkoutImg.setAttribute('src', bankImg);
     checkoutImg.classList.add('check-out');
 
-    if(window.innerWidth > 700) {
+    if(window.innerWidth < 700) {
+        weldPar.innerHTML = `                
+            <span id="in-span">-</span> ${bankInfo1} <br>
+            <span id="in-span">-</span> ${bankInfo2} <br>
+            <span id="in-span">-</span> ${bankInfo3} <br>
+        `;
+    } else {
         weldPar.innerHTML = `                
             <span id="in-span">-</span> ${bankInfo1} <br>
             <span id="in-span">-</span> ${bankInfo2} <br>
@@ -169,13 +172,8 @@ function updateCartTotal() {
             <span id="in-span">-</span> ${bankInfo3} <br>
             <span id="in-span">-</span> ${bankInfo4} <br>
         `;
-    } else {
-        weldPar.innerHTML = `                
-            <span id="in-span">-</span> ${bankInfo1} <br>
-            <span id="in-span">-</span> ${bankInfo2} <br>
-            <span id="in-span">-</span> ${bankInfo3} <br>
-        `;
     }
+
     
     theLogo.src = `${bankImg}`;
 

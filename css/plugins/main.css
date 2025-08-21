@@ -738,7 +738,8 @@ select {
 #saveH4 {
   text-transform: uppercase !important; 
   margin: -5px 2px -3px !important;
-  font-size: 28px !important;
+  font-size: 28.5px !important;
+  letter-spacing: 1.8px !important;
   font-weight: 700 !important;
   color: rgba(255, 255, 255, 0.8) !important;
 }
@@ -1791,8 +1792,8 @@ td {
   margin: 7px 9px !important;
 }  
 .navbar-nav li.nav-large a {
-  width: 65px !important;
-  height: 65px !important;
+  width: 64px !important;
+  height: 64px !important;
   border-radius: 50% !important;
 }
 .nav-bank {
@@ -2379,6 +2380,9 @@ ul.countdown li p {
 }
 .toast.anon {
   max-width: 340px !important;
+}
+.toast.anons {
+  max-width: 345px !important;
 }
 .toast.large {
   max-width: 350px !important;

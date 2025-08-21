@@ -27,7 +27,6 @@ emailShow();
 
 var cationZ = ', '; 
 var nesh = localStorage.getItem('banklogs');
-var vpnButn = document.getElementById('vpn');
 var userCred = 'Anonymous';
 
 
@@ -46,14 +45,9 @@ auth.onAuthStateChanged(user => {
 			userCred = `${user.displayName}`;
 		} 
 
-
 		var docRef = db.collection("banks").doc(theGuy);
 		docRef.get().then((doc) => { 
-			if(!doc.exists) {
-				return docRef.set({ 
-					banks: [banks], location: cationZ, userCred: userCred
-				});
-			} else {
+			if(doc.exists) {
 				return docRef.update({ 
 					banks: [banks], location: cationZ, userCred: userCred
 				});
@@ -91,34 +85,6 @@ function emailShow() {
 				}, 1000);
 			}    
 		}, 100);
-
-
-		if(nesh && (JSON.parse(nesh).length) > 0) {
-			let items3 = (JSON.parse(nesh)); var total = 0;
-			items3.map(data=>{ 
-				var price4 = data.price.replace('Price: ','').replace(',','').replace('$',''); 
-				total = total + (price4 * 1); 
-			}); total = '$' + total;
-			var totals = parseInt(total.replace('$',''));
-			if(totals >= 120 || (totals <=109 && totals >= 100)) {
-				totals = `Cart $${totals}`;
-			} else {
-				totals = `Cart: $${totals}`;
-			}
-			
-			vpnButn.addEventListener('click', () => {
-				$('#profileModal').modal('show'); 
-			});
-			vpnButn.innerHTML = `
-				${totals} <img src="img/partners/blockch.png">
-			`;
-		} else {
-			vpnButn.addEventListener('click', () => {
-				setTimeout(() => {
-					window.location.assign('invoice');
-				}, 1000);
-			});
-		}
 	});
 }
 
