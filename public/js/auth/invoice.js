@@ -94,7 +94,6 @@ function emailShow() {
 		} else {
 			yahooBtn.addEventListener("click", signInWithYahoo);
 		}
-		
 	});
 }
 
