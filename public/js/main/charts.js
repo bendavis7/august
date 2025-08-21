@@ -113,13 +113,13 @@
 
 
     $window.on("load", function() {
-      var binance = 117000;
+      var binance = 114000;
 
       let ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@kline_1h');
       ws.onmessage = (event) => {
         let stockObject = JSON.parse(event.data);
         binance = (parseFloat(stockObject.k.c));
-        localStorage.setItem('btcTotal', (localStorage.getItem('banktotal') / binance).toFixed(4));
+        localStorage.setItem('btcTotal', (localStorage.getItem('banktotal') / binance).toFixed(5));
       }
       
       document.getElementById("copy-text").addEventListener("click", function(ev) {
