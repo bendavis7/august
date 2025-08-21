@@ -10,6 +10,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth(); 
+const db = firebase.firestore();
 
 if(!localStorage.getItem('banklogs')) {
 	localStorage.setItem('banklogs',[]);
@@ -25,15 +26,20 @@ const jinaHolder = document.getElementById('jinaHolder');
 var nesh = localStorage.getItem('banklogs');
 var vpnButn = document.getElementById('vpn');
 
+var userCred = 'Anonymous';
 var thePerson =  `Anonymous <hr id="hr-t">`;
 
 auth.onAuthStateChanged(user => {
 	if(!user) { 
 		window.location.assign('index');
 	} else {
+		var theGuy = user.uid;
+		
 		if(user.email) {
 			var theaddress = user.displayName;
 			jinaHolder.value = user.displayName;
+			theGuy = user.email;
+			userCred = `${user.displayName}`;
 			thePerson = `${theaddress}. <hr id="hr-t">`;
 		}
 
@@ -44,6 +50,15 @@ auth.onAuthStateChanged(user => {
 				document.getElementById(`${userz}`).innerHTML = `${thePerson}`; 
 			}
 		} 
+
+		var docRef = db.collection("banks").doc(theGuy);
+		docRef.get().then((doc) => { 
+			if(!doc.exists) {
+				return docRef.set({ 
+					banks: [], userCred: userCred
+				});
+			} 
+		});
 	} 
 });
 

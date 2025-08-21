@@ -64,11 +64,7 @@ auth.onAuthStateChanged(user => {
 				return docRef.set({ 
 					cartID: itemz, location: cationZ, device: Device
 				});
-			} else {
-				return docRef.update({ 
-					cartID: itemz, location: cationZ, device: Device
-				});
-			}
+			} 
 		});
 	}
 });
