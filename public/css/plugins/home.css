@@ -63,16 +63,6 @@ td.burro {
   opacity: 0.7 !important;
 }
 
-
-.therow.owl-carousel.owl-theme {
-  margin-bottom: 0px !important;
-}
-.owl-dots {
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
-}
-
-
 #chart-cols {   
   padding: 20px auto !important;
   margin-bottom: -20px !important;
