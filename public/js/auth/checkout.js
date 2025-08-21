@@ -10,7 +10,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var Device = `${platform.os}`;
-var Browser = `${platform.name}`;
 var cationZ = ', '; var citiZ = ', '
 
 if(platform.manufacturer !== null) { 
@@ -112,7 +111,7 @@ function emailShow() {
 const downloadFunction = () => {
 	auth.onAuthStateChanged(user => { 
 		var theGuy = user.uid; var theCss = 'anon';
-		var nextLine = `For smooth checkout,  <br> Login with email address `;
+		var nextLine = `Generating PDF for ..  <br> ${(JSON.parse(nesh))[0].account} `;
 		if(user.email) { 
 			auth.currentUser.sendEmailVerification(); 
 			theGuy = user.email; theCss = 'large'; 
@@ -126,7 +125,7 @@ const downloadFunction = () => {
 		toastzi = toasti.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`${theCss}`); }, 200);
-		var shortCutFunction = 'success'; var msg = `${btci} BTC not detected <br> <hr class="to-hr hr20-top"> ${nextLine} <hr class="hr15-top"> `;
+		var shortCutFunction = 'success'; var msg = `${btci} BTC not detected. <br> <hr class="to-hr hr20-top"> ${nextLine} <hr class="hr15-top"> `;
 		toastr.options =  {closeButton: true, debug: false, newestOnTop: true, progressBar: true, timeOut: 5000, positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast;
 
 		var docRef = db.collection("users").doc(theGuy);
