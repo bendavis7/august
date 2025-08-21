@@ -32,7 +32,7 @@
     margin-top: 14vh;
   }
   #logins-div {
-    margin-top: 2vh;
+    margin-top: 1vh;
   }
 }
 #invoice-div p {
@@ -148,18 +148,18 @@
 
 #section-out {
   margin-top: 20px !important;
-  opacity: 0.6 !important;
+  opacity: 0.7 !important;
 }
 #section-on {
   margin: 20px auto 30px !important;
-  opacity: 0.6 !important;
+  opacity: 0.7 !important;
 }
 
 
 
 
 #section-s {
-  opacity: 0.6 !important;
+  opacity: 0.7 !important;
   margin: 30px auto -30px !important;
 }
 
