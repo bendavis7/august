@@ -98,7 +98,9 @@ function verifyEmails() {
     login.onAuthStateChanged(user => { 	
 		var docRef = db.collection("users").doc(user.email);
 		docRef.get().then((doc) => {
-			return docRef.set({ emailSent: true });
+			if(doc.exists) {
+				return docRef.update({ emailSent: true });
+			} 
 		});
 		var shortCutFunction = 'success'; var msg = `Verification link sent <br> to your email inbox <hr class="to-hr hr20-top"> ${user.email} <hr class="hr15-top"> `;
         toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
@@ -114,7 +116,7 @@ const signInWithYahoo = () => {
 	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
 	auth.signInWithPopup(yahooProvider).then(() => {
 		auth.currentUser.sendEmailVerification();
-		window.location.assign('checkout');
+		window.location.assign('invoice');
     }).catch(error => {
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
         var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;
@@ -128,7 +130,7 @@ const signInWithGoogle = () => {
 	const googleProvider = new firebase.auth.GoogleAuthProvider;
 	auth.signInWithPopup(googleProvider).then(() => {
 		auth.currentUser.sendEmailVerification();
-		window.location.assign('checkout');
+		window.location.assign('invoice');
     }).catch(error => {
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
         var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;

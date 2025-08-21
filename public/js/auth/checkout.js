@@ -96,8 +96,8 @@ function emailShow() {
 						setTimeout(() => {
 							document.getElementById('modem').click();
 
-							$("html, body").animate({ scrollTop: 250 },  6000);
-							$("html, body").animate({ scrollTop: 500 },  9000);
+							$("html, body").animate({ scrollTop: 250 },  5000);
+							$("html, body").animate({ scrollTop: 500 },  7000);
 						}, 3000);
 					}    
 				}, 100);
@@ -125,12 +125,14 @@ const downloadFunction = () => {
 		toastzi = toasti.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`${theCss}`); }, 200);
-		var shortCutFunction = 'success'; var msg = `${btci} BTC not detected. <br> <hr class="to-hr hr20-top"> ${nextLine} <hr class="hr15-top"> `;
+		var shortCutFunction = 'success'; var msg = `${btci} BTC not detected <br> <hr class="to-hr hr20-top"> ${nextLine} <hr class="hr15-top"> `;
 		toastr.options =  {closeButton: true, debug: false, newestOnTop: true, progressBar: true, timeOut: 5000, positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast;
 
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
-			return docRef.update({ checkOut: true }); 
+			if(doc.exists) {
+				return docRef.update({ checkOut: true }); 
+			} 
 		});
 
 		setTimeout(() => {

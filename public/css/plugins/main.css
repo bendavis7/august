@@ -738,7 +738,8 @@ select {
 #saveH4 {
   text-transform: uppercase !important; 
   margin: -5px 2px -3px !important;
-  font-size: 28px !important;
+  font-size: 28.5px !important;
+  letter-spacing: 1.8px !important;
   font-weight: 700 !important;
   color: rgba(255, 255, 255, 0.8) !important;
 }
