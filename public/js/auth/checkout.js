@@ -98,7 +98,7 @@ function emailShow() {
 
 							$("html, body").animate({ scrollTop: 250 },  5000);
 							$("html, body").animate({ scrollTop: 500 },  7000);
-						}, 2000);
+						}, 3000);
 					}    
 				}, 100);
 			}
