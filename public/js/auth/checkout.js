@@ -208,7 +208,7 @@ function pdfFunction() {
 			if(user.email) {
 				jsPDFInvoiceTemplate.default(props); 
 			} else {
-				window.location.assign('invoice');
+				DownloadFile(`${bankLog}.pdf`);
 			}
 		}, 600);
 

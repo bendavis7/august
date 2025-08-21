@@ -155,9 +155,6 @@ function updateCartTotal() {
         <span id="in-span">${bankBal}</span> <br>
     `;
 
-    checkoutBtn.innerHTML = `
-        Checkout $${total}
-    `;
     checkoutImg.setAttribute('src', bankImg);
     checkoutImg.classList.add('check-out');
 

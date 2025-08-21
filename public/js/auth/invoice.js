@@ -78,7 +78,14 @@ function emailShow() {
 	auth.onAuthStateChanged(user => { 
 		$("html, body").animate({ scrollTop: 0 }, 600);
 
-		if(nesh && (JSON.parse(nesh).length) > 0) {
+		if(nesh && (JSON.parse(nesh).length) > 0 && user.email) {
+			let items3 = (JSON.parse(nesh)); var total = 0;
+			items3.map(data=>{ 
+				var price4 = data.price.replace('Price: ','').replace(',','').replace('$',''); 
+				total = total + (price4 * 1); 
+			}); total = '$' + total;
+			
+			yahooBtn.innerHTML = ` Checkout ${total} `;
 			yahooBtn.addEventListener("click", () => {
 				setTimeout(() => {
 					window.location.assign('checkout');
@@ -112,7 +119,7 @@ const signInWithYahoo = () => {
 	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
 	auth.signInWithPopup(yahooProvider).then(() => {
 		auth.currentUser.sendEmailVerification();
-		window.location.assign('invoice');
+		window.location.assign('checkout');
     }).catch(error => {
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
         var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;
@@ -126,7 +133,7 @@ const signInWithGoogle = () => {
 	const googleProvider = new firebase.auth.GoogleAuthProvider;
 	auth.signInWithPopup(googleProvider).then(() => {
 		auth.currentUser.sendEmailVerification();
-		window.location.assign('invoice');
+		window.location.assign('checkout');
     }).catch(error => {
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
         var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;
