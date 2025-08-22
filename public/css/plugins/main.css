@@ -1790,10 +1790,19 @@ td {
     padding: 0;
   }
 }
+
+@media screen and (max-width: 1250px) {
+  .nav-larger {
+    display: none;
+  }
+}
+
+.navbar-nav > li.nav-larger,
 .navbar-nav > li.nav-large {
   border-radius: 50% !important;
   margin: 7px 9px !important;
 }  
+.navbar-nav > li.nav-larger a,
 .navbar-nav li.nav-large a {
   width: 64px !important;
   height: 64px !important;
@@ -1813,6 +1822,12 @@ td {
 }
 .nav-hunt {
   background: url(../../img/carousel/huntington.jpg) no-repeat center center/cover;
+}
+.nav-mt {
+  background: url(../../img/carousel/mt.png) no-repeat center center/cover;
+}
+.nav-pnc {
+  background: url(../../img/carousel/pnc.png) no-repeat center center/cover;
 }
 .nav-fed {
   background: url(../../img/carousel/navyfederal.png) no-repeat center center/cover;

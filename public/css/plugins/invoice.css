@@ -98,6 +98,14 @@
     max-width: 30.5%;
   }
 }
+@media (min-width: 1250px) {
+  #logins-div.col-12,
+  #invoice-div.col-12 {
+    -ms-flex: 0 0 27%;
+    flex: 0 0 27%;
+    max-width: 27%;
+  }
+}
 @media (max-width: 571px)  {
   #logins-div.col-12,
   #invoice-div.col-12 {
