@@ -27,8 +27,6 @@ const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById('jinaHolder');
 const moneButn = document.getElementById('monez');
 
-const spanTest = document.getElementById('span-test');
-
 var userCred = 'Anonymous';
 var thePerson =  `${Device} <hr id="hr-t">`;
 
@@ -107,10 +105,6 @@ function emailShow() {
 						}, 1000);
 					}    
 				}, 100);
-
-				spanTest.addEventListener('click', () => {
-					document.getElementById('modem').click();
-				});
 			} 
 		});
 	});
