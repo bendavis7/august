@@ -8,7 +8,6 @@ var cartLen = document.getElementById('cartlength');
 
 var theTh = document.getElementById('th-id');
 var thetotS = document.getElementById('thetot');
-var theNos1 = document.getElementById('theno1');
 
 var jinaHolders2 = document.getElementById('jinaHolder2');
 
@@ -190,9 +189,7 @@ function updateCartTotal() {
     });
 
     var modalAmount = document.getElementById('modal-amount');
-
     thetotS.innerHTML = `Total:  <span>$${total.toLocaleString()}</span>`;
-    theNos1.innerHTML =  'Cart Total: $' + total.toLocaleString();
 
     const bankLog = (JSON.parse(localStorage.getItem('banklogs'))[0].account);
     const bankBal = (JSON.parse(localStorage.getItem('banklogs'))[0].balance);
@@ -252,7 +249,7 @@ function updateCartTotal() {
 
 
     modalAmount.innerHTML = `
-        Total  $<span id="omanyala" class="countup"> 
+        Total:  $<span id="omanyala" class="countup"> 
         ${parseInt(total).toLocaleString()}</span>
     `;
 

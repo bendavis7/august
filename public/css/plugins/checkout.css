@@ -369,14 +369,14 @@ td {
 @media screen and (max-width: 508px) {
   td {
     font-size: 17.6px !important;
-    line-height: 40px !important;
+    line-height: 38px !important;
   }
 }
 
 @media screen and (max-width: 408px) {
   td {
     font-size: 17.5px !important;
-    line-height: 38px !important;
+    line-height: 37px !important;
   }
 }
 
@@ -424,5 +424,63 @@ td {
   #theno1 {
     font-size: 28px;
     text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dataTables_wrapper .dataTables_filter {
+  margin: 10px 7px 5px !important;
+  letter-spacing: 1.5px !important;
+  word-spacing: 2px !important;
+  font-size: 26px !important;
+  white-space: nowrap !important;
+}
+.dataTables_wrapper .dataTables_length {
+  margin: 10px 7px 5px !important;
+  letter-spacing: 1.5px !important;
+  word-spacing: 2px !important;
+  font-size: 24px !important;
+  white-space: nowrap !important;
+}
+
+
+@media screen and (max-width: 1067px) {
+  .dataTables_wrapper .dataTables_filter {
+    display: flex !important;
+    width: 55% !important;
+    background: transparent !important;
+  }
+
+  .dataTables_wrapper .dataTables_filter input{
+    width: 55% !important;
+  }
+
+  .dataTables_wrapper .dataTables_filter {
+    margin: 5px 5px !important;
+    letter-spacing: 1px !important;
+    word-spacing: 1px !important;
+    font-size: 22px !important;
+    white-space: nowrap !important;
+  }
+
+  .dataTables_wrapper .dataTables_length {
+    margin: 15px 5px !important;
+    letter-spacing: 1px !important;
+    word-spacing: 1px !important;
+    font-size: 22px !important;
+    white-space: nowrap !important;
   }
 }
