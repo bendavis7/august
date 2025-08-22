@@ -65,7 +65,7 @@
       navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
       responsive: {
         0: { items: 1.2, margin: -10, dotsEach: 3 },
-        768: { items: 2.4, margin: -10, dotsEach: 3 },
+        768: { items: 2, margin: -10, dotsEach: 3 },
         992: { items: 2, margin: -10, dotsEach: 3 },
       }
     });
@@ -79,7 +79,7 @@
       navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
       responsive: {
         0: { items: 1.2, margin: -10, dotsEach: 6 },
-        768: { items: 2.4, margin: -10, dotsEach: 6 },
+        768: { items: 2, margin: -10, dotsEach: 6 },
         992: { items: 2, margin: -10, dotsEach: 6 },
       }
     });
@@ -93,7 +93,7 @@
       navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
       responsive: {
         0: { items: 1.2, margin: -10, dotsEach: 4 },
-        768: { items: 2.4, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
         992: { items: 2, margin: -10, dotsEach: 4 },
       }
     });
@@ -107,7 +107,7 @@
       navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
       responsive: {
         0: { items: 1.2, margin: -10, dotsEach: 4 },
-        768: { items: 2.4, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
         992: { items: 2, margin: -10, dotsEach: 4 },
       }
     });
@@ -121,7 +121,7 @@
       navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
       responsive: {
         0: { items: 1.2, margin: -10, dotsEach: 4 },
-        768: { items: 2.4, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
         992: { items: 2, margin: -10, dotsEach: 4 },
       }
     });
@@ -135,7 +135,7 @@
       navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
       responsive: {
         0: { items: 1.2, margin: -10, dotsEach: 2 },
-        768: { items: 2.4, margin: -10, dotsEach: 2 },
+        768: { items: 2, margin: -10, dotsEach: 2 },
         992: { items: 2, margin: -10, dotsEach: 2 },
       }
     });
@@ -150,7 +150,7 @@
       navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
       responsive: {
         0: { items: 1.2, margin: -10, dotsEach: 4 },
-        768: { items: 2.4, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
         992: { items: 2, margin: -10, dotsEach: 4 },
       }
     });
@@ -164,7 +164,7 @@
       navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
       responsive: {
         0: { items: 1.2, margin: -10, dotsEach: 4 },
-        768: { items: 2.4, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
         992: { items: 2, margin: -10, dotsEach: 4 },
       }
     });
@@ -178,7 +178,7 @@
       navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
       responsive: {
         0: { items: 1.2, margin: -10, dotsEach: 4 },
-        768: { items: 2.4, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
         992: { items: 2, margin: -10, dotsEach: 4 },
       }
     });
@@ -192,7 +192,7 @@
       navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
       responsive: {
         0: { items: 1.2, margin: -10, dotsEach: 4 },
-        768: { items: 2.4, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
         992: { items: 2, margin: -10, dotsEach: 4 },
       }
     });

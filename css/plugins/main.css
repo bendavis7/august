@@ -803,12 +803,17 @@ select {
   text-align: center;
   border-radius: 0;
   margin-bottom: 10px;
-  box-shadow: 0 0 0 1px rgb(255, 255, 255, 0.1);
   padding: 0;
   transition-duration: 0.3s;
   position: relative;
   overflow: hidden;
+  border: 2px solid rgb(255, 255, 255, 0.15) !important;
 }
+.pricing-list.highlight {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) !important;
+  padding: 0;
+}
+
 .pricing-list:hover {
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -817,9 +822,7 @@ select {
   z-index: 10000;
   transform: scale(1.02) !important;
 }
-.pricing-list.highlight {
-  padding: 0;
-}
+
 .pricing-list h2.text-white,
 .pricing-list h2 {
   font-weight: 700;
@@ -1729,6 +1732,9 @@ td {
   .port a img {
     height: 210px;
   }
+  .port h4 a {
+    font-size: 27px;
+  }
 }
 @media screen and (max-width: 769px) {
   .port a img {
@@ -1787,10 +1793,19 @@ td {
     padding: 0;
   }
 }
+
+@media screen and (max-width: 1350px) {
+  .nav-larger {
+    display: none;
+  }
+}
+
+.navbar-nav > li.nav-larger,
 .navbar-nav > li.nav-large {
   border-radius: 50% !important;
   margin: 7px 9px !important;
 }  
+.navbar-nav > li.nav-larger a,
 .navbar-nav li.nav-large a {
   width: 64px !important;
   height: 64px !important;
@@ -1810,6 +1825,12 @@ td {
 }
 .nav-hunt {
   background: url(../../img/carousel/huntington.jpg) no-repeat center center/cover;
+}
+.nav-mt {
+  background: url(../../img/carousel/mt.png) no-repeat center center/cover;
+}
+.nav-pnc {
+  background: url(../../img/carousel/pnc.png) no-repeat center center/cover;
 }
 .nav-fed {
   background: url(../../img/carousel/navyfederal.png) no-repeat center center/cover;
@@ -2130,13 +2151,13 @@ ul.countdown li p {
 }
 .vpn-section .butn#vpn1,
 .vpn-section .butn#vpn {
-  margin: 50px auto 70px !important;
+  margin: 60px auto 80px !important;
   cursor: pointer;
   border: 2px solid rgb(18, 29, 51, 0.7) !important;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7) !important;
 
-  padding: 18px 15px !important;
-  font-size: 31px !important;
+  padding: 18px 16px !important;
+  font-size: 32px !important;
   word-spacing: 1.2px !important;
   letter-spacing: 1.5px !important;
 }
@@ -2161,10 +2182,28 @@ ul.countdown li p {
   margin-top: -12px !important;
 }
 
+@media screen and (max-width: 867px) and (min-width: 767px) {
+  .vpn-section .butn#vpn1,
+  .vpn-section .butn#vpn {
+    margin: 100px auto !important;
+
+    padding: 22px 18px !important;
+    font-size: 35px !important;
+    word-spacing: 1.2px !important;
+    letter-spacing: 1.5px !important;
+
+  }
+}
+
 @media screen and (max-width: 767px) {
   .vpn-section .butn#vpn1,
   .vpn-section .butn#vpn {
     margin: 70px auto 140px !important;
+
+    padding: 18px 15px !important;
+    font-size: 31px !important;
+    word-spacing: 1.2px !important;
+    letter-spacing: 1.5px !important;
 
   }
 }

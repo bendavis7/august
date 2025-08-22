@@ -203,10 +203,10 @@ let btc = 50;
 
 if (document.getElementById('boa01')) {
     (boa1.innerHTML = "$4,207"),
-    (boa2.innerHTML = "$4,768"),
+    (boa2.innerHTML = "$4,865"),
     (boa3.innerHTML = "$5,407"),
-    (boa4.innerHTML = "$6,530"),
-    (boa5.innerHTML = "$6,729"),
+    (boa4.innerHTML = "$6,479"),
+    (boa5.innerHTML = "$6,829"),
     (boa6.innerHTML = "$7,325"),
     (boa7.innerHTML = "$8,147"),
     (boa8.innerHTML = "$8,504"),

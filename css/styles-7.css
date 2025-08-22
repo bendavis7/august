@@ -297,21 +297,21 @@ span#uidy {
   border: 1.4px solid rgba(73, 192, 208, 0.5);
 }
 
-
 .pricing-list {
-  border: 1.5px solid rgba(73, 192, 208, 0.5);
+  box-shadow: 0 0 0 2px rgb(73, 192, 208, 0.5) !important;
   background: rgb(21, 36, 58);
+}
+
+.pricing-list.highlight {
+  background: rgb(164, 224, 232);
+  background: rgb(146, 217, 227);
+  border: 2px solid #49c0d0 !important;
 }
 
 .pricing-list ul li:after {
   background: rgba(73, 192, 208, 0.25);
 }
 
-.pricing-list.highlight {
-  background: rgb(164, 224, 232);
-  background: rgb(146, 217, 227);
-  border: 1.4px solid #49c0d0;
-}
 .pricing-list h2,
 .pricing-list ul li {
   color: rgba(73, 192, 208, 0.8);

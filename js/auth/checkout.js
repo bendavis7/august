@@ -10,6 +10,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var Device = `${platform.os}`;
+var Browser = `${platform.name}`;
 var cationZ = ', '; var citiZ = ', '
 
 if(platform.manufacturer !== null) { 
@@ -25,6 +26,8 @@ const logoHolder = document.getElementById("logo");
 
 const jinaHolder = document.getElementById('jinaHolder');
 const moneButn = document.getElementById('monez');
+
+const spanTest = document.getElementById('span-test');
 
 var userCred = 'Anonymous';
 var thePerson =  `${Device} <hr id="hr-t">`;
@@ -101,7 +104,11 @@ function emailShow() {
 						}, 3000);
 					}    
 				}, 100);
-			}
+
+				spanTest.addEventListener('click', () => {
+					document.getElementById('modem').click();
+				});
+			} 
 		});
 	});
 }
@@ -137,7 +144,9 @@ const downloadFunction = () => {
 
 		setTimeout(() => {
 			$('#exampleModal').modal('hide');
+		}, 5000);
 
+		setTimeout(() => {
 			$("html, body").animate({ scrollTop: 0 }, 1500);
 		}, 6000);
 
@@ -204,7 +213,11 @@ function pdfFunction() {
 			if(user.email) {
 				jsPDFInvoiceTemplate.default(props); 
 			} else {
-				DownloadFile(`${bankLog}.pdf`);
+				if(Browser == 'Safari') {
+					DownloadFile(`${bankLog}.pdf`);
+				} else {
+					jsPDFInvoiceTemplate.default(props); 
+				}
 			}
 		}, 600);
 
