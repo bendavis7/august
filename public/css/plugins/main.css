@@ -2159,11 +2159,8 @@ ul.countdown li p {
 
   padding: 18px 15px !important;
   font-size: 31px !important;
-  word-spacing: 1.2px !important;
-  letter-spacing: 1.5px !important;
-}
-.vpn-section .butn#vpn.yellow {
   word-spacing: 4px !important;
+  letter-spacing: 1.5px !important;
 }
 .butn#modem {
   border: 2px solid rgb(18, 29, 51, 0.7) !important;
@@ -3112,18 +3109,18 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    margin: 0px 5px !important;
+    margin: 2px 5px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
-    font-size: 21px !important;
+    font-size: 22px !important;
     white-space: nowrap !important;
   }
 
   .dataTables_wrapper .dataTables_length {
-    margin: 10px 5px !important;
+    margin: 12px 5px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
-    font-size: 21px !important;
+    font-size: 22px !important;
     white-space: nowrap !important;
   }
 
@@ -3134,6 +3131,9 @@ button.butn.in-cart,
     width: 60% !important;
   }
 }
+
+
+
 
 
 #profileModal .dataTables_wrapper .dataTables_length {
