@@ -144,7 +144,9 @@ const downloadFunction = () => {
 
 		setTimeout(() => {
 			$('#exampleModal').modal('hide');
+		}, 5000);
 
+		setTimeout(() => {
 			$("html, body").animate({ scrollTop: 0 }, 1500);
 		}, 6000);
 

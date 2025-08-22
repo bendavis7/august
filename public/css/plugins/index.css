@@ -157,34 +157,34 @@ body {
 }
 @media screen and (max-width: 821px) {
   .port {
-    margin: 35px 15px !important;
+    margin: 15px 15px !important;
   }
   .port a img {
-    height: 250px;
+    height: 200px;
   }
   .port h4 a.butn {
-    font-size: 39px;
-    padding: 20px 0 !important;
+    font-size: 33px;
+    padding: 14px 0 !important;
   }
   .port h4 a.butn.boa {
-    font-size: 37px;
-    padding: 20px 0 !important;
+    font-size: 31px;
+    padding: 14px 0 !important;
   }
 }
 @media screen and (max-width: 769px) {
   .port {
-    margin: 20px 15px !important;
+    margin: 15px 15px !important;
   }
   .port a img {
-    height: 230px;
+    height: 190px;
   }
   .port h4 a.butn {
-    font-size: 35px;
-    padding: 14px 0 !important;
+    font-size: 31px;
+    padding: 12px 0 !important;
   }
   .port h4 a.butn.boa {
-    font-size: 33px;
-    padding: 14px 0 !important;
+    font-size: 29px;
+    padding: 12px 0 !important;
   }
 }
 @media screen and (max-width: 506px) {
@@ -353,9 +353,9 @@ blink {
 }
 @media (min-width: 767px) {
   .col-md-65 {
-    -ms-flex: 0 0 40%;
-    flex: 0 0 40%;
-    max-width: 40%;
+    -ms-flex: 0 0 37%;
+    flex: 0 0 37%;
+    max-width: 37%;
     margin: 3% auto !important;
   }
 }

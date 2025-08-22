@@ -1732,6 +1732,9 @@ td {
   .port a img {
     height: 210px;
   }
+  .port h4 a {
+    font-size: 27px;
+  }
 }
 @media screen and (max-width: 769px) {
   .port a img {
@@ -1791,7 +1794,7 @@ td {
   }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1350px) {
   .nav-larger {
     display: none;
   }
@@ -2148,13 +2151,13 @@ ul.countdown li p {
 }
 .vpn-section .butn#vpn1,
 .vpn-section .butn#vpn {
-  margin: 50px auto 70px !important;
+  margin: 60px auto 80px !important;
   cursor: pointer;
   border: 2px solid rgb(18, 29, 51, 0.7) !important;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7) !important;
 
-  padding: 18px 15px !important;
-  font-size: 31px !important;
+  padding: 18px 16px !important;
+  font-size: 32px !important;
   word-spacing: 1.2px !important;
   letter-spacing: 1.5px !important;
 }
@@ -2179,10 +2182,28 @@ ul.countdown li p {
   margin-top: -12px !important;
 }
 
+@media screen and (max-width: 867px) and (min-width: 767px) {
+  .vpn-section .butn#vpn1,
+  .vpn-section .butn#vpn {
+    margin: 100px auto !important;
+
+    padding: 22px 18px !important;
+    font-size: 35px !important;
+    word-spacing: 1.2px !important;
+    letter-spacing: 1.5px !important;
+
+  }
+}
+
 @media screen and (max-width: 767px) {
   .vpn-section .butn#vpn1,
   .vpn-section .butn#vpn {
     margin: 70px auto 140px !important;
+
+    padding: 18px 15px !important;
+    font-size: 31px !important;
+    word-spacing: 1.2px !important;
+    letter-spacing: 1.5px !important;
 
   }
 }
