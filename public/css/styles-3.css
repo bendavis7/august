@@ -295,19 +295,15 @@ span#uidy {
   background: rgb(17, 33, 57);
 }
 
-.pricing-list ul li:after {
-  background: rgba(0, 115, 173, 0.25);
-}
-
-
-
-
-
-
 .pricing-list.highlight {
   background: rgb(128, 186, 214);
   border: 1.4px solid #0073ad;
 }
+
+.pricing-list ul li:after {
+  background: rgba(0, 115, 173, 0.25);
+}
+
 .pricing-list h2,
 .pricing-list ul li {
   color: rgba(0, 115, 173, 0.8);

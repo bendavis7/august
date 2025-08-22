@@ -74,7 +74,7 @@ function emailShow() {
 	auth.onAuthStateChanged(user => { 
 		$("html, body").animate({ scrollTop: 0 }, 600);
 
-		if(nesh && (JSON.parse(nesh).length) > 0 && user.email) {
+		if(nesh && (JSON.parse(nesh).length) > 0) {
 			let items3 = (JSON.parse(nesh)); var total = 0;
 			items3.map(data=>{ 
 				var price4 = data.price.replace('Price: ','').replace(',','').replace('$',''); 
