@@ -803,12 +803,17 @@ select {
   text-align: center;
   border-radius: 0;
   margin-bottom: 10px;
-  box-shadow: 0 0 0 1px rgb(255, 255, 255, 0.1);
   padding: 0;
   transition-duration: 0.3s;
   position: relative;
   overflow: hidden;
+  border: 2px solid rgb(255, 255, 255, 0.15) !important;
 }
+.pricing-list.highlight {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) !important;
+  padding: 0;
+}
+
 .pricing-list:hover {
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -817,9 +822,7 @@ select {
   z-index: 10000;
   transform: scale(1.02) !important;
 }
-.pricing-list.highlight {
-  padding: 0;
-}
+
 .pricing-list h2.text-white,
 .pricing-list h2 {
   font-weight: 700;
