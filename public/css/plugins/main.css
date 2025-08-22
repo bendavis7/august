@@ -1040,8 +1040,8 @@ td {
   border-bottom: none;
 }
 #modal-amount {
-  font-size: 35px !important;
-  margin: 7px 5px !important;
+  font-size: 34px !important;
+  margin: 10px 5px !important;
   letter-spacing: 1px !important;
   word-spacing: 3px !important;
   font-weight: 700;
@@ -1050,11 +1050,11 @@ td {
   color: white !important;
 }
 #bitcoin-logo {
-  margin: 5px 5px;
+  margin: 10px 5px;
 }
 #bitcoin-logo img {
-  width: 60px !important;
-  height: 60px !important;
+  width: 55px !important;
+  height: 55px !important;
   border-radius: 50% !important;
 }
 
@@ -1940,7 +1940,7 @@ td {
   border-radius: 50% !important;
 }
 #logo.logo-90 {
-  border-radius: 5px !important;
+  border-radius: 6px !important;
 }
 
 
@@ -2685,10 +2685,10 @@ button.toast-close-button {
   background: linear-gradient(to bottom, #fff 0%, #d4edda 50%);
 }
 .alert {
-  line-height: 35px !important;
-  font-size: 17.6px !important;
+  line-height: 37px !important;
+  font-size: 17.5px !important;
 
-  margin: 4px 2px !important;
+  margin: 5px 2px !important;
 
   border: 1.4px solid rgba(59, 151, 169, 0.4) !important;
   box-shadow: 0 0 0 1.4px rgb(134, 213, 224, 0.5) !important;

@@ -17,11 +17,11 @@
 }
 
 #invoice-div {
-  margin-top: 14vh;
+  margin-top: 13.5vh;
   z-index: 1 !important;
 }
 #logins-div {
-  margin-top: 14vh;
+  margin-top: 13.5vh;
   z-index: 1 !important;
 }
 @media screen and (min-width: 1350px) {
@@ -48,7 +48,7 @@
   }
 }
 #invoice-div p {
-  margin: 7px auto !important;
+  margin: 7px auto 10px !important;
   font-size: 24px !important;
   line-height: 60px !important;
 }
@@ -105,20 +105,28 @@
 @media (min-width: 1072px) {
   #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex: 0 0 30.5%;
-    flex: 0 0 30.5%;
-    max-width: 30.5%;
+    -ms-flex: 0 0 31.5%;
+    flex: 0 0 31.5%;
+    max-width: 31.5%;
   }
 }
 @media (min-width: 1270px) {
   #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex: 0 0 30%;
-    flex: 0 0 30%;
-    max-width: 30%;
+    -ms-flex: 0 0 30.5%;
+    flex: 0 0 30.5%;
+    max-width: 30.5%;
   }
 }
 @media (min-width: 1350px) {
+  #logins-div.col-12,
+  #invoice-div.col-12 {
+    -ms-flex: 0 0 29%;
+    flex: 0 0 29%;
+    max-width: 29%;
+  }
+}
+@media (min-width: 1400px) {
   #logins-div.col-12,
   #invoice-div.col-12 {
     -ms-flex: 0 0 28%;
@@ -126,28 +134,20 @@
     max-width: 28%;
   }
 }
-@media (min-width: 1400px) {
-  #logins-div.col-12,
-  #invoice-div.col-12 {
-    -ms-flex: 0 0 27%;
-    flex: 0 0 27%;
-    max-width: 27%;
-  }
-}
 @media (max-width: 571px)  {
   #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex:0 0 94%;
-    flex:0 0 94%;
-    max-width: 94%;
+    -ms-flex:0 0 95%;
+    flex:0 0 95%;
+    max-width: 95%;
   }  
 }
 @media (max-width: 400px)  {
   #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex:0 0 97%;
-    flex:0 0 97%;
-    max-width: 97%;
+    -ms-flex:0 0 98%;
+    flex:0 0 98%;
+    max-width: 98%;
   }  
 }
 
@@ -167,8 +167,9 @@
 }
 
 #checkout {
-  padding: 10px 11px !important;
-  padding-right: 13px !important;
+  padding: 10px !important;
+  padding-right: 12px !important;
+  letter-spacing: 1.3px !important;
 }
 
 
@@ -217,43 +218,28 @@
 
 
 #next-up img {
-  width: 47px !important;
-  height: 47px !important;
+  width: 50px !important;
+  height: 50px !important;
   margin-top: -100px !important;
   margin-left: -20px !important;
-  margin-right: 15px !important;
+  margin-right: 20px !important;
   border-radius: 50% !important;
 }
 
 #next-up img.check-out {
   border-radius: 0% !important;
-  width: 50px !important;
-  height: 50px !important;
 }
 #next-up img.invo-ice {
-  width: 50px !important;
-  height: 50px !important;
   border: 1.4px solid rgba(73, 192, 208, 0.7);
 }
 
 @media screen and (max-width: 767px) {
   #next-up img {
     margin-top: -125px !important;
-    width: 54px !important;
-    height: 54px !important;
-    margin-right: 18px !important;
+    width: 55px !important;
+    height: 55px !important;
+    margin-right: 20px !important;
     margin-left: -10px !important;
-  }
-
-  #next-up img.check-out {
-    width: 55px !important;
-    height: 55px !important;
-  }
-
-  #next-up img.invo-ice {
-    width: 55px !important;
-    height: 55px !important;
-    border: 1.4px solid rgba(73, 192, 208, 0.7);
   }
 
   #checkout,
@@ -264,29 +250,18 @@
     font-size: 24px !important;
   }
   #checkout {
-    padding: 12px 14px !important;
-    padding-right: 15px !important;
+    padding: 12px !important;
+    padding-right: 14px !important;
   }
 }
 
 @media screen and (max-width: 407px) {
   #next-up img {
     margin-top: -120px !important;
-    width: 52px !important;
-    height: 52px !important;
-    margin-right: 15px !important;
+    width: 53px !important;
+    height: 53px !important;
+    margin-right: 18px !important;
     margin-left: -10px !important;
-  }
-
-  #next-up img.check-out {
-    width: 53px !important;
-    height: 53px !important;
-  }
-
-  #next-up img.invo-ice {
-    width: 53px !important;
-    height: 53px !important;
-    border: 1.4px solid rgba(73, 192, 208, 0.7);
   }
 
   #checkout,
@@ -297,7 +272,7 @@
     font-size: 22px !important;
   }
   #checkout {
-    padding: 11px 13px !important;
-    padding-right: 14px !important;
+    padding: 11px !important;
+    padding-right: 13px !important;
   }
 }
