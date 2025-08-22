@@ -2149,6 +2149,7 @@ ul.countdown li p {
   text-align: center !important;
   display: flex !important;
 }
+
 .vpn-section .butn#vpn1,
 .vpn-section .butn#vpn {
   margin: 60px auto 80px !important;
@@ -2156,10 +2157,13 @@ ul.countdown li p {
   border: 2px solid rgb(18, 29, 51, 0.7) !important;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7) !important;
 
-  padding: 18px 16px !important;
-  font-size: 32px !important;
+  padding: 18px 15px !important;
+  font-size: 31px !important;
   word-spacing: 1.2px !important;
   letter-spacing: 1.5px !important;
+}
+.vpn-section .butn#vpn.yellow {
+  word-spacing: 4px !important;
 }
 .butn#modem {
   border: 2px solid rgb(18, 29, 51, 0.7) !important;
