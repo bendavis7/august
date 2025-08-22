@@ -3080,7 +3080,6 @@ button.butn.in-cart,
 }
 
 
-.dataTables_wrapper .dataTables_length,
 .dataTables_wrapper .dataTables_filter {
   margin: 10px 7px 5px !important;
   letter-spacing: 1.5px !important;
@@ -3088,35 +3087,54 @@ button.butn.in-cart,
   font-size: 26px !important;
   white-space: nowrap !important;
 }
+.dataTables_wrapper .dataTables_length {
+  margin: 10px 7px 5px !important;
+  letter-spacing: 1.5px !important;
+  word-spacing: 2px !important;
+  font-size: 24px !important;
+  white-space: nowrap !important;
+}
 
 
 @media screen and (max-width: 1067px) {
   .dataTables_wrapper .dataTables_filter {
     display: flex !important;
-    width: 75% !important;
+    width: 55% !important;
     background: transparent !important;
   }
 
   .dataTables_wrapper .dataTables_filter input{
-    width: 60% !important;
+    width: 55% !important;
   }
 
-  .dataTables_wrapper .dataTables_length,
   .dataTables_wrapper .dataTables_filter {
     margin: 0px 5px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
-    font-size: 22px !important;
+    font-size: 21px !important;
     white-space: nowrap !important;
+  }
+
+  .dataTables_wrapper .dataTables_length {
+    margin: 10px 5px !important;
+    letter-spacing: 1px !important;
+    word-spacing: 1px !important;
+    font-size: 21px !important;
+    white-space: nowrap !important;
+  }
+
+  #profileModal .dataTables_wrapper .dataTables_filter {
+    width: 70% !important;
+  }
+  #profileModal .dataTables_wrapper .dataTables_filter input {
+    width: 60% !important;
   }
 }
 
-.dataTables_wrapper .dataTables_length {
+
+#profileModal .dataTables_wrapper .dataTables_length {
   display: none !important;
 }
-
-
-
 
 
 section .dataTables_wrapper .dataTables_paginate {
