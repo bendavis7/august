@@ -27,8 +27,6 @@ const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById('jinaHolder');
 const moneButn = document.getElementById('monez');
 
-const spanTest = document.getElementById('span-test');
-
 var userCred = 'Anonymous';
 var thePerson =  `${Device} <hr id="hr-t">`;
 
@@ -65,10 +63,13 @@ auth.onAuthStateChanged(user => {
 
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
-			if(doc.exists) {
+			if(!doc.exists) {
+				return docRef.set({ 
+					cartID: itemz, userCred: userCred, device: Device
+				});
+			} else {
 				return docRef.update({ 
-					cartID: itemz, userCred: userCred, 
-					location: cationZ, device: Device
+					cartID: itemz, userCred: userCred, device: Device
 				});
 			}
 		});
@@ -99,15 +100,11 @@ function emailShow() {
 						setTimeout(() => {
 							document.getElementById('modem').click();
 
-							$("html, body").animate({ scrollTop: 250 },  5000);
+							$("html, body").animate({ scrollTop: 250 },  4000);
 							$("html, body").animate({ scrollTop: 500 },  7000);
-						}, 3000);
+						}, 1000);
 					}    
 				}, 100);
-
-				spanTest.addEventListener('click', () => {
-					document.getElementById('modem').click();
-				});
 			} 
 		});
 	});

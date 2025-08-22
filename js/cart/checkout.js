@@ -8,12 +8,12 @@ var cartLen = document.getElementById('cartlength');
 
 var theTh = document.getElementById('th-id');
 var thetotS = document.getElementById('thetot');
-var theNos1 = document.getElementById('theno1');
 
 var jinaHolders2 = document.getElementById('jinaHolder2');
 
 const vpnButn = document.getElementById('vpn');
 const vpnButn1 = document.getElementById('vpn1');
+const spanTest = document.getElementById('span-test');
 
 const login = firebase.auth(); 
 
@@ -125,6 +125,7 @@ if(localStorage.getItem('banklogs')){
 
         vpnButn.addEventListener('click', ()=> { modems.click(); });
         vpnButn1.addEventListener('click', ()=> { modems.click(); });
+        spanTest.addEventListener('click', ()=> { modems.click(); });
     } else {
         cartLen.style.display = 'none'; 
         emptyCart();
@@ -176,7 +177,7 @@ for(j=0; j< jobs.length; j++) {
     var theJob = jobs[j];
     var thePrize = theJob.parentElement.children[1].children[2].innerText;
     
-    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
+    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 47).toFixed(0)).toLocaleString();
     theJob.innerHTML = '$'+ thePr;
 }
 
@@ -190,9 +191,7 @@ function updateCartTotal() {
     });
 
     var modalAmount = document.getElementById('modal-amount');
-
     thetotS.innerHTML = `Total:  <span>$${total.toLocaleString()}</span>`;
-    theNos1.innerHTML =  'Cart Total: $' + total.toLocaleString();
 
     const bankLog = (JSON.parse(localStorage.getItem('banklogs'))[0].account);
     const bankBal = (JSON.parse(localStorage.getItem('banklogs'))[0].balance);
@@ -252,7 +251,7 @@ function updateCartTotal() {
 
 
     modalAmount.innerHTML = `
-        Total  $<span id="omanyala" class="countup"> 
+        Total:  $<span id="omanyala" class="countup"> 
         ${parseInt(total).toLocaleString()}</span>
     `;
 

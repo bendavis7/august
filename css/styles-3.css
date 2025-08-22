@@ -280,7 +280,7 @@ span#uidy {
   color: rgb(16, 40, 66) !important;
   border: 2.2px solid rgba(5, 94, 143, 0.7);
 }
-
+#vpn.yellow,
 #showtoasts {
   background: linear-gradient(to bottom, #fff 0%, #80ba57 100%) !important;
 }

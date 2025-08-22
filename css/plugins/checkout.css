@@ -369,60 +369,14 @@ td {
 @media screen and (max-width: 508px) {
   td {
     font-size: 17.6px !important;
-    line-height: 40px !important;
+    line-height: 38px !important;
   }
 }
 
 @media screen and (max-width: 408px) {
   td {
     font-size: 17.5px !important;
-    line-height: 38px !important;
+    line-height: 37px !important;
   }
 }
 
-
-#table-email .modal-header {
-  padding: 7px !important;
-}
-
-
-
-#modal-one .dataTables_wrapper .dataTables_paginate {
-  display: none !important;
-}
-
-
-
-@media (max-width: 570px) {
-  #showtoasts {
-    font-size: 27px !important;
-    padding: 15px 14px !important;
-
-    letter-spacing: 1.8px !important;
-    float: right !important;
-    margin: 18px 24px !important;
-  }  
-}
-
-@media (max-width: 420px) {
-  #showtoasts {
-    font-size: 27px !important;
-    padding: 15px 14px !important;
-
-  }  
-}
-
-
-@media (max-width: 576px) {
-  #theno1 {
-    font-size: 30px;
-    text-align: center;
-    line-height: 50px !important;
-  }
-}
-@media (max-width: 374px) {
-  #theno1 {
-    font-size: 28px;
-    text-align: center;
-  }
-}

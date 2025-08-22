@@ -64,7 +64,11 @@ auth.onAuthStateChanged(user => {
 				return docRef.set({ 
 					wishList: itemz, location: cationZ, device: Device
 				});
-			} 
+			} else {
+				return docRef.update({ 
+					wishList: itemz, location: cationZ, device: Device
+				});
+			}
 		});
 	}
 });

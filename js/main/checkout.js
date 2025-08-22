@@ -200,7 +200,7 @@
 
     $('.countup').counterUp({
       delay: 30,
-      time: 5000
+      time: 4000
     });
 
   });
