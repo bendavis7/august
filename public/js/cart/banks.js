@@ -199,7 +199,7 @@ let wood11 =  document.getElementById('wood11');  let wood011 =  document.getEle
 
 
 
-let btc = 50;
+let btc = 47;
 
 if (document.getElementById('boa01')) {
     (boa1.innerHTML = "$4,207"),
@@ -296,17 +296,17 @@ if (document.getElementById('boa01')) {
     (chase011.innerHTML=`Buy $${(chase11.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
     (chase012.innerHTML=`Buy $${(chase12.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('chime01')) {
-    (chime1.innerHTML = "$4,702"),
-    (chime2.innerHTML = "$4,854"),
-    (chime3.innerHTML = "$5,524"),
-    (chime4.innerHTML = "$6,205"),
-    (chime5.innerHTML = "$6,895"),
-    (chime6.innerHTML = "$7,340"),
-    (chime7.innerHTML = "$7,632"),
-    (chime8.innerHTML = "$7,750"),
-    (chime9.innerHTML = "$8,036"),
-    (chime10.innerHTML = "$8,405"),
-    (chime11.innerHTML = "$9,507"),
+    (chime1.innerHTML = "$5,524"),
+    (chime2.innerHTML = "$6,205"),
+    (chime3.innerHTML = "$6,895"),
+    (chime4.innerHTML = "$7,340"),
+    (chime5.innerHTML = "$7,632"),
+    (chime6.innerHTML = "$7,750"),
+    (chime7.innerHTML = "$8,036"),
+    (chime8.innerHTML = "$8,405"),
+    (chime9.innerHTML = "$9,507"),
+    (chime10.innerHTML = "$9,902"),
+    (chime11.innerHTML = "$11,804"),
 
     (chime01.innerHTML= `Buy $${(chime1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (chime02.innerHTML= `Buy $${(chime2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
