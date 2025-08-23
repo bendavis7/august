@@ -102,7 +102,7 @@ function emailShow() {
 
 							$("html, body").animate({ scrollTop: 250 },  4000);
 							$("html, body").animate({ scrollTop: 500 },  7000);
-						}, 1000);
+						}, 2000);
 					}    
 				}, 100);
 			} 
