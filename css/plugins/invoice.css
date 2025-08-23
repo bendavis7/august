@@ -17,11 +17,11 @@
 }
 
 #invoice-div {
-  margin-top: 13.5vh;
+  margin-top: 14vh;
   z-index: 1 !important;
 }
 #logins-div {
-  margin-top: 13.5vh;
+  margin-top: 14vh;
   z-index: 1 !important;
 }
 @media screen and (min-width: 1350px) {
@@ -48,7 +48,7 @@
   }
 }
 #invoice-div p {
-  margin: 7px auto 10px !important;
+  margin: 7px auto !important;
   font-size: 24px !important;
   line-height: 60px !important;
 }
@@ -105,25 +105,25 @@
 @media (min-width: 1072px) {
   #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex: 0 0 31.5%;
-    flex: 0 0 31.5%;
-    max-width: 31.5%;
+    -ms-flex: 0 0 32%;
+    flex: 0 0 32%;
+    max-width: 32%;
   }
 }
 @media (min-width: 1270px) {
   #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex: 0 0 30.5%;
-    flex: 0 0 30.5%;
-    max-width: 30.5%;
+    -ms-flex: 0 0 31%;
+    flex: 0 0 31%;
+    max-width: 31%;
   }
 }
-@media (min-width: 1350px) {
+@media (min-width: 1320px) {
   #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex: 0 0 29%;
-    flex: 0 0 29%;
-    max-width: 29%;
+    -ms-flex: 0 0 29.5%;
+    flex: 0 0 29.5%;
+    max-width: 29.5%;
   }
 }
 @media (min-width: 1400px) {
@@ -169,7 +169,6 @@
 #checkout {
   padding: 10px !important;
   padding-right: 12px !important;
-  letter-spacing: 1.3px !important;
 }
 
 
@@ -220,7 +219,7 @@
 #next-up img {
   width: 50px !important;
   height: 50px !important;
-  margin-top: -100px !important;
+  margin-top: -105px !important;
   margin-left: -20px !important;
   margin-right: 20px !important;
   border-radius: 50% !important;
@@ -251,7 +250,7 @@
   }
   #checkout {
     padding: 12px !important;
-    padding-right: 14px !important;
+    padding-right: 15px !important;
   }
 }
 
@@ -273,6 +272,6 @@
   }
   #checkout {
     padding: 11px !important;
-    padding-right: 13px !important;
+    padding-right: 14px !important;
   }
 }

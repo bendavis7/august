@@ -950,9 +950,10 @@ select {
   background: rgba(0, 0, 0, 0.1);
   margin: 3px auto 0;
 }
+
 td {
   font-size: 17.4px !important;
-  line-height: 35px !important;
+  line-height: 36px !important;
   color: #121d33;
   font-weight: 500 !important;
 }
@@ -960,16 +961,17 @@ td {
 @media screen and (max-width: 508px) {
   td {
     font-size: 17.6px !important;
-    line-height: 34px !important;
+    line-height: 38px !important;
   }
 }
 
 @media screen and (max-width: 408px) {
   td {
-    font-size: 17.3px !important;
-    line-height: 33px !important;
+    font-size: 17.4px !important;
+    line-height: 36px !important;
   }
 }
+
 
 
 #escoz-3 {
@@ -1699,14 +1701,14 @@ td {
 }
 .port h4 a {
   color: rgba(255, 255, 255, 0.7) !important;
-  font-size: 22.5px;
+  font-size: 22px;
   line-height: 37px !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
 }
 .port a img {
   width: 100% !important;
-  height: 180px;
+  height: 177px;
   box-shadow: 0 0 0 0.7px rgba(255, 255, 255, 0.7) !important;
 }
 .modal-img {
@@ -1863,13 +1865,13 @@ td {
   letter-spacing: 1px !important;
   padding: 14px 10px !important;
   border-radius: 1.5px !important;
-  margin: -10px 10px 15px !important;
+  margin: -5px 10px 15px !important;
   border-width: 2px !important;
-  opacity: 0.85 !important;
+  opacity: 0.9 !important;
 }
 .filtering .butn.white,
 .filtering .butn {
-  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 0 0 1.7px rgba(255, 255, 255, 0.4) !important;
 }
 
 
@@ -3100,7 +3102,7 @@ button.butn.in-cart,
 @media screen and (max-width: 1067px) {
   .dataTables_wrapper .dataTables_filter {
     display: flex !important;
-    width: 55% !important;
+    width: 60% !important;
     background: transparent !important;
   }
 
@@ -3109,7 +3111,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    margin: 2px 5px !important;
+    margin: 0px 5px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 22px !important;
@@ -3117,7 +3119,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_length {
-    margin: 12px 5px !important;
+    margin: 10px 5px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 22px !important;

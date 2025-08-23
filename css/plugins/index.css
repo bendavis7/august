@@ -130,10 +130,6 @@ body {
   font-size: 24px;
   letter-spacing: 1px !important;
 }
-.port a img {
-  width: 100% !important;
-  height: 180px;
-}
 @media screen and (min-width: 996px) {
   .port {
     border-radius: 0;
@@ -143,6 +139,10 @@ body {
   .port a img {
     height: 175px;
   }
+}
+.port a img {
+  width: 100% !important;
+  height: 170px;
 }
 @media screen and (max-width: 996px) {
   .port a img {
