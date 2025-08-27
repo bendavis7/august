@@ -2062,7 +2062,7 @@ td {
   position: absolute !important;
   background: rgba(18, 29, 51, 0.8) !important;
   inset: 7px !important;
-  opacity: 0.05 !important;
+  opacity: 0.1 !important;
   transition-duration: 0.7s !important;
   border: 1.4px solid rgba(18, 29, 51, 1) !important;
   text-align: center !important;

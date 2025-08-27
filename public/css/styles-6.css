@@ -246,6 +246,7 @@ blink {
 .btn-remove {
   border: 1.4px solid rgba(208, 173, 85, 0.7);
 }
+#modal-check,
 .modal-body {
   border: 1.4px solid rgba(208, 173, 85, 0.2);
 }
