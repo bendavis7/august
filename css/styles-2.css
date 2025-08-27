@@ -244,6 +244,7 @@ blink {
 .btn-remove {
   border: 1.4px solid rgba(3, 169, 245, 0.7);
 }
+#modal-check,
 .modal-body {
   border: 1.4px solid rgba(3, 169, 245, 0.2);
 }
@@ -369,7 +370,7 @@ span#uidy {
   background: rgb(17, 35, 60);
 }
 .filtering .butn.white {
-  background: linear-gradient(to bottom, #fff 0%, #03a9f5 100%); 
+  background: linear-gradient(to bottom, #fff 0%, #03a9f5 150%); 
   color: rgb(15, 61, 96);
   border: 1.4px solid #03a9f5;
 }

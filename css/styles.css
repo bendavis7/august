@@ -211,7 +211,7 @@ blink {
   background: rgb(23, 36, 52);
 }
 .filtering .butn.white {
-  background: linear-gradient(to bottom, #fff 0%, #86bc42 100%); 
+  background: linear-gradient(to bottom, #fff 0%, #86bc42 120%); 
   color: rgb(45, 66, 54);
   border: 1.4px solid #86bc42;
 }
@@ -272,6 +272,7 @@ blink {
 .btn-remove {
   border: 1.4px solid rgba(134, 188, 66, 0.7);
 }
+#modal-check,
 .modal-body {
   border: 1.4px solid rgba(134, 188, 66, 0.2);
 }

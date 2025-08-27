@@ -359,3 +359,53 @@ td.burro {
 
 
 
+
+td {
+  font-size: 17.4px !important;
+  line-height: 38px !important;
+  color: #121d33;
+  font-weight: 500 !important;
+}
+
+@media screen and (max-width: 508px) {
+  td {
+    font-size: 17.6px !important;
+    line-height: 40px !important;
+  }
+}
+
+@media screen and (max-width: 408px) {
+  td {
+    font-size: 17.4px !important;
+    line-height: 38px !important;
+  }
+}
+
+
+#theno1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: white;
+  word-spacing: 2px !important;
+  letter-spacing: 1.3px !important;
+  white-space: nowrap !important;
+  margin: 5px 0px !important;
+}
+@media (max-width: 576px) {
+  #theno1 {
+    font-size: 30px;
+    text-align: center;
+    margin: 4px 0 !important;
+  }
+}
+@media (max-width: 374px) {
+  #theno1 {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+#modal-check {
+  border-radius: 0 !important;
+}
