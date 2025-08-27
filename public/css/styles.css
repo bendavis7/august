@@ -211,7 +211,7 @@ blink {
   background: rgb(23, 36, 52);
 }
 .filtering .butn.white {
-  background: linear-gradient(to bottom, #fff 0%, #86bc42 100%); 
+  background: linear-gradient(to bottom, #fff 0%, #86bc42 120%); 
   color: rgb(45, 66, 54);
   border: 1.4px solid #86bc42;
 }

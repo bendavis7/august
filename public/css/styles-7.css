@@ -374,7 +374,7 @@ span#uidy {
   background: rgb(21, 36, 58);
 }
 .filtering .butn.white {
-  background: linear-gradient(to bottom, #fff 0%, #49c0d0 100%); 
+  background: linear-gradient(to bottom, #fff 0%, #49c0d0 120%); 
   color: rgb(31, 67, 87);
   border: 1.4px solid #49c0d0;
 }

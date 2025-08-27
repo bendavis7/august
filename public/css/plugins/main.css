@@ -1433,7 +1433,7 @@ td {
 @media (min-width: 1092px) {
   .attr-nav > ul > li.dropdown ul.dropdown-menu {
     left: -150%;
-    width: 240%;
+    width: 245%;
   }
   .attr-nav {
     margin-right: 0 !important;
@@ -1865,7 +1865,7 @@ td {
   letter-spacing: 1px !important;
   padding: 14px 10px !important;
   border-radius: 1.5px !important;
-  margin: -5px 10px 15px !important;
+  margin: 0px 10px 20px !important;
   border-width: 2px !important;
   opacity: 0.9 !important;
 }
@@ -3096,6 +3096,7 @@ button.butn.in-cart,
   word-spacing: 2px !important;
   font-size: 24px !important;
   white-space: nowrap !important;
+  opacity: 0.8 !important;
 }
 
 

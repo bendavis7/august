@@ -158,39 +158,32 @@ function updateCartTotal() {
     checkoutImg.setAttribute('src', bankImg);
     checkoutImg.classList.add('check-out');
 
-    if(window.innerWidth < 700) {
-        weldPar.innerHTML = `                
-            <span id="in-span">-</span> ${bankInfo1} <br>
-            <span id="in-span">-</span> ${bankInfo2} <br>
-            <span id="in-span">-</span> ${bankInfo3} <br>
-        `;
-    } else {
-        weldPar.innerHTML = `                
-            <span id="in-span">-</span> ${bankInfo1} <br>
-            <span id="in-span">-</span> ${bankInfo2} <br>
-            <hr class="nohr">
-            <span id="in-span">-</span> ${bankInfo3} <br>
-            <span id="in-span">-</span> ${bankInfo4} <br>
-        `;
-    }
+
+    weldPar.innerHTML = `                
+        <span id="in-span">-</span> ${bankInfo1} <br>
+        <span id="in-span">-</span> ${bankInfo2} <br>
+        <hr class="nohr">
+        <span id="in-span">-</span> ${bankInfo3} <br>
+        <span id="in-span">-</span> ${bankInfo4} <br>
+    `;
 
     
     theLogo.src = `${bankImg}`;
 
-    if(bankLog.includes('Chime') || bankLog.includes('PNC') || 
+    if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
        bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
         checkoutImg.classList.remove('check-out');
         checkoutImg.classList.add('invo-ice');
     } 
     
-    if(bankLog.includes('TD') || bankLog.includes('Woodforest') || bankLog.includes('M&T')) {
+    if(bankLog.includes('TD') || bankLog.includes('Woodforest')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-90');
     } 
 
     if(bankLog.includes('Truist')) {
         theLogo.setAttribute('src', 'img/carousel/truist.jpg');
-        theLogo.classList.add('logo-90'); 
+        theLogo.classList.add('logo-50'); 
     }
 
     if(bankLog.includes('America') || bankLog.includes('Barclays')) {

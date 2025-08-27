@@ -121,38 +121,39 @@ showToast.addEventListener('click', showThis);
 
 
 
-document.getElementById('balance1').innerHTML = '$7,540';
-document.getElementById('balance2').innerHTML = '$7,320';
-document.getElementById('balance3').innerHTML = '$7,405';
-document.getElementById('balance4').innerHTML = '$7,523';
-document.getElementById('balance5').innerHTML = '$7,702';
-document.getElementById('balance6').innerHTML = '$7,340';
-document.getElementById('balance7').innerHTML = '$7,087';
-document.getElementById('balance8').innerHTML = '$7,259';
-document.getElementById('balance9').innerHTML = '$7,820';
+document.getElementById('balance1').innerHTML = '$6,540';
+document.getElementById('balance2').innerHTML = '$6,320';
+document.getElementById('balance3').innerHTML = '$6,405';
+document.getElementById('balance4').innerHTML = '$6,523';
+document.getElementById('balance5').innerHTML = '$6,702';
+document.getElementById('balance6').innerHTML = '$6,340';
+document.getElementById('balance7').innerHTML = '$6,087';
+document.getElementById('balance8').innerHTML = '$6,259';
+document.getElementById('balance9').innerHTML = '$6,820';
 
-document.getElementById('balance10').innerHTML = '$7,805';
-document.getElementById('balance11').innerHTML = '$7,214';
-document.getElementById('balance12').innerHTML = '$7,390';
-document.getElementById('balance13').innerHTML = '$7,832';
-document.getElementById('balance14').innerHTML = '$7,439';
-document.getElementById('balance15').innerHTML = '$7,228';
-document.getElementById('balance16').innerHTML = '$7,910';
-document.getElementById('balance17').innerHTML = '$7,104';
-document.getElementById('balance18').innerHTML = '$7,724';
-document.getElementById('balance19').innerHTML = '$7,863';
-document.getElementById('balance20').innerHTML = '$7,270';
-document.getElementById('balance21').innerHTML = '$7,309';
-document.getElementById('balance22').innerHTML = '$7,183';
+document.getElementById('balance10').innerHTML = '$6,805';
+document.getElementById('balance11').innerHTML = '$6,214';
+document.getElementById('balance12').innerHTML = '$6,390';
+document.getElementById('balance13').innerHTML = '$6,832';
+document.getElementById('balance14').innerHTML = '$6,439';
+document.getElementById('balance15').innerHTML = '$6,228';
+document.getElementById('balance16').innerHTML = '$6,910';
+document.getElementById('balance17').innerHTML = '$6,104';
+document.getElementById('balance18').innerHTML = '$6,724';
+document.getElementById('balance19').innerHTML = '$6,863';
+document.getElementById('balance20').innerHTML = '$6,270';
+document.getElementById('balance21').innerHTML = '$6,309';
+document.getElementById('balance22').innerHTML = '$6,183';
 
 var jobs = document.getElementsByClassName('prized');
 for(j=0; j< jobs.length; j++) {
     var theJob = jobs[j];
     var thePrize = theJob.parentElement.children[1].children[2].innerText;
     
-    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
+    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 47).toFixed(0)).toLocaleString();
     theJob.innerHTML = '$'+ thePr;
 }
+
 
 
 
@@ -212,18 +213,18 @@ function updateCartTotal() {
     theLogo.src = `${bankImg}`;
     document.getElementById('jinaHolder2').innerHTML = `${bankLog} Account`;
 
-    if(bankLog.includes('Chime') || bankLog.includes('PNC') ||
+    if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
        bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
     } 
     
-    if(bankLog.includes('TD') || bankLog.includes('Woodforest') || bankLog.includes('M&T')) {
+    if(bankLog.includes('TD') || bankLog.includes('Woodforest')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-90');
     } 
 
     if(bankLog.includes('Truist')) {
         theLogo.setAttribute('src', 'img/carousel/truist.jpg');
-        theLogo.classList.add('logo-90'); 
+        theLogo.classList.add('logo-50'); 
     }
 
     if(bankLog.includes('America') || bankLog.includes('Barclays')) {
