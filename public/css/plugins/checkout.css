@@ -396,6 +396,7 @@ td {
   #theno1 {
     font-size: 30px;
     text-align: center;
+    margin: 3px 0 !important;
   }
 }
 @media (max-width: 374px) {

@@ -100,9 +100,9 @@ function emailShow() {
 						setTimeout(() => {
 							document.getElementById('modem').click();
 
-							$("html, body").animate({ scrollTop: 250 },  4000);
-							$("html, body").animate({ scrollTop: 500 },  7000);
-						}, 2000);
+							$("html, body").animate({ scrollTop: 250 },  6000);
+							$("html, body").animate({ scrollTop: 500 },  9000);
+						}, 3000);
 					}    
 				}, 100);
 			} 
@@ -144,7 +144,7 @@ const downloadFunction = () => {
 		}, 5000);
 
 		setTimeout(() => {
-			$("html, body").animate({ scrollTop: 0 }, 1500);
+			$("html, body").animate({ scrollTop: 0 }, 3000);
 		}, 6000);
 
 		setTimeout(() => { pdfFunction(); }, 7000);
