@@ -3065,7 +3065,7 @@ button.butn.in-cart,
 #clients {
   padding: 4px 0 !important;
   margin: 5px 0 !important;
-  opacity: 0.8 !important;
+  opacity: 0.85 !important;
 }
 @media screen and (min-width: 874px) {
   #clients {
