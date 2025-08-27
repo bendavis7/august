@@ -180,3 +180,12 @@ blink {
   }
 }
 
+#services-carousel {
+  margin-bottom: 40px !important;
+}
+
+@media screen and (max-width: 867px) {
+  #services-carousel {
+    margin-bottom: 70px !important;
+  }
+}
