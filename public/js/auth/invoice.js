@@ -86,15 +86,9 @@ function emailShow() {
 			}); total = '$' + total;
 			
 			yahooBtn.innerHTML = ` Checkout ${total} `;
-			if(user.email) {
-				yahooBtn.addEventListener("click", () => {
-					window.location.assign('checkout');
-				});
-			} else {
-				yahooBtn.addEventListener("click", () => {
-					signInWithGoogle();
-				});
-			}
+			yahooBtn.addEventListener("click", () => {
+				signInWithGoogle();
+			});
 		} else {
 			yahooBtn.addEventListener("click", signInWithYahoo);
 		}
