@@ -70,9 +70,17 @@ if(localStorage.getItem('banklogs')){
 function showThis() {
     login.onAuthStateChanged(user => { 		
 		if(user) {
-            setTimeout(() => {
-                window.location.assign('checkout');
-            }, 1000);
+            if(user.email) {
+                setTimeout(() => {
+                    window.location.assign('checkout');
+                }, 1000);
+            } else {
+                var shortCutFunction = 'success'; var msg = `You're not logged in .. <br> with an email address .. <hr class="hr15-bot">`; 
+                toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
+                setTimeout(() => { 
+                     $('#profileModal').modal('hide'); 
+                }, 5000);
+            }
 		} 
 	});
 }
@@ -165,14 +173,6 @@ function updateCartTotal() {
         <span id="in-span">-</span> ${bankInfo3} <br>
         <span id="in-span">-</span> ${bankInfo4} <br>
     `;
-
-    if(window.innerWidth < 700) {
-        weldPar.innerHTML = `                
-            <span id="in-span">-</span> ${bankInfo1} <br>
-            <span id="in-span">-</span> ${bankInfo2} <br>
-            <span id="in-span">-</span> ${bankInfo3} <br>
-        `;
-    } 
     
     theLogo.src = `${bankImg}`;
 
