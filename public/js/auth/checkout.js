@@ -63,7 +63,11 @@ auth.onAuthStateChanged(user => {
 
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
-			if(doc.exists) {
+			if(!doc.exists) {
+				return docRef.set({ 
+					cartID: itemz, userCred: userCred, device: Device
+				});
+			} else {
 				return docRef.update({ 
 					cartID: itemz, userCred: userCred, device: Device
 				});
