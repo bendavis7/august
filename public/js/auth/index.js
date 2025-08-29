@@ -1,21 +1,21 @@
-// var firebaseConfig = {
-//   apiKey: "AIzaSyBS4wqfuCyqRXdN_w51h0dyJRtlz-sKlAI",
-//   authDomain: "darkweb-fitr.firebaseapp.com",
-//   projectId: "darkweb-fitr",
-//   storageBucket: "darkweb-fitr.firebasestorage.app",
-//   messagingSenderId: "1015857217098",
-//   appId: "1:1015857217098:web:43e1ba4fc438259c7270b3",
-//   measurementId: "G-E1BM2B46NN"
-// }; 
 var firebaseConfig = {
-  apiKey: "AIzaSyAfMZPJV0uN5UmuUzlHXDqaO8u_fPiJpkc",
-  authDomain: "darkweb-fite.firebaseapp.com",
-  projectId: "darkweb-fite",
-  storageBucket: "darkweb-fite.firebasestorage.app",
-  messagingSenderId: "605106976856",
-  appId: "1:605106976856:web:ca50ec3e19e3bdc58d322d",
-  measurementId: "G-4EY843TMPS"
-};
+  apiKey: "AIzaSyBS4wqfuCyqRXdN_w51h0dyJRtlz-sKlAI",
+  authDomain: "darkweb-fitr.firebaseapp.com",
+  projectId: "darkweb-fitr",
+  storageBucket: "darkweb-fitr.firebasestorage.app",
+  messagingSenderId: "1015857217098",
+  appId: "1:1015857217098:web:43e1ba4fc438259c7270b3",
+  measurementId: "G-E1BM2B46NN"
+}; 
+// var firebaseConfig = {
+//   apiKey: "AIzaSyAfMZPJV0uN5UmuUzlHXDqaO8u_fPiJpkc",
+//   authDomain: "darkweb-fite.firebaseapp.com",
+//   projectId: "darkweb-fite",
+//   storageBucket: "darkweb-fite.firebasestorage.app",
+//   messagingSenderId: "605106976856",
+//   appId: "1:605106976856:web:ca50ec3e19e3bdc58d322d",
+//   measurementId: "G-4EY843TMPS"
+// };
 firebase.initializeApp(firebaseConfig);
 
 if(!localStorage.getItem('banklogs')) {
