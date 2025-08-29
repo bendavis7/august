@@ -63,11 +63,7 @@ auth.onAuthStateChanged(user => {
 
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
-			if(!doc.exists) {
-				return docRef.set({ 
-					cartID: itemz, userCred: userCred, device: Device
-				});
-			} else {
+			if(doc.exists) {
 				return docRef.update({ 
 					cartID: itemz, userCred: userCred, device: Device
 				});
@@ -141,7 +137,7 @@ const downloadFunction = () => {
 
 		setTimeout(() => {
 			$('#exampleModal').modal('hide');
-		}, 5000);
+		}, 4000);
 
 		setTimeout(() => {
 			$("html, body").animate({ scrollTop: 0 }, 3000);
