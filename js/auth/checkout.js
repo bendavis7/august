@@ -139,10 +139,6 @@ const downloadFunction = () => {
 			$('#exampleModal').modal('hide');
 		}, 4000);
 
-		setTimeout(() => {
-			$("html, body").animate({ scrollTop: 0 }, 3000);
-		}, 6000);
-
 		setTimeout(() => { pdfFunction(); }, 7000);
 	});
 }
