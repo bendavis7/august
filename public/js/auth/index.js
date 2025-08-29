@@ -1,21 +1,12 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyC3b0-UMQDDwRVfUFCcN4CCaVQ8Iu_Zrxk",
-  authDomain: "darkweb-fir.firebaseapp.com",
-  projectId: "darkweb-fir",
-  storageBucket: "darkweb-fir.firebasestorage.app",
-  messagingSenderId: "267677782837",
-  appId: "1:267677782837:web:45210243b3c4042f9f327c",
-  measurementId: "G-W1BFNV2S3R"
+  apiKey: "AIzaSyBS4wqfuCyqRXdN_w51h0dyJRtlz-sKlAI",
+  authDomain: "darkweb-fitr.firebaseapp.com",
+  projectId: "darkweb-fitr",
+  storageBucket: "darkweb-fitr.firebasestorage.app",
+  messagingSenderId: "1015857217098",
+  appId: "1:1015857217098:web:43e1ba4fc438259c7270b3",
+  measurementId: "G-E1BM2B46NN"
 }; 
-// var firebaseConfig = {
-//   apiKey: "AIzaSyBS4wqfuCyqRXdN_w51h0dyJRtlz-sKlAI",
-//   authDomain: "darkweb-fitr.firebaseapp.com",
-//   projectId: "darkweb-fitr",
-//   storageBucket: "darkweb-fitr.firebasestorage.app",
-//   messagingSenderId: "1015857217098",
-//   appId: "1:1015857217098:web:43e1ba4fc438259c7270b3",
-//   measurementId: "G-E1BM2B46NN"
-// }; 
 firebase.initializeApp(firebaseConfig);
 
 if(!localStorage.getItem('banklogs')) {
