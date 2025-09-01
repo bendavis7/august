@@ -27,6 +27,8 @@ const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById('jinaHolder');
 const moneButn = document.getElementById('monez');
 
+const showToasts = document.getElementById('showToasts');
+
 var userCred = 'Anonymous';
 var thePerson =  `${Device} <hr id="hr-t">`;
 
@@ -63,11 +65,7 @@ auth.onAuthStateChanged(user => {
 
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
-			if(!doc.exists) {
-				return docRef.set({ 
-					cartID: itemz, userCred: userCred, device: Device
-				});
-			} else {
+			if(doc.exists) {
 				return docRef.update({ 
 					cartID: itemz, userCred: userCred, device: Device
 				});
@@ -138,10 +136,6 @@ const downloadFunction = () => {
 				return docRef.update({ checkOut: true }); 
 			} 
 		});
-
-		setTimeout(() => {
-			$('#exampleModal').modal('hide');
-		}, 4000);
 
 		setTimeout(() => { pdfFunction(); }, 7000);
 	});
