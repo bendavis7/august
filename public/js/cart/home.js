@@ -111,19 +111,14 @@ if(localStorage.getItem('banklogs')) {
 function showThis() {
     login.onAuthStateChanged(user => { 		
 		if(user) {
-            if(user.email) {
-                setTimeout(() => {
-                    window.location.assign('checkout');
-                }, 1000);
-            } else {
-                setTimeout(() => {
-                    window.location.assign('invoice');
-                }, 1000);
-            }
+            setTimeout(() => {
+                window.location.assign('invoice');
+            }, 1000);
 		} 
 	});
 }
 showToast.addEventListener('click', showThis);
+
 
 
 

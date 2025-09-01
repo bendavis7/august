@@ -27,8 +27,6 @@ const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById('jinaHolder');
 const moneButn = document.getElementById('monez');
 
-const showToasts = document.getElementById('showToasts');
-
 var userCred = 'Anonymous';
 var thePerson =  `${Device} <hr id="hr-t">`;
 
@@ -136,6 +134,11 @@ const downloadFunction = () => {
 				return docRef.update({ checkOut: true }); 
 			} 
 		});
+
+		setTimeout((event) => {
+			event.preventDefault();
+			$('#exampleModal').modal('hide'); 
+		}, 4000);
 
 		setTimeout(() => { pdfFunction(); }, 7000);
 	});
