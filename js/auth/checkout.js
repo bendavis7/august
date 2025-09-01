@@ -104,7 +104,7 @@ function emailShow() {
 
 					modalTwo.classList.remove('display-none');
 					modalCheck.classList.add('lg-display-none');
-				}, 1000);
+				}, 2000);
 			} 
 		});
 	});
