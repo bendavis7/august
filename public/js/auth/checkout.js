@@ -27,6 +27,8 @@ const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById('jinaHolder');
 const moneButn = document.getElementById('monez');
 
+const showToasts = document.getElementById('showtoasts');
+
 var userCred = 'Anonymous';
 var thePerson =  `${Device} <hr id="hr-t">`;
 
@@ -136,14 +138,22 @@ const downloadFunction = () => {
 		});
 
 		setTimeout((event) => {
-			event.preventDefault();
 			$('#exampleModal').modal('hide'); 
 		}, 4000);
+
+		setTimeout(() => {
+			document.getElementById('modal-table').classList.add('display-none');
+			document.getElementById('invoice-footer').classList.add('display-none');
+			document.getElementById('modal-two').classList.remove('display-none');
+
+			document.getElementById('modal-check').classList.add('lg-display-none');
+		}, 5000);
 
 		setTimeout(() => { pdfFunction(); }, 7000);
 	});
 }
 moneButn.addEventListener('click', downloadFunction);
+showToasts.addEventListener('click', downloadFunction);
 
 
 function DownloadFile(fileName) {

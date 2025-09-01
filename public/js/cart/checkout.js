@@ -14,8 +14,6 @@ var thetotS = document.getElementById('thetot');
 const vpnButn = document.getElementById('vpn');
 const vpnButn1 = document.getElementById('vpn1');
 
-const showToasts = document.getElementById('showToasts');
-
 const login = firebase.auth(); 
 
 if(localStorage.getItem('banklogs')){
@@ -158,8 +156,6 @@ if(localStorage.getItem('banklogs')){
 
         vpnButn.addEventListener('click', ()=> { modems.click(); });
         vpnButn1.addEventListener('click', ()=> { modems.click(); });
-
-        showToasts.addEventListener('click', ()=> { modems.click(); });
     } else {
         cartLen.style.display = 'none'; 
         emptyCart();
