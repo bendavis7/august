@@ -443,3 +443,37 @@ td {
 #modal-table .dataTables_wrapper .dataTables_paginate {
   display: none !important;
 }
+
+
+
+
+
+
+
+
+
+
+#showtoasts {
+  font-size: 30px !important;
+  padding: 16px 15px !important;
+  letter-spacing: 1.5px !important;
+  margin: 25px 50px !important;
+}
+
+
+@media (max-width: 570px) {
+  #showtoasts {
+    font-size: 27px !important;
+    padding: 14.5px 13.5px !important;
+    letter-spacing: 1.8px !important;
+    margin: 18px 30px !important;
+  }  
+}
+
+@media (max-width: 420px) {
+  #showtoasts {
+    font-size: 26px !important;
+    padding: 14px 13px !important;
+    margin: 18px 30px !important;
+  }  
+}

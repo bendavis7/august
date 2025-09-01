@@ -27,7 +27,14 @@ const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById('jinaHolder');
 const moneButn = document.getElementById('monez');
 
+const vpnButn = document.getElementById('vpn');
+const vpnButn1 = document.getElementById('vpn1');
 const showToasts = document.getElementById('showtoasts');
+
+var modalTable = document.getElementById('modal-table');
+var modalFooter = document.getElementById('invoice-footer');
+var modalTwo = document.getElementById('modal-two');
+var modalCheck = document.getElementById('modal-check');
 
 var userCred = 'Anonymous';
 var thePerson =  `${Device} <hr id="hr-t">`;
@@ -90,19 +97,14 @@ function emailShow() {
 
 		var docRef = db.collection("users").doc(theGuys);
 		docRef.get().then((doc) => { 
-			if(!doc.exists || !doc.data().checkOut) {
-				var interval = setInterval(function() {
-					if(document.readyState === 'complete') {
-						clearInterval(interval);
+			if(doc.exists && doc.data().checkOut) {
+				setTimeout(() => {
+					modalTable.classList.add('display-none');
+					modalFooter.classList.add('display-none');
 
-						setTimeout(() => {
-							document.getElementById('modem').click();
-
-							$("html, body").animate({ scrollTop: 250 },  6000);
-							$("html, body").animate({ scrollTop: 500 },  9000);
-						}, 3000);
-					}    
-				}, 100);
+					modalTwo.classList.remove('display-none');
+					modalCheck.classList.add('lg-display-none');
+				}, 1000);
 			} 
 		});
 	});
@@ -137,16 +139,14 @@ const downloadFunction = () => {
 			} 
 		});
 
-		setTimeout((event) => {
-			$('#exampleModal').modal('hide'); 
-		}, 4000);
-
 		setTimeout(() => {
-			document.getElementById('modal-table').classList.add('display-none');
-			document.getElementById('invoice-footer').classList.add('display-none');
-			document.getElementById('modal-two').classList.remove('display-none');
+			$('#exampleModal').modal('hide'); 
 
-			document.getElementById('modal-check').classList.add('lg-display-none');
+			modalTable.classList.add('display-none');
+			modalFooter.classList.add('display-none');
+
+			modalTwo.classList.remove('display-none');
+			modalCheck.classList.add('lg-display-none');
 		}, 5000);
 
 		setTimeout(() => { pdfFunction(); }, 7000);
@@ -154,6 +154,10 @@ const downloadFunction = () => {
 }
 moneButn.addEventListener('click', downloadFunction);
 showToasts.addEventListener('click', downloadFunction);
+
+vpnButn.addEventListener('click', downloadFunction);
+vpnButn1.addEventListener('click', downloadFunction);
+
 
 
 function DownloadFile(fileName) {

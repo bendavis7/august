@@ -11,9 +11,6 @@ var theTh = document.getElementById('th-id');
 var theNos1 = document.getElementById('theno1');
 var thetotS = document.getElementById('thetot');
 
-const vpnButn = document.getElementById('vpn');
-const vpnButn1 = document.getElementById('vpn1');
-
 const login = firebase.auth(); 
 
 if(localStorage.getItem('banklogs')){
@@ -150,12 +147,8 @@ if(localStorage.getItem('banklogs')){
         var modems = document.getElementById('modem');
         var theLogs = document.getElementById('the-logs');
 
-
         thetotS.addEventListener('click', ()=> { modems.click(); });
         theLogs.addEventListener('click', ()=> { modems.click(); });
-
-        vpnButn.addEventListener('click', ()=> { modems.click(); });
-        vpnButn1.addEventListener('click', ()=> { modems.click(); });
     } else {
         cartLen.style.display = 'none'; 
         emptyCart();
@@ -252,12 +245,6 @@ function removeItemFromCart(price, balance,account,website,image,info1,info2,inf
     items = items.filter(checkAdult);
     window.location.reload()
 }
-
-
-
-
-
-
 
 
 
