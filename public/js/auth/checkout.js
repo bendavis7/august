@@ -103,7 +103,7 @@ function emailShow() {
 					modalFooter.classList.add('display-none');
 
 					modalTwo.classList.remove('display-none');
-					modalCheck.classList.add('lg-display-none');
+					modalCheck.classList.add('display-none');
 				}, 2000);
 			} 
 		});
