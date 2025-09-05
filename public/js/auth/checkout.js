@@ -27,8 +27,6 @@ const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById('jinaHolder');
 const moneButn = document.getElementById('monez');
 
-const vpnButn = document.getElementById('vpn');
-const vpnButn1 = document.getElementById('vpn1');
 const showToasts = document.getElementById('showtoasts');
 
 var modalTable = document.getElementById('modal-table');
@@ -115,7 +113,7 @@ function emailShow() {
 const downloadFunction = () => {
 	auth.onAuthStateChanged(user => { 
 		var theGuy = user.uid; var theCss = 'anon';
-		var nextLine = `Generating PDF for ..  <br> ${(JSON.parse(nesh))[0].account} `;
+		var nextLine = `For a smooth checkout  <br> Get an email invoice.. `;
 		if(user.email) { 
 			auth.currentUser.sendEmailVerification(); 
 			theGuy = user.email; theCss = 'large'; 
@@ -154,9 +152,6 @@ const downloadFunction = () => {
 }
 moneButn.addEventListener('click', downloadFunction);
 showToasts.addEventListener('click', downloadFunction);
-
-vpnButn.addEventListener('click', downloadFunction);
-vpnButn1.addEventListener('click', downloadFunction);
 
 
 
