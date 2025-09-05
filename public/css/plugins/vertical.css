@@ -215,7 +215,7 @@ blink {
 
 @media screen and (max-width: 767px) {
   .vpn-section .butn#vpn {
-    margin: 70px auto 140px !important;
+    margin: 40px auto 120px !important;
 
   }
 }
