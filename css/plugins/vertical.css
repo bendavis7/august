@@ -189,3 +189,33 @@ blink {
     margin-bottom: 70px !important;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.vpn-section .butn#vpn1,
+.vpn-section .butn#vpn {
+  margin: 40px auto 70px !important;
+}
+
+
+@media screen and (max-width: 867px) and (min-width: 767px) {
+  .vpn-section .butn#vpn {
+    margin: 100px auto !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .vpn-section .butn#vpn {
+    margin: 40px auto 120px !important;
+
+  }
+}

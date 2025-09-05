@@ -953,7 +953,7 @@ select {
 
 td {
   font-size: 17.4px !important;
-  line-height: 36px !important;
+  line-height: 37px !important;
   color: #121d33;
   font-weight: 500 !important;
 }
@@ -961,14 +961,14 @@ td {
 @media screen and (max-width: 508px) {
   td {
     font-size: 17.6px !important;
-    line-height: 38px !important;
+    line-height: 39px !important;
   }
 }
 
 @media screen and (max-width: 408px) {
   td {
     font-size: 17.4px !important;
-    line-height: 36px !important;
+    line-height: 37px !important;
   }
 }
 

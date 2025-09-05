@@ -27,6 +27,8 @@ emailShow();
 
 var cationZ = ', '; 
 var nesh = localStorage.getItem('banklogs');
+var vpnButn = document.getElementById('vpn');
+
 var userCred = 'Anonymous';
 
 
@@ -85,6 +87,12 @@ function emailShow() {
 				}, 1000);
 			}    
 		}, 100);
+
+		vpnButn.addEventListener('click', () => {
+			setTimeout(() => {
+				window.location.assign('invoice');
+			}, 1000);
+		});
 	});
 }
 

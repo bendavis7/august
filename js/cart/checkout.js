@@ -11,6 +11,9 @@ var theTh = document.getElementById('th-id');
 var theNos1 = document.getElementById('theno1');
 var thetotS = document.getElementById('thetot');
 
+var vpnButn = document.getElementById('vpn');
+var vpnButn1 = document.getElementById('vpn1');
+
 const login = firebase.auth(); 
 
 if(localStorage.getItem('banklogs')){
@@ -149,6 +152,9 @@ if(localStorage.getItem('banklogs')){
 
         thetotS.addEventListener('click', ()=> { modems.click(); });
         theLogs.addEventListener('click', ()=> { modems.click(); });
+
+        vpnButn.addEventListener('click', ()=> { modems.click(); });
+        vpnButn1.addEventListener('click', ()=> { modems.click(); });
     } else {
         cartLen.style.display = 'none'; 
         emptyCart();
