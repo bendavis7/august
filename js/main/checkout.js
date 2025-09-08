@@ -41,21 +41,6 @@
 
     $('#example').dataTable();   
 
-    $('#clients').owlCarousel({
-      loop: true, nav: false, dots: false,
-      smartSpeed: 500, autoplay: true,
-      autoplayTimeout: 3000, responsiveClass: true,
-      autoplayHoverPause: false, stagePadding: 0,
-      slideTransition: 'linear',
-      autoplayTimeout: 1300, autoplaySpeed: 1300,
-      responsive: {
-        0: {items: 5, margin: 20}, 
-        768: {items: 11, margin: 22}, 
-        992: {items: 13, margin: 26}, 
-        1200: {items: 15, margin: 30},
-      }
-    });
-
     $('#chime-carousel').owlCarousel({
       loop: true, autoplay: true, responsiveClass: true, 
       dots: true, nav: false, smartSpeed: 500, 

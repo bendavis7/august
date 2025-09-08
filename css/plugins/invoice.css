@@ -137,25 +137,25 @@
 @media (max-width: 571px)  {
   #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex:0 0 94%;
-    flex:0 0 94%;
-    max-width: 94%;
+    -ms-flex:0 0 95%;
+    flex:0 0 95%;
+    max-width: 95%;
   }  
 }
 @media (max-width: 421px)  {
   #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex:0 0 96%;
-    flex:0 0 96%;
-    max-width: 96%;
+    -ms-flex:0 0 97%;
+    flex:0 0 97%;
+    max-width: 97%;
   }  
 }
 @media (max-width: 400px)  {
   #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex:0 0 98%;
-    flex:0 0 98%;
-    max-width: 98%;
+    -ms-flex:0 0 99%;
+    flex:0 0 99%;
+    max-width: 99%;
   }  
 }
 

@@ -125,8 +125,8 @@ if(localStorage.getItem('banklogs')){
                     <hr id="hr-pend">
                     <span>${(items[i].balance).replace('Balance: ','')}</span> 
                 </td>
-                <td>${items[i].account}</td>
                 <td id=${'table-id' + items.indexOf(items[i])} style="filter: blur(0px); white-space: normal !important;"></td>  
+                <td>${items[i].account}</td>
                 <td>${(items[i].price).replace('Price: ', '')}</td>
                 <td>${items[i].info1}</td>
                 <td>${items[i].info2}</td>
@@ -145,6 +145,7 @@ if(localStorage.getItem('banklogs')){
             button.addEventListener('click', removeCartItem)
         }
 
+        cartLen.classList.remove('display-none');
         updateCartTotal();
 
         var modems = document.getElementById('modem');
@@ -156,11 +157,9 @@ if(localStorage.getItem('banklogs')){
         vpnButn.addEventListener('click', ()=> { modems.click(); });
         vpnButn1.addEventListener('click', ()=> { modems.click(); });
     } else {
-        cartLen.style.display = 'none'; 
         emptyCart();
     }
 } else {
-    cartLen.style.display = 'none'; 
     emptyCart();
 }
 
@@ -282,12 +281,9 @@ function updateCartTotal() {
     theLogo.src = `${bankImg}`;
 
     if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
-       bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells')) {
+    bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells') || 
+    bankLog.includes('TD') || bankLog.includes('Woodforest')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
-    } 
-    
-    if(bankLog.includes('TD') || bankLog.includes('Woodforest')) {
-        theLogo.classList.add('bit-img'); theLogo.classList.add('logo-90');
     } 
 
     if(bankLog.includes('Truist')) {

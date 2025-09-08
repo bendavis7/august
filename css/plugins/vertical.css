@@ -181,18 +181,21 @@ blink {
 }
 
 #services-carousel {
-  margin-bottom: 40px !important;
+  margin-bottom: 150px !important;
 }
 
 @media screen and (max-width: 867px) {
   #services-carousel {
-    margin-bottom: 70px !important;
+    margin-bottom: 180px !important;
   }
 }
 
-
-
-
+.therow.owl-carousel.owl-theme {
+  margin-bottom: 150px !important;
+}
+.owl-dots {
+  margin-top: -140px !important;
+}
 
 
 

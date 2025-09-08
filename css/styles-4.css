@@ -9,9 +9,8 @@
     background-color: rgba(71, 88, 143, 0.2) !important;
   }
 }
-.logo-90,
 .logo-50 {
-  border: 1.4px solid rgba(71, 88, 143, 0.7);
+  border: 2px solid rgba(71, 88, 143, 0.5);
 }
 .form-control::placeholder{
   color: rgb(31, 44, 74, 0.9)
@@ -298,7 +297,7 @@ span#uidy {
 
 .pricing-list.highlight {
   background: rgb(163, 172, 200);
-  border: 2px solid #47588f !important;
+  border: 2px solid #3e4e81 !important;
 }
 
 .pricing-list ul li:after {
@@ -426,7 +425,7 @@ span#span {
 }
 
 #my-invoice {
-  border: 5px solid rgb(71, 88, 144, 0.5) !important;
+  border: 4px solid rgb(71, 88, 144, 0.5) !important;
 }
 
 #the-life {
