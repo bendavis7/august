@@ -10,7 +10,7 @@
   }
 }
 .logo-50 {
-  border: 1.4px solid rgba(3, 169, 245, 0.7);
+  border: 2px solid rgba(3, 169, 245, 0.5);
 }
 .form-control::placeholder{
   color: rgb(14, 64, 100, 0.9) !important;
