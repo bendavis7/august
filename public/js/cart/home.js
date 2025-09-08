@@ -98,14 +98,10 @@ if(localStorage.getItem('banklogs')) {
             var button = removeFromCartButtons[i];
             button.addEventListener('click', removeCartItem)
         }
-    
+        cartLen.classList.remove('display-none');
         updateCartTotal();
-    } else {
-        cartLen.style.display = 'none'; 
-    }
-} else {
-    cartLen.style.display = 'none'; 
-}
+    } 
+} 
 
 
 function showThis() {

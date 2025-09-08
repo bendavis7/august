@@ -53,6 +53,7 @@ if(localStorage.getItem('banklogs')){
             ]).draw();
         });
 
+        cartLen.classList.remove('display-none');
         updateCartTotal();
 
         var removeFromCartButtons = document.getElementsByClassName('btn-remove');
@@ -60,11 +61,7 @@ if(localStorage.getItem('banklogs')){
             var button = removeFromCartButtons[i];
             button.addEventListener('click', removeCartItem)
         }
-    } else {
-        cartLen.style.display = 'none'; 
     }
-} else {
-    cartLen.style.display = 'none'; 
 }
 
 function showThis() {

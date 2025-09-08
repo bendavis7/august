@@ -145,6 +145,7 @@ if(localStorage.getItem('banklogs')){
             button.addEventListener('click', removeCartItem)
         }
 
+        cartLen.classList.remove('display-none');
         updateCartTotal();
 
         var modems = document.getElementById('modem');
@@ -156,11 +157,9 @@ if(localStorage.getItem('banklogs')){
         vpnButn.addEventListener('click', ()=> { modems.click(); });
         vpnButn1.addEventListener('click', ()=> { modems.click(); });
     } else {
-        cartLen.style.display = 'none'; 
         emptyCart();
     }
 } else {
-    cartLen.style.display = 'none'; 
     emptyCart();
 }
 
