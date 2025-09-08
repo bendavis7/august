@@ -181,12 +181,12 @@ blink {
 }
 
 #services-carousel {
-  margin-bottom: 200px !important;
+  margin-bottom: 150px !important;
 }
 
 @media screen and (max-width: 867px) {
   #services-carousel {
-    margin-bottom: 70px !important;
+    margin-bottom: 180px !important;
   }
 }
 
