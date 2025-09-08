@@ -387,7 +387,7 @@ if (document.getElementById('boa01')) {
     (mt010.innerHTML= `Buy $${(mt10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('nfcu01')) {
     (nfcu1.innerHTML = "$5,407"),
-    (nfcu2.innerHTML = "$5,864"),
+    (nfcu2.innerHTML = "$5,634"),
     (nfcu3.innerHTML = "$6,320"),
     (nfcu4.innerHTML = "$6,759"),
     (nfcu5.innerHTML = "$7,304"),
@@ -519,7 +519,7 @@ if (document.getElementById('boa01')) {
     (truist010.innerHTML= `Buy $${(truist10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('wells01')) {
     (wells1.innerHTML = "$5,026"),
-    (wells2.innerHTML = "$5,520"),
+    (wells2.innerHTML = "$5,420"),
     (wells3.innerHTML = "$6,850"),
     (wells4.innerHTML = "$7,389"),
     (wells5.innerHTML = "$7,614"),

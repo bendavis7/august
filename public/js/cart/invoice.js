@@ -182,16 +182,13 @@ function updateCartTotal() {
     theLogo.src = `${bankImg}`;
 
     if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
-       bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells')) {
+    bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells') || 
+    bankLog.includes('TD') || bankLog.includes('Woodforest')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
         checkoutImg.classList.remove('check-out');
         checkoutImg.classList.add('invo-ice');
     } 
     
-    if(bankLog.includes('TD') || bankLog.includes('Woodforest')) {
-        theLogo.classList.add('bit-img'); theLogo.classList.add('logo-90');
-    } 
-
     if(bankLog.includes('Truist')) {
         theLogo.setAttribute('src', 'img/carousel/truist.jpg');
         theLogo.classList.add('logo-50'); 
