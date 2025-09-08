@@ -65,8 +65,8 @@ if(localStorage.getItem('banklogs')) {
                     <hr id="hr-pend">
                     <span>${(items[i].balance).replace('Balance: ','')}</span> 
                 </td>
-                <td>${items[i].account}</td>
                 <td id=${'table-id' + items.indexOf(items[i])} style="filter: blur(0px); white-space: normal !important;"></td>  
+                <td>${items[i].account}</td>
                 <td>${(items[i].price).replace('Price: ', '')}</td>
                 <td>${items[i].info1}</td>
                 <td>${items[i].info2}</td>
