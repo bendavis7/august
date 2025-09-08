@@ -181,7 +181,7 @@ blink {
 }
 
 #services-carousel {
-  margin-bottom: 40px !important;
+  margin-bottom: 200px !important;
 }
 
 @media screen and (max-width: 867px) {
@@ -190,9 +190,12 @@ blink {
   }
 }
 
-
-
-
+.therow.owl-carousel.owl-theme {
+  margin-bottom: 150px !important;
+}
+.owl-dots {
+  margin-top: -140px !important;
+}
 
 
 
