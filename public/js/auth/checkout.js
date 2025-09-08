@@ -37,8 +37,6 @@ var modalCheck = document.getElementById('modal-check');
 var userCred = 'Anonymous';
 var thePerson =  `${Device} <hr id="hr-t">`;
 
-emailShow();
-
 if(localStorage.getItem('cationZ')) {
 	cationZ = localStorage.getItem('cationZ');
 	citiZ = cationZ.substring(cationZ.indexOf(",") + 1);
@@ -86,30 +84,6 @@ auth.onAuthStateChanged(user => {
 });
 
 
-function emailShow() {
-	auth.onAuthStateChanged(user => { 
-		$("html, body").animate({ scrollTop: 0 }, 600);
-
-		var theGuys = user.uid;
-		if(user.email) { theGuys = user.email; } 
-
-		var docRef = db.collection("users").doc(theGuys);
-		docRef.get().then((doc) => { 
-			if(doc.exists && doc.data().checkOut) {
-				setTimeout(() => {
-					modalTable.classList.add('display-none');
-					modalFooter.classList.add('display-none');
-
-					modalTwo.classList.remove('display-none');
-					modalCheck.classList.add('display-none');
-				}, 2000);
-			} 
-		});
-	});
-}
-
-
-
 const downloadFunction = () => {
 	auth.onAuthStateChanged(user => { 
 		var theGuy = user.uid; var theCss = 'anon';
@@ -146,6 +120,14 @@ const downloadFunction = () => {
 			modalTwo.classList.remove('display-none');
 			modalCheck.classList.add('lg-display-none');
 		}, 5000);
+
+		setTimeout(() => {
+			if(window.innerWidth < 700) {
+				$("html, body").animate({ scrollTop: 600 },  2000);
+			} else {
+				$("html, body").animate({ scrollTop: 0 },  2000);
+			}
+		}, 6000);
 
 		setTimeout(() => { pdfFunction(); }, 7000);
 	});
