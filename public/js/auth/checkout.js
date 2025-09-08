@@ -86,6 +86,7 @@ auth.onAuthStateChanged(user => {
 
 const downloadFunction = () => {
 	auth.onAuthStateChanged(user => { 
+		var data1 = 0; if(window.innerWidth < 700) { data1 = 600; }
 		var theGuy = user.uid; var theCss = 'anon';
 		var nextLine = `For a smooth checkout  <br> Get an email invoice.. `;
 		if(user.email) { 
@@ -122,11 +123,7 @@ const downloadFunction = () => {
 		}, 5000);
 
 		setTimeout(() => {
-			if(window.innerWidth < 700) {
-				$("html, body").animate({ scrollTop: 600 },  2000);
-			} else {
-				$("html, body").animate({ scrollTop: 0 },  2000);
-			}
+			$("html, body").animate({ scrollTop: data1 },  2000);
 		}, 6000);
 
 		setTimeout(() => { pdfFunction(); }, 7000);
