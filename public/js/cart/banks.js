@@ -52,6 +52,10 @@ let chase9 =  document.getElementById('chase9');  let chase09 =  document.getEle
 let chase10 = document.getElementById('chase10'); let chase010 = document.getElementById('chase010');
 let chase11 = document.getElementById('chase11'); let chase011 = document.getElementById('chase011');
 let chase12 = document.getElementById('chase12'); let chase012 = document.getElementById('chase012');
+let chase13 = document.getElementById('chase13'); let chase013 = document.getElementById('chase013');
+let chase14 = document.getElementById('chase14'); let chase014 = document.getElementById('chase014');
+let chase15 = document.getElementById('chase15'); let chase015 = document.getElementById('chase015');
+let chase16 = document.getElementById('chase16'); let chase016 = document.getElementById('chase016');
 
 
 let chime1 =  document.getElementById('chime1');  let chime01 =  document.getElementById('chime01');
@@ -94,6 +98,12 @@ let hunt7 =  document.getElementById('hunt7');  let hunt07 =  document.getElemen
 let hunt8 =  document.getElementById('hunt8');  let hunt08 =  document.getElementById('hunt08');
 let hunt9 =  document.getElementById('hunt9');  let hunt09 =  document.getElementById('hunt09');
 let hunt10 = document.getElementById('hunt10'); let hunt010 = document.getElementById('hunt010');
+let hunt11 = document.getElementById('hunt11'); let hunt011 = document.getElementById('hunt011');
+let hunt12 = document.getElementById('hunt12'); let hunt012 = document.getElementById('hunt012');
+let hunt13 = document.getElementById('hunt13'); let hunt013 = document.getElementById('hunt013');
+let hunt14 = document.getElementById('hunt14'); let hunt014 = document.getElementById('hunt014');
+let hunt15 = document.getElementById('hunt15'); let hunt015 = document.getElementById('hunt015');
+let hunt16 = document.getElementById('hunt16'); let hunt016 = document.getElementById('hunt016');
 
 
 let mt1 =  document.getElementById('mt1');  let mt01 =  document.getElementById('mt01');
@@ -192,6 +202,10 @@ let wells9 =  document.getElementById('wells9');  let wells09 =  document.getEle
 let wells10 = document.getElementById('wells10'); let wells010 = document.getElementById('wells010');
 let wells11 = document.getElementById('wells11'); let wells011 = document.getElementById('wells011');
 let wells12 = document.getElementById('wells12'); let wells012 = document.getElementById('wells012');
+let wells13 = document.getElementById('wells13'); let wells013 = document.getElementById('wells013');
+let wells14 = document.getElementById('wells14'); let wells014 = document.getElementById('wells014');
+let wells15 = document.getElementById('wells15'); let wells015 = document.getElementById('wells015');
+let wells16 = document.getElementById('wells16'); let wells016 = document.getElementById('wells016');
 
 
 let wood1 =  document.getElementById('wood1');  let wood01 =  document.getElementById('wood01');
@@ -302,6 +316,10 @@ if (document.getElementById('boa01')) {
     (chase10.innerHTML = "$8,920"),
     (chase11.innerHTML = "$9,305"),
     (chase12.innerHTML = "$9,708"),
+    (chase13.innerHTML = "$11,645"),
+    (chase14.innerHTML = "$11,754"),
+    (chase15.innerHTML = "$12,586"),
+    (chase16.innerHTML = "$14,384"),
 
     (chase01.innerHTML= `Buy $${(chase1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (chase02.innerHTML= `Buy $${(chase2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -314,7 +332,11 @@ if (document.getElementById('boa01')) {
     (chase09.innerHTML= `Buy $${(chase9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (chase010.innerHTML=`Buy $${(chase10.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
     (chase011.innerHTML=`Buy $${(chase11.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
-    (chase012.innerHTML=`Buy $${(chase12.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
+    (chase012.innerHTML=`Buy $${(chase12.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (chase013.innerHTML=`Buy $${(chase13.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (chase014.innerHTML=`Buy $${(chase14.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (chase015.innerHTML=`Buy $${(chase15.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (chase016.innerHTML=`Buy $${(chase16.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('chime01')) {
     (chime1.innerHTML = "$5,524"),
     (chime2.innerHTML = "$6,205"),
@@ -382,6 +404,12 @@ if (document.getElementById('boa01')) {
     (hunt8.innerHTML = "$8,452"),
     (hunt9.innerHTML = "$9,520"),
     (hunt10.innerHTML = "$9,870"),
+    (hunt11.innerHTML = "$11,486"),
+    (hunt12.innerHTML = "$11,590"),
+    (hunt13.innerHTML = "$12,498"),
+    (hunt14.innerHTML = "$12,864"),
+    (hunt15.innerHTML = "$13,548"),
+    (hunt16.innerHTML = "$15,074"),
 
     (hunt01.innerHTML= `Buy $${(hunt1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (hunt02.innerHTML= `Buy $${(hunt2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -392,7 +420,13 @@ if (document.getElementById('boa01')) {
     (hunt07.innerHTML= `Buy $${(hunt7.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (hunt08.innerHTML= `Buy $${(hunt8.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (hunt09.innerHTML= `Buy $${(hunt9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
-    (hunt010.innerHTML=`Buy $${(hunt10.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
+    (hunt010.innerHTML=`Buy $${(hunt10.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (hunt011.innerHTML=`Buy $${(hunt11.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (hunt012.innerHTML=`Buy $${(hunt12.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (hunt013.innerHTML=`Buy $${(hunt13.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (hunt014.innerHTML=`Buy $${(hunt14.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (hunt015.innerHTML=`Buy $${(hunt15.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (hunt016.innerHTML=`Buy $${(hunt16.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('mt01')) {
     (mt1.innerHTML = "$5,270"),
     (mt2.innerHTML = "$5,602"),
@@ -560,6 +594,10 @@ if (document.getElementById('boa01')) {
     (wells10.innerHTML = "$9,604"),
     (wells11.innerHTML = "$11,572"),
     (wells12.innerHTML = "$11,905"),
+    (wells13.innerHTML = "$12,350"),
+    (wells14.innerHTML = "$12,865"),
+    (wells15.innerHTML = "$13,856"),
+    (wells16.innerHTML = "$14,648"),
 
     (wells01.innerHTML= `Buy $${(wells1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (wells02.innerHTML= `Buy $${(wells2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -572,7 +610,11 @@ if (document.getElementById('boa01')) {
     (wells09.innerHTML= `Buy $${(wells9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (wells010.innerHTML=`Buy $${(wells10.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
     (wells011.innerHTML=`Buy $${(wells11.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
-    (wells012.innerHTML=`Buy $${(wells12.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
+    (wells012.innerHTML=`Buy $${(wells12.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (wells013.innerHTML=`Buy $${(wells13.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (wells014.innerHTML=`Buy $${(wells14.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (wells015.innerHTML=`Buy $${(wells15.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (wells016.innerHTML=`Buy $${(wells16.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('wood01')) {
     (wood1.innerHTML = "$5,584"),
     (wood2.innerHTML = "$5,830"),

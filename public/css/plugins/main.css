@@ -940,10 +940,10 @@ select {
 }
 
 .borderp {
-  margin-top: 1px !important;
+  margin-top: 4px !important;
   margin-right: 1px !important;
   border-radius: 2px !important;
-  width: 40px !important;
+  width: 38px !important;
   float: right;
 }
 @media screen and (max-width: 400px) {
