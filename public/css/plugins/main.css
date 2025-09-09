@@ -2475,7 +2475,7 @@ ul.countdown li p {
   font-weight: 700;
   letter-spacing: 0.64px !important;
   font-size: 17.5px;
-  line-height: 50px !important;
+  line-height: 55px !important;
 }
 @media screen and (max-width: 502px) {
   .toast-message {
@@ -2728,8 +2728,9 @@ span#uida {
 .hr15-top {
   margin-top: 15px !important;
 }
-.hr20-top {
-  margin-top: 20px !important;
+.hr25-top {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
 }
 
 
@@ -3115,18 +3116,18 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    margin: -5px 5px 3px !important;
+    margin: -3px 7px 4px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
-    font-size: 21px !important;
+    font-size: 22px !important;
     white-space: nowrap !important;
   }
 
   .dataTables_wrapper .dataTables_length {
-    margin: 5px 5px !important;
+    margin: 7px 7px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
-    font-size: 21px !important;
+    font-size: 22px !important;
     white-space: nowrap !important;
   }
 
@@ -3135,6 +3136,20 @@ button.butn.in-cart,
   }
   #profileModal .dataTables_wrapper .dataTables_filter input {
     width: 60% !important;
+  }
+}
+
+
+
+@media screen and (max-width: 407px) {
+  .dataTables_wrapper .dataTables_filter {
+    margin: -5px 5px 3px !important;
+    font-size: 21px !important;
+  }
+
+  .dataTables_wrapper .dataTables_length {
+    margin: 5px 5px !important;
+    font-size: 21px !important;
   }
 }
 

@@ -362,6 +362,8 @@ td.burro {
 
 #modal-check {
   border-radius: 0 !important;
+  border-width: 1px !important;
+  border-bottom-width: 0.5px !important;
 }
 
 
@@ -372,6 +374,27 @@ td.burro {
 
 
 
+
+td {
+  font-size: 17.4px !important;
+  line-height: 36px !important;
+  color: #121d33;
+  font-weight: 500 !important;
+}
+
+@media screen and (max-width: 508px) {
+  td {
+    font-size: 17.9px !important;
+    line-height: 43px !important;
+  }
+}
+
+@media screen and (max-width: 408px) {
+  td {
+    font-size: 17.8px !important;
+    line-height: 40px !important;
+  }
+}
 
 
 

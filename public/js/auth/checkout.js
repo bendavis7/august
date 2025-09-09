@@ -91,7 +91,7 @@ auth.onAuthStateChanged(user => {
 
 const downloadFunction = () => {
 	auth.onAuthStateChanged(user => { 
-		var data1 = 0; if(window.innerWidth < 700) { data1 = 600; }
+		var data1 = 0; if(window.innerWidth < 700) { data1 = 570; }
 		var theGuy = user.uid; var theCss = 'anon';
 		var nextLine = `For a smooth checkout  <br> Get an email invoice.. `;
 		if(user.email) { 
@@ -107,7 +107,7 @@ const downloadFunction = () => {
 		toastzi = toasti.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`${theCss}`); }, 200);
-		var shortCutFunction = 'success'; var msg = `${btci} BTC not detected <br> <hr class="to-hr hr20-top"> ${nextLine} <hr class="hr15-top"> `;
+		var shortCutFunction = 'success'; var msg = `${btci} BTC not detected <br> <hr class="to-hr hr25-top"> ${nextLine} <hr class="hr15-top"> `;
 		toastr.options =  {closeButton: true, debug: false, newestOnTop: true, progressBar: true, timeOut: 5000, positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast;
 
 		var docRef = db.collection("users").doc(theGuy);
@@ -129,7 +129,7 @@ const downloadFunction = () => {
 
 		setTimeout(() => {
 			$("html, body").animate({ scrollTop: data1 },  2000);
-			setTimeout(() => { pdfFunction(); }, 4000);
+			setTimeout(() => { pdfFunction(); }, 3000);
 		}, 6000);
 	});
 }
