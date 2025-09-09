@@ -913,7 +913,7 @@ select {
 }
 @media screen and (max-width: 400px) {
   .borderp {
-    width: 40px !important;
+    width: 38px !important;
   }
 }
 .pricing-list ul li:after {

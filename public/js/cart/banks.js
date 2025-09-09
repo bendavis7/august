@@ -60,6 +60,11 @@ let chime8 =  document.getElementById('chime8');  let chime08 =  document.getEle
 let chime9 =  document.getElementById('chime9');  let chime09 =  document.getElementById('chime09');
 let chime10 =  document.getElementById('chime10');  let chime010 =  document.getElementById('chime010');
 let chime11 =  document.getElementById('chime11');  let chime011 =  document.getElementById('chime011');
+let chime12 =  document.getElementById('chime12');  let chime012 =  document.getElementById('chime012');
+let chime13 =  document.getElementById('chime13');  let chime013 =  document.getElementById('chime013');
+let chime14 =  document.getElementById('chime14');  let chime014 =  document.getElementById('chime014');
+let chime15 =  document.getElementById('chime15');  let chime015 =  document.getElementById('chime015');
+let chime16 =  document.getElementById('chime16');  let chime016 =  document.getElementById('chime016');
 
 
 let citi1 =  document.getElementById('citi1');  let citi01 =  document.getElementById('citi01');
@@ -307,6 +312,11 @@ if (document.getElementById('boa01')) {
     (chime9.innerHTML = "$8,942"),
     (chime10.innerHTML = "$9,507"),
     (chime11.innerHTML = "$9,842"),
+    (chime12.innerHTML = "$11,345"),
+    (chime13.innerHTML = "$11,596"),
+    (chime14.innerHTML = "$11,507"),
+    (chime15.innerHTML = "$12,495"),
+    (chime16.innerHTML = "$13,507"),
 
     (chime01.innerHTML= `Buy $${(chime1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (chime02.innerHTML= `Buy $${(chime2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -318,7 +328,12 @@ if (document.getElementById('boa01')) {
     (chime08.innerHTML= `Buy $${(chime8.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (chime09.innerHTML= `Buy $${(chime9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (chime010.innerHTML= `Buy $${(chime10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
-    (chime011.innerHTML= `Buy $${(chime11.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
+    (chime011.innerHTML= `Buy $${(chime11.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (chime012.innerHTML= `Buy $${(chime12.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (chime013.innerHTML= `Buy $${(chime13.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (chime014.innerHTML= `Buy $${(chime14.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (chime015.innerHTML= `Buy $${(chime15.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (chime016.innerHTML= `Buy $${(chime16.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('citi01')) {
     (citi1.innerHTML = "$5,570"),
     (citi2.innerHTML = "$5,809"),
