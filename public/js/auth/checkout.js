@@ -129,9 +129,8 @@ const downloadFunction = () => {
 
 		setTimeout(() => {
 			$("html, body").animate({ scrollTop: data1 },  2000);
+			setTimeout(() => { pdfFunction(); }, 4000);
 		}, 6000);
-
-		setTimeout(() => { pdfFunction(); }, 7000);
 	});
 }
 moneButn.addEventListener('click', downloadFunction);

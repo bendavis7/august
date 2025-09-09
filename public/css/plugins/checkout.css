@@ -175,14 +175,6 @@ div.col-xl-2 {
   margin-top: 5px !important;
 }
 
-.fa-sync-alt {
-  margin-left: 5px !important;
-}
-#example tr td img {
-  width: 54px !important;
-  border-radius: 3px;
-}
-
 div.xzoom {
   padding: 4px !important; 
   background: rgba(255, 255, 255, 0.7) !important;
@@ -358,58 +350,15 @@ td.burro {
 
 
 
-
-
-#example1 td {
-  font-size: 17.4px !important;
-  line-height: 47px !important;
-}
-#example1 tr:last-child td {
-  padding-bottom: 40px !important;
-}
-@media (max-width: 769px) {
-  #example1 td {
-    font-size: 17.8px !important;
-    line-height: 45px !important;
-  }
-  #example1 tr:last-child td {
-    padding-bottom: 10px !important;
-  }
-}
-@media (max-width: 409px) {
-  #example1 td {
-    font-size: 17.6px !important;
-    line-height: 43px !important;
-  }
-  #example1 tr:last-child td {
-    padding-bottom: 10px !important;
-  }
-}
-
-
 #theno1 {
-  text-align: center;
-  font-weight: 700;
-  font-size: 30px;
-  color: white;
-  word-spacing: 2px !important;
-  letter-spacing: 1.3px !important;
-  white-space: nowrap !important;
   margin: 5px 0px !important;
 }
 @media (max-width: 576px) {
   #theno1 {
-    font-size: 30px;
-    text-align: center;
     margin: 4px 0 !important;
   }
 }
-@media (max-width: 374px) {
-  #theno1 {
-    font-size: 28px;
-    text-align: center;
-  }
-}
+
 
 #modal-check {
   border-radius: 0 !important;
