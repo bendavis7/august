@@ -234,7 +234,7 @@ let wood8 =  document.getElementById('wood8');  let wood08 =  document.getElemen
 let wood9 =  document.getElementById('wood9');  let wood09 =  document.getElementById('wood09');
 let wood10 =  document.getElementById('wood10');  let wood010 =  document.getElementById('wood010');
 let wood11 =  document.getElementById('wood11');  let wood011 =  document.getElementById('wood011');
-
+let wood12 =  document.getElementById('wood12');  let wood012 =  document.getElementById('wood012');
 
 
 
@@ -672,6 +672,7 @@ if (document.getElementById('boa01')) {
     (wood9.innerHTML = "$9,752"),
     (wood10.innerHTML = "$11,275"),
     (wood11.innerHTML = "$11,604"),
+    (wood12.innerHTML = "$12,537"),
 
     (wood01.innerHTML= `Buy $${(wood1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (wood02.innerHTML= `Buy $${(wood2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -683,5 +684,6 @@ if (document.getElementById('boa01')) {
     (wood08.innerHTML= `Buy $${(wood8.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (wood09.innerHTML= `Buy $${(wood9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (wood010.innerHTML= `Buy $${(wood10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
-    (wood011.innerHTML= `Buy $${(wood11.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
+    (wood011.innerHTML= `Buy $${(wood11.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (wood012.innerHTML= `Buy $${(wood12.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 }
