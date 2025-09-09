@@ -63,7 +63,7 @@ header.scrollHeader .navbar-default {
 }
 #canvas {
   border-radius: 50%;
-  margin: 0 0 0 25px;
+  margin: 0 0 0 20px;
   padding: 0;
 }
 
@@ -72,7 +72,7 @@ header.scrollHeader .navbar-default {
 }
 @media screen and (max-width: 1092px) {
   #canvas {
-    margin: 0 0 0 7px;
+    margin: 0 0 0 10px;
   }
 }
 #cartlength {

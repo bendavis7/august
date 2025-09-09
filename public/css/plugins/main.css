@@ -1439,8 +1439,8 @@ td {
 }
 @media (min-width: 1092px) {
   .attr-nav > ul > li.dropdown ul.dropdown-menu {
-    left: -150%;
-    width: 245%;
+    left: -165%;
+    width: 252%;
   }
   .attr-nav {
     margin-right: 0 !important;
@@ -1502,7 +1502,7 @@ td {
 @media (max-width: 526px) {
   .attr-nav > ul > li.dropdown ul.dropdown-menu {
     left: -120%;
-    width: 257%;
+    width: 255%;
   }
 
   .thegold img {
@@ -1517,10 +1517,10 @@ td {
     word-spacing: 4px !important;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 400px) {
   .attr-nav > ul > li.dropdown ul.dropdown-menu {
     left: -120%;
-    width: 255%;
+    width: 247%;
   }
   .thegold img {
     height: 51px !important;

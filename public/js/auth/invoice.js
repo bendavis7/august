@@ -27,6 +27,7 @@ const jinaHolder = document.getElementById('jinaHolder');
 const yahooBtn = document.getElementById('checkout');
 const emailBtn = document.getElementById('email-phone');
 
+const nextUp2 = document.getElementsByClassName('next')[1];
 
 if(localStorage.getItem('cationZ')) {
 	cationZ = localStorage.getItem('cationZ');
@@ -60,6 +61,8 @@ auth.onAuthStateChanged(user => {
 			emailBtn.innerHTML = `Verify - Email`;
 			emailBtn.removeEventListener("click", signInWithGoogle);
 			emailBtn.addEventListener("click", verifyEmails);
+
+			nextUp2.classList.add('display-none');
 		} 
 
 		emailShow();
