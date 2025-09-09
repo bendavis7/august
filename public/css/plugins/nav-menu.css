@@ -435,7 +435,6 @@ header.scrollHeader .navbar-default {
 @media screen and (max-width: 567px) {
   #jinaHolder {
     font-size: 23px;
-    letter-spacing: 0.92px !important;
   }
   #jinaHolder2 {
     font-size: 16.5px !important;

@@ -961,14 +961,14 @@ td {
 @media screen and (max-width: 508px) {
   td {
     font-size: 17.7px !important;
-    line-height: 40px !important;
+    line-height: 37px !important;
   }
 }
 
 @media screen and (max-width: 408px) {
   td {
     font-size: 17.5px !important;
-    line-height: 38px !important;
+    line-height: 35px !important;
   }
 }
 
@@ -3108,7 +3108,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    margin: 0px 5px !important;
+    margin: -5px 5px 3px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 22px !important;
@@ -3116,7 +3116,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_length {
-    margin: 10px 5px !important;
+    margin: 5px 5px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 22px !important;
