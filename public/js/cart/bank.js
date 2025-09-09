@@ -672,7 +672,7 @@ if (document.getElementById('boa01')) {
     (wood9.innerHTML = "$9,752"),
     (wood10.innerHTML = "$11,275"),
     (wood11.innerHTML = "$11,604"),
-    (wood12.innerHTML = "$12,537"),
+    (wood12.innerHTML = "$12,532"),
 
     (wood01.innerHTML= `Buy $${(wood1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (wood02.innerHTML= `Buy $${(wood2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),

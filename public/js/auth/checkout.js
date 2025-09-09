@@ -132,7 +132,7 @@ const downloadFunction = () => {
 		}, 5000);
 
 		setTimeout(() => {
-			$("html, body").animate({ scrollTop: data1 },  2000);
+			$("html, body").animate({ scrollTop: data1 },  1500);
 			setTimeout(() => { pdfFunction(); }, 3000);
 		}, 6000);
 	});
