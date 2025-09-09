@@ -518,7 +518,7 @@ if (document.getElementById('boa01')) {
     (truist09.innerHTML= `Buy $${(truist9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (truist010.innerHTML= `Buy $${(truist10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('wells01')) {
-    (wells1.innerHTML = "$5,026"),
+    (wells1.innerHTML = "$5,076"),
     (wells2.innerHTML = "$5,420"),
     (wells3.innerHTML = "$6,850"),
     (wells4.innerHTML = "$7,389"),

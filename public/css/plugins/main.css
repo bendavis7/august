@@ -1501,26 +1501,26 @@ td {
 }
 @media (max-width: 526px) {
   .attr-nav > ul > li.dropdown ul.dropdown-menu {
-    left: -120%;
-    width: 255%;
+    left: -130%;
+    width: 260%;
   }
 
   .thegold img {
-    height: 52px !important;
-    width: 52px !important;
+    height: 53px !important;
+    width: 53px !important;
     margin-right: 18px !important;
   }
   .thegold a {
-    padding: 15px 0 !important;
-    font-size: 21px !important;
-    letter-spacing: 1.4px !important;
+    padding: 16px 0 !important;
+    font-size: 20.9px !important;
+    letter-spacing: 1.5px !important;
     word-spacing: 4px !important;
   }
 }
 @media (max-width: 400px) {
   .attr-nav > ul > li.dropdown ul.dropdown-menu {
     left: -120%;
-    width: 247%;
+    width: 250%;
   }
   .thegold img {
     height: 51px !important;
@@ -3116,7 +3116,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    margin: -3px 7px 4px !important;
+    margin: 0px 5px 5px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 22px !important;
@@ -3124,7 +3124,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_length {
-    margin: 7px 7px !important;
+    margin: 10px 10px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 22px !important;
@@ -3143,12 +3143,10 @@ button.butn.in-cart,
 
 @media screen and (max-width: 407px) {
   .dataTables_wrapper .dataTables_filter {
-    margin: -5px 5px 3px !important;
     font-size: 21px !important;
   }
 
   .dataTables_wrapper .dataTables_length {
-    margin: 5px 5px !important;
     font-size: 21px !important;
   }
 }
