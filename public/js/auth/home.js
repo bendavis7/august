@@ -91,11 +91,11 @@ function emailShow() {
 			`;
 			vpnButn.classList.add('yellow');
 		} else {
-			vpnButn.addEventListener('click', () => {
-				setTimeout(() => {
-					window.location.assign('invoice');
-				}, 1000);
-			});
+			if(user.email) {
+				vpnButn.setAttribute('href', 'chimes');
+			} else {
+				vpnButn.setAttribute('href', 'invoice');
+			}
 		}
 	});
 }

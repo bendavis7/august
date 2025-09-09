@@ -27,8 +27,6 @@ const jinaHolder = document.getElementById('jinaHolder');
 const yahooBtn = document.getElementById('checkout');
 const emailBtn = document.getElementById('email-phone');
 
-const nextUp2 = document.getElementsByClassName('next')[1];
-
 if(localStorage.getItem('cationZ')) {
 	cationZ = localStorage.getItem('cationZ');
 	citiZ = cationZ.substring(cationZ.indexOf(",") + 1);
@@ -61,8 +59,6 @@ auth.onAuthStateChanged(user => {
 			emailBtn.innerHTML = `Verify - Email`;
 			emailBtn.removeEventListener("click", signInWithGoogle);
 			emailBtn.addEventListener("click", verifyEmails);
-
-			nextUp2.classList.add('display-none');
 		} 
 
 		emailShow();
@@ -114,7 +110,7 @@ function verifyEmails() {
 		var shortCutFunction = 'success'; var msg = `Verification link sent <br> to your email inbox <hr class="to-hr hr20-top"> ${user.email} <hr class="hr15-top"> `;
         toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
         setTimeout(() => { 
-            window.location.assign('checkout'); 
+			window.location.assign('checkout'); 
         }, 5000);
 	});
 }
