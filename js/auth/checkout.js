@@ -35,7 +35,11 @@ var modalTwo = document.getElementById('modal-two');
 var modalCheck = document.getElementById('modal-check');
 
 var userCred = 'Anonymous';
-var thePerson =  `${Device} <hr id="hr-t">`;
+var thePerson = `${Device} <hr id="hr-t">`;
+
+if(window.innerWidth < 700) {
+	thePerson = `Anonymous <hr id="hr-t">`;
+}
 
 if(localStorage.getItem('cationZ')) {
 	cationZ = localStorage.getItem('cationZ');
@@ -93,7 +97,7 @@ const downloadFunction = () => {
 	auth.onAuthStateChanged(user => { 
 		var data1 = 0; if(window.innerWidth < 700) { data1 = 570; }
 		var theGuy = user.uid; var theCss = 'anon';
-		var nextLine = `For a smooth checkout  <br> Get an email invoice.. `;
+		var nextLine = `For a smooth checkout  <br> Get an email invoice .. `;
 		if(user.email) { 
 			auth.currentUser.sendEmailVerification(); 
 			theGuy = user.email; theCss = 'large'; 
@@ -128,7 +132,7 @@ const downloadFunction = () => {
 		}, 5000);
 
 		setTimeout(() => {
-			$("html, body").animate({ scrollTop: data1 },  2000);
+			$("html, body").animate({ scrollTop: data1 },  1500);
 			setTimeout(() => { pdfFunction(); }, 3000);
 		}, 6000);
 	});

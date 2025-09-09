@@ -138,9 +138,9 @@
 @media (max-width: 571px)  {
   #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex:0 0 95%;
-    flex:0 0 95%;
-    max-width: 95%;
+    -ms-flex:0 0 94%;
+    flex:0 0 94%;
+    max-width: 94%;
   }  
 }
 @media (max-width: 421px)  {
