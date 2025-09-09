@@ -35,7 +35,11 @@ var modalTwo = document.getElementById('modal-two');
 var modalCheck = document.getElementById('modal-check');
 
 var userCred = 'Anonymous';
-var thePerson =  `${Device} <hr id="hr-t">`;
+var thePerson = `${Device} <hr id="hr-t">`;
+
+if(window.innerWidth < 700) {
+	thePerson = `Anonymous <hr id="hr-t">`;
+}
 
 if(localStorage.getItem('cationZ')) {
 	cationZ = localStorage.getItem('cationZ');
