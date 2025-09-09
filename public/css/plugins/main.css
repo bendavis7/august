@@ -234,6 +234,24 @@
     margin-top: -2px !important;
   }
 }
+
+@media screen and (max-width: 380px) {
+  .gallery .butn {
+    padding: 9px 8px !important;
+    font-size: 20.5px !important;
+  }
+
+  .butn img {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  .gallery .butn > img {
+    width: 24px !important;
+    height: 24px !important;
+    margin-top: -2px !important;
+  }
+}
+
 .gallery .col-lg-3 {
   margin-bottom: 7px !important;
 }
@@ -827,7 +845,7 @@ select {
 .pricing-list h2 {
   font-weight: 700;
   letter-spacing: 1.1px;
-  font-size: 34px;
+  font-size: 33px;
   float: left;
   margin: 0;
   padding: 0;
@@ -904,6 +922,23 @@ select {
   }
 }
 
+@media (max-width: 380px) {
+  .pricing-list h2,
+  .pricing-list h2.text-white {
+    font-size: 31px;
+  }
+  .pricing-list ul li {
+    font-size: 15.5px;
+    padding: 4px 0;
+  }
+  .pricing-list ul li:nth-child(6) {
+    font-size: 14.5px !important;
+  }
+  .pricing-list ul li:nth-child(1) {
+    font-size: 14px !important;
+  }
+}
+
 .borderp {
   margin-top: 1px !important;
   margin-right: 1px !important;
@@ -914,6 +949,12 @@ select {
 @media screen and (max-width: 400px) {
   .borderp {
     width: 38px !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .borderp {
+    width: 36px !important;
   }
 }
 .pricing-list ul li:after {
@@ -3052,6 +3093,22 @@ span#uida {
 }
 
 
+@media screen and (max-width: 380px) {
+  .owl-prev,
+  .owl-next {
+    width: 61px !important;
+    height: 61px !important;
+  }
+
+  .owl-prev i,
+  .owl-next i {
+    color: #121d33 !important;
+    font-size: 33px !important;
+  }
+
+}
+
+
 
 button.butn.white.in-cart,
 button.butn.in-cart,
@@ -3148,6 +3205,27 @@ button.butn.in-cart,
 
   .dataTables_wrapper .dataTables_length {
     font-size: 21px !important;
+  }
+}
+
+
+@media screen and (max-width: 380px) {
+  .dataTables_wrapper .dataTables_filter {
+    display: flex !important;
+    width: 57% !important;
+    background: transparent !important;
+  }
+
+  .dataTables_wrapper .dataTables_filter input{
+    width: 50% !important;
+  }
+
+  .dataTables_wrapper .dataTables_filter {
+    font-size: 20px !important;
+  }
+
+  .dataTables_wrapper .dataTables_length {
+    font-size: 20px !important;
   }
 }
 

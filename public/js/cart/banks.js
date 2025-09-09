@@ -9,6 +9,11 @@ let boa8 =  document.getElementById('boa8');  let boa08 =  document.getElementBy
 let boa9 =  document.getElementById('boa9');  let boa09 =  document.getElementById('boa09');
 let boa10 = document.getElementById('boa10'); let boa010 = document.getElementById('boa010');
 let boa11 = document.getElementById('boa11'); let boa011 = document.getElementById('boa011');
+let boa12 = document.getElementById('boa12'); let boa012 = document.getElementById('boa012');
+let boa13 = document.getElementById('boa13'); let boa013 = document.getElementById('boa013');
+let boa14 = document.getElementById('boa14'); let boa014 = document.getElementById('boa014');
+let boa15 = document.getElementById('boa15'); let boa015 = document.getElementById('boa015');
+let boa16 = document.getElementById('boa16'); let boa016 = document.getElementById('boa016');
 
 
 let bar1 =  document.getElementById('bar1');  let bar01 =  document.getElementById('bar01');
@@ -218,6 +223,11 @@ if (document.getElementById('boa01')) {
     (boa9.innerHTML = "$9,925"),
     (boa10.innerHTML = "$11,420"),
     (boa11.innerHTML = "$11,629"),
+    (boa12.innerHTML = "$12,485"),
+    (boa13.innerHTML = "$12,876"),
+    (boa14.innerHTML = "$13,593"),
+    (boa15.innerHTML = "$13,856"),
+    (boa16.innerHTML = "$15,495"),
 
     (boa01.innerHTML= `Buy $${(boa1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (boa02.innerHTML= `Buy $${(boa2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -229,7 +239,12 @@ if (document.getElementById('boa01')) {
     (boa08.innerHTML= `Buy $${(boa8.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (boa09.innerHTML= `Buy $${(boa9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (boa010.innerHTML=`Buy $${(boa10.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
-    (boa011.innerHTML=`Buy $${(boa11.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
+    (boa011.innerHTML=`Buy $${(boa11.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (boa012.innerHTML=`Buy $${(boa12.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (boa013.innerHTML=`Buy $${(boa13.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (boa014.innerHTML=`Buy $${(boa14.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (boa015.innerHTML=`Buy $${(boa15.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (boa016.innerHTML=`Buy $${(boa16.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('bar01')) {
     (bar1.innerHTML = "$5,478"),
     (bar2.innerHTML = "$5,842"),
