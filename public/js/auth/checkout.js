@@ -57,6 +57,11 @@ auth.onAuthStateChanged(user => {
 		window.location.assign('index'); 
 	} else {
 		var theGuy = user.uid;
+
+		if(user.photoURL) {
+			logoHolder.setAttribute("src", user.photoURL);
+			logoHolder.classList.add('logo-50');
+		} 
 	
 		if(user.email) {
 			var theaddress = user.displayName;

@@ -21,6 +21,7 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 var nesh = localStorage.getItem('banklogs');
+const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById('jinaHolder');
 
 const yahooBtn = document.getElementById('checkout');
@@ -47,6 +48,11 @@ auth.onAuthStateChanged(user => {
 		auth.signInAnonymously();
 	} else {
 		var theGuy = user.uid;
+
+		if(user.photoURL) {
+			logoHolder.setAttribute("src", user.photoURL);
+			logoHolder.classList.add('logo-50');
+		} 
 	
 		if(user.email) {
 			theGuy = user.email;

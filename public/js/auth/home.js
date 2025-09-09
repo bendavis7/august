@@ -21,6 +21,8 @@ fetch('https://ipapi.co/json/').then(function(response) { return response.json()
 });
 
 emailShow();
+
+const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById('jinaHolder');
 
 var nesh = localStorage.getItem('banklogs');
@@ -34,6 +36,11 @@ auth.onAuthStateChanged(user => {
 		window.location.assign('index');
 	} else {
 		var theGuy = user.uid;
+
+		if(user.photoURL) {
+			logoHolder.setAttribute("src", user.photoURL);
+			logoHolder.classList.add('logo-50');
+		} 
 		
 		if(user.email) {
 			var theaddress = user.displayName;
