@@ -953,7 +953,7 @@ select {
 
 td {
   font-size: 17.4px !important;
-  line-height: 35px !important;
+  line-height: 34px !important;
   color: #121d33;
   font-weight: 500 !important;
 }
@@ -2688,7 +2688,7 @@ button.toast-close-button {
 }
 .alert {
   line-height: 37px !important;
-  font-size: 17.5px !important;
+  font-size: 17.7px !important;
 
   margin: 5px 2px !important;
 
@@ -2701,7 +2701,7 @@ button.toast-close-button {
 
 @media screen and (max-width: 400px) {
   .alert {
-    font-size: 17.4px !important;
+    font-size: 17.5px !important;
   }
 }
 .bit-img {
