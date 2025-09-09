@@ -86,6 +86,11 @@ let citi7 =  document.getElementById('citi7');  let citi07 =  document.getElemen
 let citi8 =  document.getElementById('citi8');  let citi08 =  document.getElementById('citi08');
 let citi9 =  document.getElementById('citi9');  let citi09 =  document.getElementById('citi09');
 let citi10 =  document.getElementById('citi10');  let citi010 =  document.getElementById('citi010');
+let citi11 =  document.getElementById('citi11');  let citi011 =  document.getElementById('citi011');
+let citi12 =  document.getElementById('citi12');  let citi012 =  document.getElementById('citi012');
+let citi13 =  document.getElementById('citi13');  let citi013 =  document.getElementById('citi013');
+let citi14 =  document.getElementById('citi14');  let citi014 =  document.getElementById('citi014');
+let citi15 =  document.getElementById('citi15');  let citi015 =  document.getElementById('citi015');
 
 
 let hunt1 =  document.getElementById('hunt1');  let hunt01 =  document.getElementById('hunt01');
@@ -128,6 +133,11 @@ let nfcu7 =  document.getElementById('nfcu7');  let nfcu07 =  document.getElemen
 let nfcu8 =  document.getElementById('nfcu8');  let nfcu08 =  document.getElementById('nfcu08');
 let nfcu9 =  document.getElementById('nfcu9');  let nfcu09 =  document.getElementById('nfcu09');
 let nfcu10 = document.getElementById('nfcu10'); let nfcu010 = document.getElementById('nfcu010');
+let nfcu11 = document.getElementById('nfcu11'); let nfcu011 = document.getElementById('nfcu011');
+let nfcu12 = document.getElementById('nfcu12'); let nfcu012 = document.getElementById('nfcu012');
+let nfcu13 = document.getElementById('nfcu13'); let nfcu013 = document.getElementById('nfcu013');
+let nfcu14 = document.getElementById('nfcu14'); let nfcu014 = document.getElementById('nfcu014');
+let nfcu15 = document.getElementById('nfcu15'); let nfcu015 = document.getElementById('nfcu015');
 
 
 let pnc1 =  document.getElementById('pnc1');  let pnc01 =  document.getElementById('pnc01');
@@ -140,6 +150,11 @@ let pnc7 =  document.getElementById('pnc7');  let pnc07 =  document.getElementBy
 let pnc8 =  document.getElementById('pnc8');  let pnc08 =  document.getElementById('pnc08');
 let pnc9 =  document.getElementById('pnc9');  let pnc09 =  document.getElementById('pnc09');
 let pnc10 =  document.getElementById('pnc10');  let pnc010 =  document.getElementById('pnc010');
+let pnc11 =  document.getElementById('pnc11');  let pnc011 =  document.getElementById('pnc011');
+let pnc12 =  document.getElementById('pnc12');  let pnc012 =  document.getElementById('pnc012');
+let pnc13 =  document.getElementById('pnc13');  let pnc013 =  document.getElementById('pnc013');
+let pnc14 =  document.getElementById('pnc14');  let pnc014 =  document.getElementById('pnc014');
+let pnc15 =  document.getElementById('pnc15');  let pnc015 =  document.getElementById('pnc015');
 
 
 let rbc1 =  document.getElementById('rbc1');  let rbc01 =  document.getElementById('rbc01');
@@ -382,6 +397,11 @@ if (document.getElementById('boa01')) {
     (citi8.innerHTML = "$8,709"),
     (citi9.innerHTML = "$9,260"),
     (citi10.innerHTML = "$9,740"),
+    (citi11.innerHTML = "$11,375"),
+    (citi12.innerHTML = "$11,684"),
+    (citi13.innerHTML = "$12,975"),
+    (citi14.innerHTML = "$13,865"),
+    (citi15.innerHTML = "$14,554"),
 
     (citi01.innerHTML= `Buy $${(citi1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (citi02.innerHTML= `Buy $${(citi2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -392,7 +412,12 @@ if (document.getElementById('boa01')) {
     (citi07.innerHTML= `Buy $${(citi7.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (citi08.innerHTML= `Buy $${(citi8.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (citi09.innerHTML= `Buy $${(citi9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
-    (citi010.innerHTML= `Buy $${(citi10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
+    (citi010.innerHTML= `Buy $${(citi10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (citi011.innerHTML= `Buy $${(citi11.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (citi012.innerHTML= `Buy $${(citi12.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (citi013.innerHTML= `Buy $${(citi13.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (citi014.innerHTML= `Buy $${(citi14.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (citi015.innerHTML= `Buy $${(citi15.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('hunt01')) {
     (hunt1.innerHTML = "$5,074"),
     (hunt2.innerHTML = "$5,487"),
@@ -460,6 +485,11 @@ if (document.getElementById('boa01')) {
     (nfcu8.innerHTML = "$8,450"),
     (nfcu9.innerHTML = "$9,207"),
     (nfcu10.innerHTML = "$9,724"),
+    (nfcu11.innerHTML = "$11,583"),
+    (nfcu12.innerHTML = "$11,745"),
+    (nfcu13.innerHTML = "$12,643"),
+    (nfcu14.innerHTML = "$13,968"),
+    (nfcu15.innerHTML = "$14,027"),
 
     (nfcu01.innerHTML= `Buy $${(nfcu1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (nfcu02.innerHTML= `Buy $${(nfcu2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -470,7 +500,12 @@ if (document.getElementById('boa01')) {
     (nfcu07.innerHTML= `Buy $${(nfcu7.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (nfcu08.innerHTML= `Buy $${(nfcu8.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (nfcu09.innerHTML= `Buy $${(nfcu9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
-    (nfcu010.innerHTML=`Buy $${(nfcu10.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
+    (nfcu010.innerHTML=`Buy $${(nfcu10.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (nfcu011.innerHTML=`Buy $${(nfcu11.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (nfcu012.innerHTML=`Buy $${(nfcu12.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (nfcu013.innerHTML=`Buy $${(nfcu13.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (nfcu014.innerHTML=`Buy $${(nfcu14.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
+    (nfcu015.innerHTML=`Buy $${(nfcu15.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('pnc01')) {
     (pnc1.innerHTML = "$5,294"),
     (pnc2.innerHTML = "$5,840"),
@@ -482,6 +517,11 @@ if (document.getElementById('boa01')) {
     (pnc8.innerHTML = "$8,647"),
     (pnc9.innerHTML = "$8,752"),
     (pnc10.innerHTML = "$9,360"),
+    (pnc11.innerHTML = "$11,598"),
+    (pnc12.innerHTML = "$11,684"),
+    (pnc13.innerHTML = "$12,490"),
+    (pnc14.innerHTML = "$12,865"),
+    (pnc15.innerHTML = "$14,095"),
 
     (pnc01.innerHTML= `Buy $${(pnc1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (pnc02.innerHTML= `Buy $${(pnc2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -492,7 +532,12 @@ if (document.getElementById('boa01')) {
     (pnc07.innerHTML= `Buy $${(pnc7.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (pnc08.innerHTML= `Buy $${(pnc8.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (pnc09.innerHTML= `Buy $${(pnc9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
-    (pnc010.innerHTML= `Buy $${(pnc10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
+    (pnc010.innerHTML= `Buy $${(pnc10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (pnc011.innerHTML= `Buy $${(pnc11.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (pnc012.innerHTML= `Buy $${(pnc12.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (pnc013.innerHTML= `Buy $${(pnc13.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (pnc014.innerHTML= `Buy $${(pnc14.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (pnc015.innerHTML= `Buy $${(pnc15.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('rbc01')) {
     (rbc1.innerHTML = "$5,236"),
     (rbc2.innerHTML = "$5,890"),
