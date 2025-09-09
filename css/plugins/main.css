@@ -953,7 +953,7 @@ select {
 
 td {
   font-size: 17.4px !important;
-  line-height: 38px !important;
+  line-height: 34px !important;
   color: #121d33;
   font-weight: 500 !important;
 }
@@ -961,14 +961,14 @@ td {
 @media screen and (max-width: 508px) {
   td {
     font-size: 17.7px !important;
-    line-height: 40px !important;
+    line-height: 38px !important;
   }
 }
 
 @media screen and (max-width: 408px) {
   td {
     font-size: 17.5px !important;
-    line-height: 38px !important;
+    line-height: 36px !important;
   }
 }
 
@@ -1196,30 +1196,40 @@ td {
 #example1 .table-primary {
   text-transform: uppercase;
 }
+
+
+
+
 #example1 td {
-  line-height: 40px !important;
+  font-size: 17.4px !important;
+  line-height: 45px !important;
 }
 #example1 tr:last-child td {
-  padding-bottom: 30px !important;
+  padding-bottom: 40px !important;
 }
 @media (max-width: 769px) {
   #example1 td {
     font-size: 17.8px !important;
-    line-height: 42px !important;
-  }
-  #example1 tr:last-child td {
-    padding-bottom: 3px !important;
-  }
-}
-@media (max-width: 409px) {
-  #example1 td {
-    font-size: 17.6px !important;
-    line-height: 40px !important;
+    line-height: 43px !important;
   }
   #example1 tr:last-child td {
     padding-bottom: 10px !important;
   }
 }
+@media (max-width: 409px) {
+  #example1 td {
+    font-size: 17.6px !important;
+    line-height: 41px !important;
+  }
+  #example1 tr:last-child td {
+    padding-bottom: 10px !important;
+  }
+}
+
+
+
+
+
 #example1 {
   border-bottom: 1.4px solid rgb(255 , 255, 255, 0.5) !important;
 }
@@ -1250,13 +1260,12 @@ td {
   font-size: 30px;
   color: white;
   word-spacing: 2px !important;
-  letter-spacing: 1.3px !important;
-
-  margin: 10px !important;
+  letter-spacing: 1.4px !important;
+  white-space: nowrap !important;
+  margin: 5px 10px !important;
 }
 @media (min-width: 1370px) {
   #theno1 {
-    text-align: center;
     font-weight: 700;
     font-size: 32px;
     color: white;
@@ -1265,13 +1274,11 @@ td {
 @media (max-width: 576px) {
   #theno1 {
     font-size: 30px;
-    text-align: center;
   }
 }
 @media (max-width: 374px) {
   #theno1 {
     font-size: 28px;
-    text-align: center;
   }
 }
 .countup {
@@ -1432,8 +1439,8 @@ td {
 }
 @media (min-width: 1092px) {
   .attr-nav > ul > li.dropdown ul.dropdown-menu {
-    left: -150%;
-    width: 245%;
+    left: -165%;
+    width: 252%;
   }
   .attr-nav {
     margin-right: 0 !important;
@@ -1494,26 +1501,26 @@ td {
 }
 @media (max-width: 526px) {
   .attr-nav > ul > li.dropdown ul.dropdown-menu {
-    left: -120%;
-    width: 257%;
+    left: -130%;
+    width: 260%;
   }
 
   .thegold img {
-    height: 52px !important;
-    width: 52px !important;
+    height: 53px !important;
+    width: 53px !important;
     margin-right: 18px !important;
   }
   .thegold a {
-    padding: 15px 0 !important;
-    font-size: 21px !important;
-    letter-spacing: 1.4px !important;
+    padding: 16px 0 !important;
+    font-size: 20.9px !important;
+    letter-spacing: 1.5px !important;
     word-spacing: 4px !important;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 400px) {
   .attr-nav > ul > li.dropdown ul.dropdown-menu {
     left: -120%;
-    width: 255%;
+    width: 250%;
   }
   .thegold img {
     height: 51px !important;
@@ -2468,7 +2475,7 @@ ul.countdown li p {
   font-weight: 700;
   letter-spacing: 0.64px !important;
   font-size: 17.5px;
-  line-height: 50px !important;
+  line-height: 55px !important;
 }
 @media screen and (max-width: 502px) {
   .toast-message {
@@ -2681,7 +2688,7 @@ button.toast-close-button {
 }
 .alert {
   line-height: 37px !important;
-  font-size: 17.5px !important;
+  font-size: 17.7px !important;
 
   margin: 5px 2px !important;
 
@@ -2694,7 +2701,7 @@ button.toast-close-button {
 
 @media screen and (max-width: 400px) {
   .alert {
-    font-size: 17.4px !important;
+    font-size: 17.5px !important;
   }
 }
 .bit-img {
@@ -2721,8 +2728,9 @@ span#uida {
 .hr15-top {
   margin-top: 15px !important;
 }
-.hr20-top {
-  margin-top: 20px !important;
+.hr25-top {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
 }
 
 
@@ -3060,7 +3068,7 @@ button.butn.in-cart,
 
 #clients {
   padding: 4px 0 !important;
-  margin: 5px 0 !important;
+  margin: 5px 0 10px !important;
   opacity: 0.85 !important;
 }
 @media screen and (min-width: 874px) {
@@ -3108,7 +3116,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    margin: 0px 5px !important;
+    margin: 0px 5px 5px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 22px !important;
@@ -3116,7 +3124,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_length {
-    margin: 10px 5px !important;
+    margin: 10px 10px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 22px !important;
@@ -3128,6 +3136,18 @@ button.butn.in-cart,
   }
   #profileModal .dataTables_wrapper .dataTables_filter input {
     width: 60% !important;
+  }
+}
+
+
+
+@media screen and (max-width: 407px) {
+  .dataTables_wrapper .dataTables_filter {
+    font-size: 21px !important;
+  }
+
+  .dataTables_wrapper .dataTables_length {
+    font-size: 21px !important;
   }
 }
 

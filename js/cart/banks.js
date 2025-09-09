@@ -321,7 +321,7 @@ if (document.getElementById('boa01')) {
     (chime011.innerHTML= `Buy $${(chime11.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('citi01')) {
     (citi1.innerHTML = "$5,570"),
-    (citi2.innerHTML = "$5,806"),
+    (citi2.innerHTML = "$5,809"),
     (citi3.innerHTML = "$6,405"),
     (citi4.innerHTML = "$7,239"),
     (citi5.innerHTML = "$7,365"),
@@ -518,7 +518,7 @@ if (document.getElementById('boa01')) {
     (truist09.innerHTML= `Buy $${(truist9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (truist010.innerHTML= `Buy $${(truist10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('wells01')) {
-    (wells1.innerHTML = "$5,026"),
+    (wells1.innerHTML = "$5,076"),
     (wells2.innerHTML = "$5,420"),
     (wells3.innerHTML = "$6,850"),
     (wells4.innerHTML = "$7,389"),

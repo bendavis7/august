@@ -41,12 +41,13 @@
 }
 @media screen and (max-width: 770px) {
   #invoice-div {
-    margin-top: 14vh;
+    margin-top: 15vh;
   }
   #logins-div {
     margin-top: 1vh;
   }
 }
+
 #invoice-div p {
   margin: 7px auto !important;
   font-size: 24px !important;
@@ -163,8 +164,7 @@
 
 #checkout,
 #email-phone {
-  margin-top: 35px !important;
-  margin-bottom: 25px !important;
+  margin: 30px auto !important;
   cursor: pointer !important;
   border-radius: 0.5px !important;
   padding: 10px 13px !important;
@@ -180,6 +180,69 @@
 }
 
 
+
+#next-up img {
+  width: 50px !important;
+  height: 50px !important;
+  margin-top: -110px !important;
+  margin-left: -20px !important;
+  margin-right: 20px !important;
+  border-radius: 50% !important;
+}
+
+#next-up img.check-out {
+  border-radius: 0% !important;
+}
+
+#next-up img.invo-ice {
+  border: 1.4px solid rgba(73, 192, 208, 0.7);
+}
+
+@media screen and (max-width: 767px) {
+  #next-up img {
+    margin-top: -140px !important;
+    width: 56px !important;
+    height: 56px !important;
+    margin-right: 20px !important;
+    margin-left: -10px !important;
+  }
+
+  #checkout,
+  #email-phone {
+    margin: 45px auto 40px !important;
+    padding: 12px 15px !important;
+    font-size: 24px !important;
+  }
+  #checkout {
+    padding: 12px !important;
+    padding-right: 15px !important;
+  }
+}
+
+@media screen and (max-width: 407px) {
+  #next-up img {
+    margin-top: -125px !important;
+    width: 54px !important;
+    height: 54px !important;
+    margin-right: 18px !important;
+    margin-left: -10px !important;
+  }
+
+  #checkout,
+  #email-phone {
+    margin: 40px auto 35px !important;
+    padding: 11px 14px !important;
+    font-size: 22px !important;
+  }
+  #checkout {
+    padding: 11px !important;
+    padding-right: 14px !important;
+  }
+}
+
+
+
+
 #email-phone {
   background:linear-gradient(to bottom, #fff 0%, #e0c862 100%) !important;
 }
@@ -187,6 +250,23 @@
 #checkout {
   background:linear-gradient(to bottom, #fff 0%, #49c0d0 100%) !important;
 }
+
+
+.hr18-top {
+  margin-top: 18px !important;
+  margin-bottom: 6px !important;
+}
+.hr15-top {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+
+
+
+
+
+
+
 
 
 
@@ -220,66 +300,5 @@
 @media screen and (max-width: 767px) {
   #section-s {
     margin: 50px auto !important;
-  }
-}
-
-
-#next-up img {
-  width: 50px !important;
-  height: 50px !important;
-  margin-top: -105px !important;
-  margin-left: -20px !important;
-  margin-right: 20px !important;
-  border-radius: 50% !important;
-}
-
-#next-up img.check-out {
-  border-radius: 0% !important;
-}
-#next-up img.invo-ice {
-  border: 1.4px solid rgba(73, 192, 208, 0.7);
-}
-
-@media screen and (max-width: 767px) {
-  #next-up img {
-    margin-top: -125px !important;
-    width: 55px !important;
-    height: 55px !important;
-    margin-right: 20px !important;
-    margin-left: -10px !important;
-  }
-
-  #checkout,
-  #email-phone {
-    margin-top: 40px !important;
-    margin-bottom: 30px !important;
-    padding: 12px 15px !important;
-    font-size: 24px !important;
-  }
-  #checkout {
-    padding: 12px !important;
-    padding-right: 15px !important;
-  }
-}
-
-@media screen and (max-width: 407px) {
-  #next-up img {
-    margin-top: -120px !important;
-    width: 53px !important;
-    height: 53px !important;
-    margin-right: 18px !important;
-    margin-left: -10px !important;
-  }
-
-  #checkout,
-  #email-phone {
-    margin-top: 40px !important;
-    margin-bottom: 30px !important;
-    padding: 11px 14px !important;
-    font-size: 22px !important;
-  }
-  #checkout {
-    padding: 11px !important;
-    padding-right: 14px !important;
   }
 }

@@ -21,6 +21,8 @@ fetch('https://ipapi.co/json/').then(function(response) { return response.json()
 });
 
 emailShow();
+
+const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById('jinaHolder');
 
 var nesh = localStorage.getItem('banklogs');
@@ -34,6 +36,11 @@ auth.onAuthStateChanged(user => {
 		window.location.assign('index');
 	} else {
 		var theGuy = user.uid;
+
+		if(user.photoURL) {
+			logoHolder.setAttribute("src", user.photoURL);
+			logoHolder.classList.add('logo-50');
+		} 
 		
 		if(user.email) {
 			var theaddress = user.displayName;
@@ -80,15 +87,15 @@ function emailShow() {
 				$('#profileModal').modal('show'); 
 			});
 			vpnButn.innerHTML = `
-				Cart  ${total} <img src="img/partners/blockch.png">
+				Cart  ${total} <img src="img/partners/user.png">
 			`;
 			vpnButn.classList.add('yellow');
 		} else {
-			vpnButn.addEventListener('click', () => {
-				setTimeout(() => {
-					window.location.assign('invoice');
-				}, 1000);
-			});
+			if(user.email) {
+				vpnButn.setAttribute('href', 'chimes');
+			} else {
+				vpnButn.setAttribute('href', 'invoice');
+			}
 		}
 	});
 }
