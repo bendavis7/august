@@ -41,12 +41,13 @@
 }
 @media screen and (max-width: 770px) {
   #invoice-div {
-    margin-top: 14vh;
+    margin-top: 15vh;
   }
   #logins-div {
     margin-top: 1vh;
   }
 }
+
 #invoice-div p {
   margin: 7px auto !important;
   font-size: 24px !important;

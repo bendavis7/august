@@ -87,7 +87,7 @@ function emailShow() {
 				$('#profileModal').modal('show'); 
 			});
 			vpnButn.innerHTML = `
-				Cart  ${total} <img src="img/partners/blockch.png">
+				Cart  ${total} <img src="img/partners/user.png">
 			`;
 			vpnButn.classList.add('yellow');
 		} else {
