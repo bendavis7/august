@@ -994,22 +994,22 @@ select {
 
 td {
   font-size: 17.4px !important;
-  line-height: 35px !important;
+  line-height: 37px !important;
   color: #121d33;
   font-weight: 500 !important;
 }
 
 @media screen and (max-width: 508px) {
   td {
-    font-size: 17.7px !important;
-    line-height: 37px !important;
+    font-size: 17.8px !important;
+    line-height: 40px !important;
   }
 }
 
 @media screen and (max-width: 408px) {
   td {
-    font-size: 17.5px !important;
-    line-height: 35px !important;
+    font-size: 17.8px !important;
+    line-height: 38px !important;
   }
 }
 
@@ -3145,19 +3145,19 @@ button.butn.in-cart,
 
 
 .dataTables_wrapper .dataTables_filter {
-  margin: 5px 7px 1px !important;
+  margin: 7px 7px 1px !important;
   letter-spacing: 1.5px !important;
   word-spacing: 2px !important;
   font-size: 24px !important;
   white-space: nowrap !important;
 }
 .dataTables_wrapper .dataTables_length {
-  margin: 5px 7px 1px !important;
+  margin: 7px 7px 1px !important;
   letter-spacing: 1.5px !important;
   word-spacing: 2px !important;
   font-size: 24px !important;
   white-space: nowrap !important;
-  opacity: 0.7 !important;
+  opacity: 0.8 !important;
 }
 
 

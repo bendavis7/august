@@ -17,8 +17,6 @@ var cartLen = document.getElementById('cartlength');
 var showToast = document.getElementById('showtoasts');
 var theTh = document.getElementById('the-th');
 
-var titleLogs2 = document.getElementById('titlelogs2');
-
 if(localStorage.getItem('banklogs')) {
     if((JSON.parse(localStorage.getItem('banklogs')).length) > 0) {
 
@@ -204,11 +202,6 @@ function updateCartTotal() {
     thetotS.innerHTML = `Total:  <span>$${total.toLocaleString()}</span>`;
     theNos1.innerHTML =  'Cart Total: $' + total.toLocaleString();
 
-    titleLogs2.innerHTML =  `
-        Cart Total: 
-        $<span class="countup">${parseInt(total).toLocaleString()}</span>
-    `;
-    
 
     const bankLog = (JSON.parse(localStorage.getItem('banklogs'))[0].account);
     const bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
