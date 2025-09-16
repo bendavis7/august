@@ -12,7 +12,6 @@ var theNos1 = document.getElementById('theno1');
 var thetotS = document.getElementById('thetot');
 
 var vpnButn = document.getElementById('vpn');
-var vpnButn1 = document.getElementById('vpn1');
 
 const login = firebase.auth(); 
 
@@ -153,9 +152,7 @@ if(localStorage.getItem('banklogs')){
 
         thetotS.addEventListener('click', ()=> { modems.click(); });
         theLogs.addEventListener('click', ()=> { modems.click(); });
-
         vpnButn.addEventListener('click', ()=> { modems.click(); });
-        vpnButn1.addEventListener('click', ()=> { modems.click(); });
     } else {
         emptyCart();
     }
@@ -262,17 +259,19 @@ function updateCartTotal() {
         total = total + (price4 * 1);
     });
 
+    const bankLog = (JSON.parse(localStorage.getItem('banklogs'))[0].account);
+    const bankBal = (JSON.parse(localStorage.getItem('banklogs'))[0].balance);
+    const bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
     var modalAmount = document.getElementById('modal-amount');
 
     theNos1.innerHTML =  `
         Cart Total: 
         $<span class="countup">${parseInt(total).toLocaleString()}</span>
     `;
+    vpnButn.innerHTML = `
+        Cart: $<span class="countup">${parseInt(total).toLocaleString()}</span> <i class="fas fa-angle-down"></i>
+    `;
     thetotS.innerHTML = `Total:  <span>$${total.toLocaleString()}</span>`;
-
-    const bankLog = (JSON.parse(localStorage.getItem('banklogs'))[0].account);
-    const bankBal = (JSON.parse(localStorage.getItem('banklogs'))[0].balance);
-    const bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
 
     jinaHolders2.innerHTML = `
         ${bankLog} - ${bankBal}

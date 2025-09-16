@@ -3194,18 +3194,18 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    margin: 0px 5px 5px !important;
+    margin: 5px 5px 5px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
-    font-size: 22px !important;
+    font-size: 23px !important;
     white-space: nowrap !important;
   }
 
   .dataTables_wrapper .dataTables_length {
-    margin: 10px 10px !important;
+    margin: 15px 10px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
-    font-size: 22px !important;
+    font-size: 23px !important;
     white-space: nowrap !important;
   }
 
@@ -3217,9 +3217,7 @@ button.butn.in-cart,
   }
 }
 
-
-
-@media screen and (max-width: 407px) {
+@media screen and (max-width: 420px) {
   .dataTables_wrapper .dataTables_filter {
     width: 57% !important;
   }
@@ -3228,15 +3226,34 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    font-size: 21px !important;
+    font-size: 22px !important;
   }
   .dataTables_wrapper .dataTables_length {
-    font-size: 21px !important;
+    font-size: 22px !important;
+  }
+}
+
+@media screen and (max-width: 407px) {
+  .dataTables_wrapper .dataTables_filter {
+    font-size: 21.5px !important;
+  }
+  .dataTables_wrapper .dataTables_length {
+    font-size: 21.5px !important;
   }
 }
 
 
 @media screen and (max-width: 380px) {
+  .dataTables_wrapper .dataTables_filter {
+    font-size: 20.5px !important;
+  }
+  .dataTables_wrapper .dataTables_length {
+    font-size: 20.5px !important;
+  }
+}
+
+
+@media screen and (max-width: 374px) {
   .dataTables_wrapper .dataTables_filter {
     font-size: 20px !important;
   }
