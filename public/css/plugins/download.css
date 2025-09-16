@@ -253,12 +253,6 @@ section #section-x {
   margin: -10px auto 20px !important; 
   opacity: 0.8 !important;
 }
-@media screen and (min-width: 767px) {
-  section #section-x {
-    margin: -80px auto 50px !important; 
-    opacity: 0.8 !important;
-  }
-}
 
 @media screen and (min-width: 1067px) {
   blink#disb {
