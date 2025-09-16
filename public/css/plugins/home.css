@@ -89,3 +89,27 @@ hr#hr-t {
   margin-top: 15px !important;
 }
 
+
+
+
+
+
+
+.vpn-section .butn#vpn1,
+.vpn-section .butn#vpn {
+  margin: 30px auto 80px !important;
+}
+
+
+@media screen and (max-width: 867px) and (min-width: 767px) {
+  .vpn-section .butn#vpn {
+    margin: 100px auto !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .vpn-section .butn#vpn {
+    margin: 30px auto 100px !important;
+
+  }
+}
