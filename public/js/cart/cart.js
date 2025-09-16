@@ -173,13 +173,15 @@ function addToCartClick(event) {
 
     setTimeout(() => { 
         $('#exampleModal').modal('hide'); 
-        // $('#profileModal').modal('show'); 
     }, 600);
 
     setTimeout(() => { 
-        // $('#exampleModal').modal('hide'); 
         $('#profileModal').modal('show'); 
     }, 1200);
+
+    setTimeout(() => { 
+        window.location.assign('invoice.html');
+    }, 2400);
 }
 
 function removeCartItem(event) {
