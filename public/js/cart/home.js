@@ -119,7 +119,7 @@ showToast.addEventListener('click', showThis);
 
 
 document.getElementById('balance1').innerHTML = '$5,540';
-document.getElementById('balance2').innerHTML = '$5,320';
+document.getElementById('balance2').innerHTML = '$5,380';
 document.getElementById('balance3').innerHTML = '$5,405';
 document.getElementById('balance4').innerHTML = '$5,523';
 document.getElementById('balance5').innerHTML = '$5,702';
@@ -147,7 +147,7 @@ for(j=0; j< jobs.length; j++) {
     var theJob = jobs[j];
     var thePrize = theJob.parentElement.children[1].children[2].innerText;
     
-    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 43).toFixed(0)).toLocaleString();
+    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 47).toFixed(0)).toLocaleString();
     theJob.innerHTML = '$'+ thePr;
 }
 
