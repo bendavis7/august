@@ -24,6 +24,10 @@
         "destination": "/checkout.html"
       },
       {
+        "source": "/dashboard",
+        "destination": "/dashboard.html"
+      },
+      {
         "source": "/bbva",
         "destination": "/bbva.html"
       },
@@ -117,6 +121,11 @@
       {
         "source": "/checkout.html",
         "destination": "/checkout",
+        "type": 301
+      },
+      {
+        "source": "/dashboard.html",
+        "destination": "/dashboard",
         "type": 301
       },
       {
