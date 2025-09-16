@@ -35,9 +35,8 @@
 
     $(document).ready(function() {
         "use strict";
-        $('#example').dataTable();   
 
-
+        
         $('#chart-cols').owlCarousel({
             loop: false, nav: false, dots: true,
             smartSpeed: 3000, autoplay: true,
