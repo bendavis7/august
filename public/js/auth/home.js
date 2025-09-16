@@ -85,15 +85,15 @@ function emailShow() {
 				$('#profileModal').modal('show'); 
 			});
 			vpnButn.innerHTML = `
-				Cart  ${total} <img src="img/partners/table.png">
+				Cart: ${total} <i class="fas fa-angle-down"></i>
 			`;
 			vpnButn.classList.add('yellow');
 		} else {
-			if(user.email) {
-				vpnButn.setAttribute('href', 'chimes');
-			} else {
-				vpnButn.setAttribute('href', 'invoice');
-			}
+			vpnButn.addEventListener('click', () => {
+				setTimeout(() => {
+					window.location.assign('invoice');
+				}, 1000);
+			})
 		}
 	});
 }

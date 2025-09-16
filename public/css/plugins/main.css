@@ -3194,7 +3194,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    margin: 5px 5px 5px !important;
+    margin: 3px 5px 5px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 23px !important;
@@ -3202,7 +3202,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_length {
-    margin: 15px 10px !important;
+    margin: 12px 10px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 23px !important;

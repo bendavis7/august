@@ -78,7 +78,7 @@ function emailShow() {
 				$('#profileModal').modal('show'); 
 			});
 			vpnButn.innerHTML = `
-				Cart  ${total} <img src="img/partners/table.png">
+				Cart: ${total} <i class="fas fa-angle-down"></i>
 			`;
 			vpnButn.classList.add('yellow');
 		} else {
@@ -86,7 +86,7 @@ function emailShow() {
 				setTimeout(() => {
 					window.location.assign('home');
 				}, 1000);
-			});
+			})
 		}
 	});
 }
