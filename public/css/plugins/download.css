@@ -227,7 +227,7 @@ div.xzoom {
 
 section #section-v2,
 section #section-v1 {
-  opacity: 0.7 !important;
+  opacity: 0.8 !important;
   margin-top: 50px !important;
 }
 @media screen and (max-width: 767px) {
@@ -239,24 +239,24 @@ section #section-v1 {
 
 section #section-z {
   margin: 20px auto 10px !important; 
-  opacity: 0.7 !important;
+  opacity: 0.8 !important;
 }
 @media screen and (max-width: 767px) {
   section #section-z {
     margin: 24px auto !important; 
-    opacity: 0.6 !important;
+    opacity: 0.8 !important;
   }
 }
 
 
 section #section-x {
   margin: -10px auto 20px !important; 
-  opacity: 0.5 !important;
+  opacity: 0.8 !important;
 }
 @media screen and (min-width: 767px) {
   section #section-x {
     margin: -80px auto 50px !important; 
-    opacity: 0.3 !important;
+    opacity: 0.8 !important;
   }
 }
 
@@ -265,8 +265,6 @@ section #section-x {
     display: none !important;
   }
 }
-
-
 
 #vpn {
   background:linear-gradient(to bottom, #fff 0%, #b6e653 100%) !important;
