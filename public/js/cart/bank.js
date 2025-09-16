@@ -201,6 +201,8 @@ let td7 =  document.getElementById('td7');  let td07 =  document.getElementById(
 let td8 =  document.getElementById('td8');  let td08 =  document.getElementById('td08');
 let td9 =  document.getElementById('td9');  let td09 =  document.getElementById('td09');
 let td10 =  document.getElementById('td10');  let td010 =  document.getElementById('td010');
+let td11 =  document.getElementById('td11');  let td011 =  document.getElementById('td011');
+let td12 =  document.getElementById('td12');  let td012 =  document.getElementById('td012');
 
 
 let truist1 =  document.getElementById('truist1');  let truist01 =  document.getElementById('truist01');
@@ -213,6 +215,8 @@ let truist7 =  document.getElementById('truist7');  let truist07 =  document.get
 let truist8 =  document.getElementById('truist8');  let truist08 =  document.getElementById('truist08');
 let truist9 =  document.getElementById('truist9');  let truist09 =  document.getElementById('truist09');
 let truist10 =  document.getElementById('truist10');  let truist010 =  document.getElementById('truist010');
+let truist11 =  document.getElementById('truist11');  let truist011 =  document.getElementById('truist011');
+let truist12 =  document.getElementById('truist12');  let truist012 =  document.getElementById('truist012');
 
 
 let wells1 =  document.getElementById('wells1');  let wells01 =  document.getElementById('wells01');
@@ -623,6 +627,8 @@ if (document.getElementById('boa01')) {
     (td8.innerHTML = "$8,374"),
     (td9.innerHTML = "$8,862"),
     (td10.innerHTML = "$9,346"),
+    (td11.innerHTML = "$11,594"),
+    (td12.innerHTML = "$11,845"),
 
     (td01.innerHTML= `Buy $${(td1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (td02.innerHTML= `Buy $${(td2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -633,7 +639,9 @@ if (document.getElementById('boa01')) {
     (td07.innerHTML= `Buy $${(td7.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (td08.innerHTML= `Buy $${(td8.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (td09.innerHTML= `Buy $${(td9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
-    (td010.innerHTML= `Buy $${(td10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
+    (td010.innerHTML= `Buy $${(td10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (td011.innerHTML= `Buy $${(td11.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (td012.innerHTML= `Buy $${(td12.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('truist01')) {
     (truist1.innerHTML = "$5,206"),
     (truist2.innerHTML = "$5,835"),
@@ -645,6 +653,8 @@ if (document.getElementById('boa01')) {
     (truist8.innerHTML = "$8,640"),
     (truist9.innerHTML = "$8,950"),
     (truist10.innerHTML = "$9,056"),
+    (truist11.innerHTML = "$11,649"),
+    (truist12.innerHTML = "$11,765"),
 
     (truist01.innerHTML= `Buy $${(truist1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (truist02.innerHTML= `Buy $${(truist2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -655,7 +665,9 @@ if (document.getElementById('boa01')) {
     (truist07.innerHTML= `Buy $${(truist7.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (truist08.innerHTML= `Buy $${(truist8.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (truist09.innerHTML= `Buy $${(truist9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
-    (truist010.innerHTML= `Buy $${(truist10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
+    (truist010.innerHTML= `Buy $${(truist10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (truist011.innerHTML= `Buy $${(truist11.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (truist012.innerHTML= `Buy $${(truist12.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('wells01')) {
     (wells1.innerHTML = "$3,864"),
     (wells2.innerHTML = "$4,156"),
@@ -691,18 +703,18 @@ if (document.getElementById('boa01')) {
     (wells015.innerHTML=`Buy $${(wells15.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
     (wells016.innerHTML=`Buy $${(wells16.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('wood01')) {
-    (wood1.innerHTML = "$3,405"),
-    (wood2.innerHTML = "$4,207"),
-    (wood3.innerHTML = "$4,732"),
-    (wood4.innerHTML = "$5,584"),
-    (wood5.innerHTML = "$5,820"),
-    (wood6.innerHTML = "$6,734"),
-    (wood7.innerHTML = "$7,245"),
-    (wood8.innerHTML = "$7,724"),
-    (wood9.innerHTML = "$8,205"),
-    (wood10.innerHTML = "$8,750"),
-    (wood11.innerHTML = "$9,380"),
-    (wood12.innerHTML = "$9,752"),
+    (wood1.innerHTML = "$5,584"),
+    (wood2.innerHTML = "$5,820"),
+    (wood3.innerHTML = "$6,734"),
+    (wood4.innerHTML = "$7,245"),
+    (wood5.innerHTML = "$7,724"),
+    (wood6.innerHTML = "$8,205"),
+    (wood7.innerHTML = "$8,750"),
+    (wood8.innerHTML = "$9,380"),
+    (wood9.innerHTML = "$9,752"),
+    (wood10.innerHTML = "$11,405"),
+    (wood11.innerHTML = "$11,607"),
+    (wood12.innerHTML = "$11,732"),
 
     (wood01.innerHTML= `Buy $${(wood1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (wood02.innerHTML= `Buy $${(wood2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
