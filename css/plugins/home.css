@@ -63,12 +63,6 @@ td.burro {
   opacity: 0.7 !important;
 }
 
-#chart-cols {   
-  padding: 20px auto !important;
-  margin-bottom: -20px !important;
-}
-
-
 
 
 #bitcoin-logo2 {
@@ -96,6 +90,26 @@ hr#hr-t {
 }
 
 
-blink {
-  margin: 6px 1px;
+
+
+
+
+
+.vpn-section .butn#vpn1,
+.vpn-section .butn#vpn {
+  margin: 30px auto 80px !important;
+}
+
+
+@media screen and (max-width: 867px) and (min-width: 767px) {
+  .vpn-section .butn#vpn {
+    margin: 100px auto !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .vpn-section .butn#vpn {
+    margin: 30px auto 100px !important;
+
+  }
 }

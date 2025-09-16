@@ -29,7 +29,6 @@ var nesh = localStorage.getItem('banklogs');
 var vpnButn = document.getElementById('vpn');
 
 var userCred = 'Anonymous';
-var thePerson =  `Anonymous <hr id="hr-t">`;
 
 auth.onAuthStateChanged(user => {
 	if(!user) { 
@@ -43,18 +42,12 @@ auth.onAuthStateChanged(user => {
 		} 
 		
 		if(user.email) {
+			jinaHolder.value = user.displayName;
 			theGuy = user.email;
 			userCred = `${user.displayName}`;
-			thePerson = `${user.displayName}. <hr id="hr-t">`;
+		} else {
+			jinaHolder.value = 'Anonymous';
 		}
-
-		if(nesh) { 
-			items = JSON.parse(nesh); 
-			for (var i = 0; i < (JSON.parse(nesh)).length; i++) {
-				var userz = `table-id${items.indexOf(items[i])}`;
-				document.getElementById(`${userz}`).innerHTML = `${thePerson}`; 
-			}
-		} 
 
 		var docRef = db.collection("banks").doc(theGuy);
 		docRef.get().then((doc) => { 
@@ -91,7 +84,7 @@ function emailShow() {
 		} else {
 			vpnButn.addEventListener('click', () => {
 				setTimeout(() => {
-					window.location.assign('invoice');
+					window.location.assign('home');
 				}, 1000);
 			})
 		}

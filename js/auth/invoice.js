@@ -89,7 +89,7 @@ function emailShow() {
 			yahooBtn.innerHTML = ` Checkout ${total} `;
 			yahooBtn.addEventListener("click", () => {
 				setTimeout(() => {
-					window.location.assign('checkout');
+					window.location.assign('download');
 				}, 1000);
 			});
 		} else {

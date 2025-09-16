@@ -36,6 +36,9 @@ var modalCheck = document.getElementById('modal-check');
 
 var userCred = 'Anonymous';
 var thePerson = `${Device} <hr id="hr-t">`;
+var vpnButn1 = document.getElementById('vpn1');
+
+emailShow();
 
 if(window.innerWidth < 700) {
 	thePerson = `Anonymous <hr id="hr-t">`;
@@ -93,11 +96,25 @@ auth.onAuthStateChanged(user => {
 });
 
 
+
+function emailShow() {
+	auth.onAuthStateChanged(user => { 
+		$("html, body").animate({ scrollTop: 0 }, 600);
+
+		vpnButn1.addEventListener("click", () => {
+			setTimeout(() => {
+				window.location.assign('home');
+			}, 1000);
+		});
+	});
+}
+
+
 const downloadFunction = () => {
 	auth.onAuthStateChanged(user => { 
-		var data1 = 0; if(window.innerWidth < 700) { data1 = 570; }
+		var data1 = 0; if(window.innerWidth < 700) { data1 = 590; }
 		var theGuy = user.uid; var theCss = 'anon';
-		var nextLine = `For a smooth checkout  <br> Get an email invoice .. `;
+		var nextLine = `For a smooth purchase  <br> Get an email invoice .. `;
 		if(user.email) { 
 			auth.currentUser.sendEmailVerification(); 
 			theGuy = user.email; theCss = 'large'; 
@@ -117,7 +134,7 @@ const downloadFunction = () => {
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
 			if(doc.exists) {
-				return docRef.update({ checkOut: true }); 
+				return docRef.update({ downLoads: true }); 
 			} 
 		});
 

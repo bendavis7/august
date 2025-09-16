@@ -177,7 +177,7 @@ blink {
   border: 1.4px solid rgba(71, 88, 143, 0.5);
 }
 .nohr {
-  border: 0.7px solid rgba(71, 88, 143, 0.2);
+  border: 0.5px solid rgba(71, 88, 143, 0.2);
 }
 #photo2 {
   background: rgba(71, 88, 143, 0.1) !important;

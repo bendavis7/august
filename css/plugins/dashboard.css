@@ -1,0 +1,36 @@
+@media screen and (max-width: 1026px) {
+  .col-12 {
+    margin-bottom: 20px;
+  }
+  .col-sm-6 {
+    margin-bottom: 4px !important;
+  }
+}
+.therow {
+  margin: 5px -0;
+}
+
+#modalsend .brock {
+  background: rgba(18, 29, 51, 0.5) !important;
+}
+
+div.col-lg-6,
+div.col-lg-3,
+div.col-lg-8,
+div.col-lg-35,
+div.col-12,
+div.col-lg-2 {
+  z-index: 1 !important;
+}
+
+
+
+#chart-cols {   
+  padding: 20px auto !important;
+  margin-bottom: -20px !important;
+}
+
+
+blink {
+  margin: 6px 1px;
+}

@@ -9,7 +9,6 @@ var wildPar = document.getElementById('wild');
 var theLogo = document.getElementById('logo');
 
 var googlBtn = document.getElementById('google');
-var weldPar = document.getElementById('weld');
 
 var table1 = jQuery('#example1').DataTable();
 
@@ -69,7 +68,7 @@ function showThis() {
 		if(user) {
             if(user.email) {
                 setTimeout(() => {
-                    window.location.assign('checkout');
+                    window.location.assign('download');
                 }, 1000);
             } else {
                 var shortCutFunction = 'success'; var msg = `You're not logged in .. <br> with an email address .. <hr class="hr15-bot">`; 
@@ -163,14 +162,6 @@ function updateCartTotal() {
     checkoutImg.setAttribute('src', bankImg);
     checkoutImg.classList.add('check-out');
     
-    weldPar.innerHTML = `                
-        <span id="in-span">-</span> ${bankInfo1} <br>
-        <span id="in-span">-</span> ${bankInfo2} <br>
-        <hr class="nohr">
-        <span id="in-span">-</span> ${bankInfo3} <br>
-        <span id="in-span">-</span> ${bankInfo4} <br>
-    `;
-    
     theLogo.src = `${bankImg}`;
 
     if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
@@ -180,11 +171,6 @@ function updateCartTotal() {
         checkoutImg.classList.remove('check-out');
         checkoutImg.classList.add('invo-ice');
     } 
-    
-    if(bankLog.includes('Truist')) {
-        theLogo.setAttribute('src', 'img/carousel/truist.jpg');
-        theLogo.classList.add('logo-50'); 
-    }
 
     if(bankLog.includes('America') || bankLog.includes('Barclays')) {
         theTh.innerHTML = 'AccountID';

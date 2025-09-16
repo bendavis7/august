@@ -12,7 +12,6 @@ var theNos1 = document.getElementById('theno1');
 var thetotS = document.getElementById('thetot');
 
 var vpnButn = document.getElementById('vpn');
-var vpnButn1 = document.getElementById('vpn1');
 
 const login = firebase.auth(); 
 
@@ -153,9 +152,7 @@ if(localStorage.getItem('banklogs')){
 
         thetotS.addEventListener('click', ()=> { modems.click(); });
         theLogs.addEventListener('click', ()=> { modems.click(); });
-
         vpnButn.addEventListener('click', ()=> { modems.click(); });
-        vpnButn1.addEventListener('click', ()=> { modems.click(); });
     } else {
         emptyCart();
     }
@@ -168,15 +165,14 @@ function emptyCart() {
         var shortCutFunction = 'success'; var msg = `Your cart is empty... <br> add bank logs to cart. <hr class="hr15-bot">`; 
         toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
         setTimeout(() => { 
-            window.location.assign('home'); 
+            window.location.assign('dashboard'); 
         }, 5000);
 	});
 }
 
 
-
 document.getElementById('balance1').innerHTML = '$5,540';
-document.getElementById('balance2').innerHTML = '$5,320';
+document.getElementById('balance2').innerHTML = '$5,380';
 document.getElementById('balance3').innerHTML = '$5,405';
 document.getElementById('balance4').innerHTML = '$5,523';
 document.getElementById('balance5').innerHTML = '$5,702';
@@ -204,9 +200,10 @@ for(j=0; j< jobs.length; j++) {
     var theJob = jobs[j];
     var thePrize = theJob.parentElement.children[1].children[2].innerText;
     
-    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 43).toFixed(0)).toLocaleString();
+    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 47).toFixed(0)).toLocaleString();
     theJob.innerHTML = '$'+ thePr;
 }
+
 
 
 
@@ -262,17 +259,19 @@ function updateCartTotal() {
         total = total + (price4 * 1);
     });
 
+    const bankLog = (JSON.parse(localStorage.getItem('banklogs'))[0].account);
+    const bankBal = (JSON.parse(localStorage.getItem('banklogs'))[0].balance);
+    const bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
     var modalAmount = document.getElementById('modal-amount');
 
     theNos1.innerHTML =  `
         Cart Total: 
         $<span class="countup">${parseInt(total).toLocaleString()}</span>
     `;
+    vpnButn.innerHTML = `
+        Cart: $<span class="countup">${parseInt(total).toLocaleString()}</span> <i class="fas fa-angle-down"></i>
+    `;
     thetotS.innerHTML = `Total:  <span>$${total.toLocaleString()}</span>`;
-
-    const bankLog = (JSON.parse(localStorage.getItem('banklogs'))[0].account);
-    const bankBal = (JSON.parse(localStorage.getItem('banklogs'))[0].balance);
-    const bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
 
     jinaHolders2.innerHTML = `
         ${bankLog} - ${bankBal}
@@ -285,11 +284,6 @@ function updateCartTotal() {
     bankLog.includes('TD') || bankLog.includes('Woodforest')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
     } 
-
-    if(bankLog.includes('Truist')) {
-        theLogo.setAttribute('src', 'img/carousel/truist.jpg');
-        theLogo.classList.add('logo-50'); 
-    }
 
     if(bankLog.includes('America') || bankLog.includes('Barclays')) {
         theTh.innerHTML = 'AccountID';

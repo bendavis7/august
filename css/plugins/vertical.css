@@ -153,33 +153,6 @@ blink {
 
 
 
-
-#section-out {
-  margin: 30px auto -50px !important;
-  opacity: 0.7 !important;
-}
-
-@media screen and (max-width: 867px) {
-  #section-out {
-    margin: 20px auto -10px !important;
-  }
-}
-
-
-#exampleModal {
-  opacity: 0 !important;
-}
-
-#section-cash {
-  opacity: 0.8 !important;
-}
-
-@media screen and (max-width: 867px) {
-  #section-cash h4 {
-    font-size: 30px !important;
-  }
-}
-
 #services-carousel {
   margin-bottom: 150px !important;
 }
@@ -199,26 +172,3 @@ blink {
 
 
 
-
-
-
-
-
-.vpn-section .butn#vpn1,
-.vpn-section .butn#vpn {
-  margin: 40px auto 70px !important;
-}
-
-
-@media screen and (max-width: 867px) and (min-width: 767px) {
-  .vpn-section .butn#vpn {
-    margin: 100px auto !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .vpn-section .butn#vpn {
-    margin: 40px auto 120px !important;
-
-  }
-}
