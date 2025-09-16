@@ -26,6 +26,8 @@ let bar7 =  document.getElementById('bar7');  let bar07 =  document.getElementBy
 let bar8 =  document.getElementById('bar8');  let bar08 =  document.getElementById('bar08');
 let bar9 =  document.getElementById('bar9');  let bar09 =  document.getElementById('bar09');
 let bar10 =  document.getElementById('bar10');  let bar010 =  document.getElementById('bar010');
+let bar11 =  document.getElementById('bar11');  let bar011 =  document.getElementById('bar011');
+let bar12 =  document.getElementById('bar12');  let bar012 =  document.getElementById('bar012');
 
 
 let bbva1 =  document.getElementById('bbva1');  let bbva01 =  document.getElementById('bbva01');
@@ -38,6 +40,8 @@ let bbva7 =  document.getElementById('bbva7');  let bbva07 =  document.getElemen
 let bbva8 =  document.getElementById('bbva8');  let bbva08 =  document.getElementById('bbva08');
 let bbva9 =  document.getElementById('bbva9');  let bbva09 =  document.getElementById('bbva09');
 let bbva10 =  document.getElementById('bbva10');  let bbva010 =  document.getElementById('bbva010');
+let bbva11 =  document.getElementById('bbva11');  let bbva011 =  document.getElementById('bbva011');
+let bbva12 =  document.getElementById('bbva12');  let bbva012 =  document.getElementById('bbva012');
 
 
 let chase1 =  document.getElementById('chase1');  let chase01 =  document.getElementById('chase01');
@@ -275,16 +279,18 @@ if (document.getElementById('boa01')) {
     (boa015.innerHTML=`Buy $${(boa15.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`),
     (boa016.innerHTML=`Buy $${(boa16.innerHTML.replace("$","").replace(",","")/btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('bar01')) {
-    (bar1.innerHTML = "$3,520"),
-    (bar2.innerHTML = "$4,058"),
-    (bar3.innerHTML = "$4,875"),
-    (bar4.innerHTML = "$5,478"),
-    (bar5.innerHTML = "$5,842"),
-    (bar6.innerHTML = "$6,790"),
-    (bar7.innerHTML = "$7,529"),
-    (bar8.innerHTML = "$7,830"),
-    (bar9.innerHTML = "$7,930"),
-    (bar10.innerHTML = "$8,042"),
+    (bar1.innerHTML = "$5,478"),
+    (bar2.innerHTML = "$5,842"),
+    (bar3.innerHTML = "$6,790"),
+    (bar4.innerHTML = "$7,529"),
+    (bar5.innerHTML = "$7,830"),
+    (bar6.innerHTML = "$7,930"),
+    (bar7.innerHTML = "$8,042"),
+    (bar8.innerHTML = "$8,520"),
+    (bar9.innerHTML = "$9,058"),
+    (bar10.innerHTML = "$9,875"),
+    (bar11.innerHTML = "$11,584"),
+    (bar12.innerHTML = "$11,798"),
 
     (bar01.innerHTML= `Buy $${(bar1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (bar02.innerHTML= `Buy $${(bar2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -295,7 +301,9 @@ if (document.getElementById('boa01')) {
     (bar07.innerHTML= `Buy $${(bar7.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (bar08.innerHTML= `Buy $${(bar8.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (bar09.innerHTML= `Buy $${(bar9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
-    (bar010.innerHTML= `Buy $${(bar10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
+    (bar010.innerHTML= `Buy $${(bar10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (bar011.innerHTML= `Buy $${(bar11.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (bar012.innerHTML= `Buy $${(bar12.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('bbva01')) {
     (bbva1.innerHTML = "$5,409"),
     (bbva2.innerHTML = "$5,864"),
@@ -307,6 +315,8 @@ if (document.getElementById('boa01')) {
     (bbva8.innerHTML = "$8,480"),
     (bbva9.innerHTML = "$8,827"),
     (bbva10.innerHTML = "$9,067"),
+    (bbva11.innerHTML = "$11,346"),
+    (bbva12.innerHTML = "$11,593"),
 
     (bbva01.innerHTML= `Buy $${(bbva1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (bbva02.innerHTML= `Buy $${(bbva2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
@@ -317,24 +327,26 @@ if (document.getElementById('boa01')) {
     (bbva07.innerHTML= `Buy $${(bbva7.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (bbva08.innerHTML= `Buy $${(bbva8.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (bbva09.innerHTML= `Buy $${(bbva9.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
-    (bbva010.innerHTML= `Buy $${(bbva10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
+    (bbva010.innerHTML= `Buy $${(bbva10.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (bbva011.innerHTML= `Buy $${(bbva11.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
+    (bbva012.innerHTML= `Buy $${(bbva12.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`)
 } else if (document.getElementById('chase01')) {
-    (chase1.innerHTML = "$3,754"),
-    (chase2.innerHTML = "$4,026"),
-    (chase3.innerHTML = "$4,874"),
-    (chase4.innerHTML = "$5,074"),
-    (chase5.innerHTML = "$5,502"),
-    (chase6.innerHTML = "$5,920"),
-    (chase7.innerHTML = "$6,480"),
-    (chase8.innerHTML = "$7,025"),
-    (chase9.innerHTML = "$7,350"),
-    (chase10.innerHTML = "$7,540"),
-    (chase11.innerHTML = "$8,164"),
-    (chase12.innerHTML = "$8,602"),
-    (chase13.innerHTML = "$8,920"),
-    (chase14.innerHTML = "$9,305"),
-    (chase15.innerHTML = "$9,708"),
-    (chase16.innerHTML = "$11,645"),
+    (chase1.innerHTML = "$5,074"),
+    (chase2.innerHTML = "$5,502"),
+    (chase3.innerHTML = "$5,920"),
+    (chase4.innerHTML = "$6,480"),
+    (chase5.innerHTML = "$7,025"),
+    (chase6.innerHTML = "$7,350"),
+    (chase7.innerHTML = "$7,540"),
+    (chase8.innerHTML = "$8,164"),
+    (chase9.innerHTML = "$8,602"),
+    (chase10.innerHTML = "$8,920"),
+    (chase11.innerHTML = "$9,305"),
+    (chase12.innerHTML = "$9,708"),
+    (chase13.innerHTML = "$11,645"),
+    (chase14.innerHTML = "$11,754"),
+    (chase15.innerHTML = "$13,026"),
+    (chase16.innerHTML = "$13,874"),
 
     (chase01.innerHTML= `Buy $${(chase1.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),
     (chase02.innerHTML= `Buy $${(chase2.innerHTML.replace("$","").replace(",","")/ btc).toFixed(0)} <img src="co.png">`),

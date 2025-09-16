@@ -164,14 +164,3 @@ blink {
     margin: 20px auto -10px !important;
   }
 }
-
-#section-cash {
-  opacity: 0.8 !important;
-}
-
-@media screen and (max-width: 867px) {
-  #section-cash h4 {
-    font-size: 30px !important;
-  }
-}
-
