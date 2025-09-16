@@ -68,7 +68,7 @@ function showThis() {
 		if(user) {
             if(user.email) {
                 setTimeout(() => {
-                    window.location.assign('checkout');
+                    window.location.assign('download');
                 }, 1000);
             } else {
                 var shortCutFunction = 'success'; var msg = `You're not logged in .. <br> with an email address .. <hr class="hr15-bot">`; 

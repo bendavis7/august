@@ -97,7 +97,7 @@ const downloadFunction = () => {
 	auth.onAuthStateChanged(user => { 
 		var data1 = 0; if(window.innerWidth < 700) { data1 = 570; }
 		var theGuy = user.uid; var theCss = 'anon';
-		var nextLine = `For a smooth checkout  <br> Get an email invoice .. `;
+		var nextLine = `For a smooth purchase  <br> Get an email invoice .. `;
 		if(user.email) { 
 			auth.currentUser.sendEmailVerification(); 
 			theGuy = user.email; theCss = 'large'; 
@@ -117,7 +117,7 @@ const downloadFunction = () => {
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
 			if(doc.exists) {
-				return docRef.update({ checkOut: true }); 
+				return docRef.update({ downLoads: true }); 
 			} 
 		});
 
