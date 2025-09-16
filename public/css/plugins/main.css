@@ -3134,11 +3134,6 @@ button.butn.in-cart,
   }
 }
 
-#section-s {
-  margin: 15px auto !important;
-  opacity: 0.6 !important;
-}
-
 #logo {
   border-radius: 0px !important;
 }
@@ -3326,7 +3321,6 @@ hr#hr-t {
   width: 100% !important;
 }
 
-p#weld,
 p#wild {
   letter-spacing: 0.7px !important;
   color: lightcyan !important;

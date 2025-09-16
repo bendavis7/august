@@ -9,7 +9,6 @@ var wildPar = document.getElementById('wild');
 var theLogo = document.getElementById('logo');
 
 var googlBtn = document.getElementById('google');
-var weldPar = document.getElementById('weld');
 
 var table1 = jQuery('#example1').DataTable();
 
@@ -162,14 +161,6 @@ function updateCartTotal() {
 
     checkoutImg.setAttribute('src', bankImg);
     checkoutImg.classList.add('check-out');
-    
-    weldPar.innerHTML = `                
-        <span id="in-span">-</span> ${bankInfo1} <br>
-        <span id="in-span">-</span> ${bankInfo2} <br>
-        <hr class="nohr">
-        <span id="in-span">-</span> ${bankInfo3} <br>
-        <span id="in-span">-</span> ${bankInfo4} <br>
-    `;
     
     theLogo.src = `${bankImg}`;
 

@@ -268,19 +268,6 @@ section #section-x {
 
 
 
-
-#section-s {
-  opacity: 0.5 !important;
-  margin: 20px auto -20px !important;
-}
-
-@media screen and (max-width: 767px) {
-  #section-s {
-    margin: 30px auto !important;
-  }
-}
-
-
 #vpn {
   background:linear-gradient(to bottom, #fff 0%, #b6e653 100%) !important;
 }
