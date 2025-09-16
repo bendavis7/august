@@ -286,11 +286,6 @@ function updateCartTotal() {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
     } 
 
-    if(bankLog.includes('Truist')) {
-        theLogo.setAttribute('src', 'img/carousel/truist.jpg');
-        theLogo.classList.add('logo-50'); 
-    }
-
     if(bankLog.includes('America') || bankLog.includes('Barclays')) {
         theTh.innerHTML = 'AccountID';
     } 

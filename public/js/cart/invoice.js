@@ -180,11 +180,6 @@ function updateCartTotal() {
         checkoutImg.classList.remove('check-out');
         checkoutImg.classList.add('invo-ice');
     } 
-    
-    if(bankLog.includes('Truist')) {
-        theLogo.setAttribute('src', 'img/carousel/truist.jpg');
-        theLogo.classList.add('logo-50'); 
-    }
 
     if(bankLog.includes('America') || bankLog.includes('Barclays')) {
         theTh.innerHTML = 'AccountID';
