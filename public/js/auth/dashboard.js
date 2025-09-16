@@ -45,6 +45,8 @@ auth.onAuthStateChanged(user => {
 			jinaHolder.value = user.displayName;
 			theGuy = user.email;
 			userCred = `${user.displayName}`;
+		} else {
+			jinaHolder.value = 'Anonymous';
 		}
 
 		var docRef = db.collection("banks").doc(theGuy);
