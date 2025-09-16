@@ -37,7 +37,7 @@
 	
     $(document).ready(function() {
 
-        var dotsEach = 4;
+        var dotsEach = 3;
         var hrefs = window.location.href;
 
         if(hrefs.includes('america')) {
