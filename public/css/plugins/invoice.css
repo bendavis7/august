@@ -70,51 +70,51 @@
 }
 @media (min-width: 1072px) {
   #invoice-div.col-12 {
+    -ms-flex: 0 0 32.7%;
+    flex: 0 0 32.7%;
+    max-width: 32.7%;
+  }
+}
+@media (min-width: 1270px) {
+  #invoice-div.col-12 {
     -ms-flex: 0 0 32%;
     flex: 0 0 32%;
     max-width: 32%;
   }
 }
-@media (min-width: 1270px) {
-  #invoice-div.col-12 {
-    -ms-flex: 0 0 31%;
-    flex: 0 0 31%;
-    max-width: 31%;
-  }
-}
 @media (min-width: 1320px) {
   #invoice-div.col-12 {
-    -ms-flex: 0 0 29.5%;
-    flex: 0 0 29.5%;
-    max-width: 29.5%;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
   }
 }
 @media (min-width: 1400px) {
   #invoice-div.col-12 {
-    -ms-flex: 0 0 28%;
-    flex: 0 0 28%;
-    max-width: 28%;
+    -ms-flex: 0 0 28.5%;
+    flex: 0 0 28.5%;
+    max-width: 28.5%;
   }
 }
 @media (max-width: 571px)  {
   #invoice-div.col-12 {
-    -ms-flex:0 0 94%;
-    flex:0 0 94%;
-    max-width: 94%;
+    -ms-flex:0 0 95%;
+    flex:0 0 95%;
+    max-width: 95%;
   }  
 }
 @media (max-width: 421px)  {
   #invoice-div.col-12 {
-    -ms-flex:0 0 97%;
-    flex:0 0 97%;
-    max-width: 97%;
+    -ms-flex:0 0 98%;
+    flex:0 0 98%;
+    max-width: 98%;
   }  
 }
 @media (max-width: 400px)  {
   #invoice-div.col-12 {
-    -ms-flex:0 0 99%;
-    flex:0 0 99%;
-    max-width: 99%;
+    -ms-flex:0 0 100%;
+    flex:0 0 100%;
+    max-width: 100%;
   }  
 }
 
@@ -135,7 +135,28 @@
 #checkout {
   padding: 10px !important;
   padding-right: 13px !important;
+
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: Floating5;
+  animation-timing-function: ease-in-out;
 }
+@keyframes Floating5 {
+  0% {
+    transform: translate(0px, 0px);
+    transform: scale(1);
+  }
+  65% {
+    transform: translate(0px, 1px);
+    transform: scale(1.01);
+  }
+  100% {
+    transform: translate(0px, 0px);
+    transform: scale(1);
+  }
+}
+
+
 
 
 
@@ -144,7 +165,7 @@
   height: 50px !important;
   margin-top: -110px !important;
   margin-left: -20px !important;
-  margin-right: 20px !important;
+  margin-right: 22px !important;
   border-radius: 50% !important;
 }
 
@@ -161,7 +182,7 @@
     margin-top: -140px !important;
     width: 56px !important;
     height: 56px !important;
-    margin-right: 20px !important;
+    margin-right: 22px !important;
     margin-left: -10px !important;
   }
 
@@ -182,7 +203,7 @@
     margin-top: -125px !important;
     width: 54px !important;
     height: 54px !important;
-    margin-right: 18px !important;
+    margin-right: 20px !important;
     margin-left: -10px !important;
   }
 
@@ -238,8 +259,8 @@
   }
 }
 
-@media screen and (max-width: 7550px) {
+@media screen and (max-width: 755px) {
   #section-out {
-    margin: 50px auto !important;
+    margin: 70px auto !important;
   }
 }

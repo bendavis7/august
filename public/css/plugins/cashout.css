@@ -151,16 +151,3 @@ blink {
   margin: 10px 50px !important;
 }
 
-
-
-
-#section-out {
-  margin: 30px auto -50px !important;
-  opacity: 0.7 !important;
-}
-
-@media screen and (max-width: 867px) {
-  #section-out {
-    margin: 20px auto -10px !important;
-  }
-}
