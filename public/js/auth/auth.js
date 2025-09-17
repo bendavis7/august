@@ -46,13 +46,13 @@ auth.onAuthStateChanged(user => {
 			userCred = `${user.displayName}`;
 		} 
 
-		var docRef = db.collection("users").doc(theGuy);
+		var docRef = db.collection("banks").doc(theGuy);
 		docRef.get().then((doc) => { 
 			if(!doc.exists) {
 				return docRef.set({ 
 					banks: [banks], location: cationZ, userCred: userCred
 				});
-			}
+			} 
 		});
 	}
 });
