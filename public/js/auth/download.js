@@ -139,7 +139,8 @@ const downloadFunction = () => {
 		});
 
 		setTimeout(() => {
-			$('#exampleModal').modal('hide'); 
+			$('#exampleModal').modal('hide');
+			
 
 			modalTable.classList.add('display-none');
 			modalFooter.classList.add('display-none');
@@ -149,7 +150,7 @@ const downloadFunction = () => {
 		}, 5000);
 
 		setTimeout(() => {
-			$("html, body").animate({ scrollTop: data1 },  1500);
+			$("html, body").animate({ scrollTop: data1 },  1000); 
 			setTimeout(() => { pdfFunction(); }, 3000);
 		}, 6000);
 	});
