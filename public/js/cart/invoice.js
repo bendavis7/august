@@ -172,7 +172,7 @@ function updateCartTotal() {
 
     if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
     bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells') || 
-    bankLog.includes('TD') || bankLog.includes('Woodforest')) {
+    bankLog.includes('TD') || bankLog.includes('Woodforest') || bankLog.includes('Huntington')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
         checkoutImg.classList.remove('check-out');
         checkoutImg.classList.add('invo-ice');
@@ -181,6 +181,10 @@ function updateCartTotal() {
     if(bankLog.includes('America') || bankLog.includes('Barclays')) {
         theTh.innerHTML = 'AccountID';
     } 
+
+    if(bankLog.includes('Huntington')) {
+        theLogo.setAttribute('src', 'img/partners/hunt.jpg');
+    }
 
     localStorage.setItem('banktotal',total);
 
