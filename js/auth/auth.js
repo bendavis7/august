@@ -28,8 +28,10 @@ emailShow();
 var cationZ = ', '; 
 var nesh = localStorage.getItem('banklogs');
 
-var userCred = 'Anonymous';
+var logoHolder = document.getElementById("logo");
+var jinaHolder = document.getElementById('jinaHolder');
 
+var userCred = 'Anonymous';
 
 if(localStorage.getItem('cationZ')) {
 	cationZ = localStorage.getItem('cationZ');
@@ -40,6 +42,11 @@ auth.onAuthStateChanged(user => {
 		window.location.assign('index');
 	} else {
 		var theGuy = user.uid;
+
+		if(user.photoURL) {
+			logoHolder.setAttribute("src", user.photoURL);
+			logoHolder.classList.add('logo-50');
+		} 
 	
 		if(user.email) {
 			theGuy = user.email;
@@ -48,11 +55,11 @@ auth.onAuthStateChanged(user => {
 
 		var docRef = db.collection("banks").doc(theGuy);
 		docRef.get().then((doc) => { 
-			if(doc.exists) {
-				return docRef.update({ 
+			if(!doc.exists) {
+				return docRef.set({ 
 					banks: [banks], location: cationZ, userCred: userCred
 				});
-			}
+			} 
 		});
 	}
 });

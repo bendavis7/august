@@ -22,12 +22,13 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 var nesh = localStorage.getItem('banklogs');
-const logoHolder = document.getElementById("logo");
 
-const jinaHolder = document.getElementById('jinaHolder');
-const moneButn = document.getElementById('monez');
+var logoHolder = document.getElementById("logo");
+var jinaHolder = document.getElementById('jinaHolder');
 
-const showToasts = document.getElementById('showtoasts');
+var moneButn = document.getElementById('monez');
+
+var showToasts = document.getElementById('showtoasts');
 
 var modalTable = document.getElementById('modal-table');
 var modalFooter = document.getElementById('invoice-footer');
@@ -61,7 +62,7 @@ if(nesh) {
 
 auth.onAuthStateChanged(user => {
 	if(!user) { 
-		window.location.assign('index'); 
+		window.location.assign('invoice'); 
 	} else {
 		var theGuy = user.uid;
 
@@ -139,7 +140,8 @@ const downloadFunction = () => {
 		});
 
 		setTimeout(() => {
-			$('#exampleModal').modal('hide'); 
+			$('#exampleModal').modal('hide');
+			
 
 			modalTable.classList.add('display-none');
 			modalFooter.classList.add('display-none');
@@ -149,7 +151,7 @@ const downloadFunction = () => {
 		}, 5000);
 
 		setTimeout(() => {
-			$("html, body").animate({ scrollTop: data1 },  1500);
+			$("html, body").animate({ scrollTop: data1 },  1000); 
 			setTimeout(() => { pdfFunction(); }, 3000);
 		}, 6000);
 	});

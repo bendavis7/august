@@ -154,10 +154,10 @@ if(localStorage.getItem('banklogs')){
         theLogs.addEventListener('click', ()=> { modems.click(); });
         vpnButn.addEventListener('click', ()=> { modems.click(); });
     } else {
-        emptyCart();
+        setTimeout(() => { emptyCart(); }, 2000);
     }
 } else {
-    emptyCart();
+    setTimeout(() => { emptyCart(); }, 2000);
 }
 
 function emptyCart() {
@@ -165,7 +165,7 @@ function emptyCart() {
         var shortCutFunction = 'success'; var msg = `Your cart is empty... <br> add bank logs to cart. <hr class="hr15-bot">`; 
         toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
         setTimeout(() => { 
-            window.location.assign('dashboard'); 
+            window.location.assign('index'); 
         }, 5000);
 	});
 }

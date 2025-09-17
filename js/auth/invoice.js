@@ -21,11 +21,12 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 var nesh = localStorage.getItem('banklogs');
-const logoHolder = document.getElementById("logo");
-const jinaHolder = document.getElementById('jinaHolder');
 
-const yahooBtn = document.getElementById('checkout');
-const emailBtn = document.getElementById('email-phone');
+var logoHolder = document.getElementById("logo");
+var jinaHolder = document.getElementById('jinaHolder');
+
+var yahooBtn = document.getElementById('checkout');
+var emailBtn = document.getElementById('email-phone');
 
 if(localStorage.getItem('cationZ')) {
 	cationZ = localStorage.getItem('cationZ');
@@ -143,7 +144,18 @@ const signInWithGoogle = () => {
         var $toast = toastr[shortCutFunction](msg); $toastlast = $toast;
     });
 };
-emailBtn.addEventListener("click", signInWithGoogle);
+emailBtn.addEventListener("click", (event) => {
+	event.preventDefault();
+
+	setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
+	var shortCutFunction = 'success';var msg = `Use a burner email .. <br> To purchase bank logins <hr class="to-hr hr15-top">`;
+	toastr.options =  { closeButton: true, debug: false, newestOnTop: true, progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null };
+	var $toast = toastr[shortCutFunction](msg); $toastlast = $toast;
+
+	setTimeout(() => {
+		signInWithGoogle();
+	}, 4000);
+});
 
 
 
