@@ -36,9 +36,7 @@ var userCred = 'Anonymous';
 
 auth.onAuthStateChanged(user => {
 	if(!user) { 
-		auth.signInAnonymously().then(() => {
-			console.log('Hello')
-		});
+		auth.signInAnonymously();
 	} else {
 		var theGuy = user.uid;
 
