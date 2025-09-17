@@ -19,15 +19,10 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth(); 
-const db = firebase.firestore();
 
 if(!localStorage.getItem('banklogs')) {
 	localStorage.setItem('banklogs',[]);
 } 
-
-fetch('https://ipapi.co/json/').then(function(response) { return response.json()}).then(function(data) {
-	localStorage.setItem('cationZ', data.country_name +  ', ' + data.city); 
-});
 
 emailShow();
 
@@ -57,15 +52,6 @@ auth.onAuthStateChanged(user => {
 			theGuy = user.email;
 			userCred = `${user.displayName}`;
 		} 
-
-		var docRef = db.collection("banks").doc(theGuy);
-		docRef.get().then((doc) => { 
-			if(!doc.exists) {
-				return docRef.set({ 
-					banks: [], userCred: userCred
-				});
-			} 
-		});
 	} 
 });
 
