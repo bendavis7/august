@@ -42,7 +42,7 @@
 
         if(hrefs.includes('america')) {
             dotsEach = 6;
-        } else if(hrefs.includes('chimes')) {
+        } else if(hrefs.includes('chime')) {
             dotsEach = 2;
         } else if(hrefs.includes('navyfederal')) {
             dotsEach = 6;
