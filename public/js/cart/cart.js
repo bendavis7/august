@@ -173,11 +173,11 @@ function addToCartClick(event) {
 
     setTimeout(() => { 
         $('#exampleModal').modal('hide'); 
-    }, 750);
+    }, 1000);
 
     setTimeout(() => { 
         $('#profileModal').modal('show'); 
-    }, 1500);
+    }, 2000);
 }
 
 function removeCartItem(event) {
