@@ -24,10 +24,6 @@
         "destination": "/download.html"
       },
       {
-        "source": "/dashboard",
-        "destination": "/dashboard.html"
-      },
-      {
         "source": "/bbva",
         "destination": "/bbva.html"
       },
@@ -64,8 +60,8 @@
         "destination": "/m&t.html"
       },
       {
-        "source": "/chimes",
-        "destination": "/chimes.html"
+        "source": "/chime",
+        "destination": "/chime.html"
       },
       {
         "source": "/citi",
@@ -124,11 +120,6 @@
         "type": 301
       },
       {
-        "source": "/dashboard.html",
-        "destination": "/dashboard",
-        "type": 301
-      },
-      {
         "source": "/bankofamerica.html",
         "destination": "/bankofamerica",
         "type": 301
@@ -164,8 +155,8 @@
         "type": 301
       },
       {
-        "source": "/chimes.html",
-        "destination": "/chimes",
+        "source": "/chime.html",
+        "destination": "/chime",
         "type": 301
       },
       {
