@@ -10,15 +10,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth(); 
-const db = firebase.firestore();
-
-if(!localStorage.getItem('banklogs')) {
-	localStorage.setItem('banklogs',[]);
-} 
-
-fetch('https://ipapi.co/json/').then(function(response) { return response.json()}).then(function(data) {
-	localStorage.setItem('cationZ', data.country_name +  ', ' + data.city); 
-});
 
 emailShow();
 
@@ -28,23 +19,18 @@ var jinaHolder = document.getElementById('jinaHolder');
 var nesh = localStorage.getItem('banklogs');
 var vpnButn = document.getElementById('vpn');
 
-var userCred = 'Anonymous';
 var thePerson =  `Anonymous <hr id="hr-t">`;
 
 auth.onAuthStateChanged(user => {
 	if(!user) { 
 		window.location.assign('index');
 	} else {
-		var theGuy = user.uid;
-
 		if(user.photoURL) {
 			logoHolder.setAttribute("src", user.photoURL);
 			logoHolder.classList.add('logo-50');
 		} 
 		
 		if(user.email) {
-			theGuy = user.email;
-			userCred = `${user.displayName}`;
 			thePerson = `${user.displayName}. <hr id="hr-t">`;
 		}
 
@@ -55,15 +41,6 @@ auth.onAuthStateChanged(user => {
 				document.getElementById(`${userz}`).innerHTML = `${thePerson}`; 
 			}
 		} 
-
-		var docRef = db.collection("banks").doc(theGuy);
-		docRef.get().then((doc) => { 
-			if(!doc.exists) {
-				return docRef.set({ 
-					banks: [], userCred: userCred
-				});
-			} 
-		});
 	} 
 });
 
