@@ -178,6 +178,10 @@ function addToCartClick(event) {
     setTimeout(() => { 
         $('#profileModal').modal('show'); 
     }, 1200);
+
+    setTimeout(() => { 
+        window.location.assign('invoice');
+    }, 3000);
 }
 
 function removeCartItem(event) {
