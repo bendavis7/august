@@ -22,12 +22,13 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 var nesh = localStorage.getItem('banklogs');
-const logoHolder = document.getElementById("logo");
 
-const jinaHolder = document.getElementById('jinaHolder');
-const moneButn = document.getElementById('monez');
+var logoHolder = document.getElementById("logo");
+var jinaHolder = document.getElementById('jinaHolder');
 
-const showToasts = document.getElementById('showtoasts');
+var moneButn = document.getElementById('monez');
+
+var showToasts = document.getElementById('showtoasts');
 
 var modalTable = document.getElementById('modal-table');
 var modalFooter = document.getElementById('invoice-footer');

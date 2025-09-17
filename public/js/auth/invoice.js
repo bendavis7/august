@@ -21,11 +21,12 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 var nesh = localStorage.getItem('banklogs');
-const logoHolder = document.getElementById("logo");
-const jinaHolder = document.getElementById('jinaHolder');
 
-const yahooBtn = document.getElementById('checkout');
-const emailBtn = document.getElementById('email-phone');
+var logoHolder = document.getElementById("logo");
+var jinaHolder = document.getElementById('jinaHolder');
+
+var yahooBtn = document.getElementById('checkout');
+var emailBtn = document.getElementById('email-phone');
 
 if(localStorage.getItem('cationZ')) {
 	cationZ = localStorage.getItem('cationZ');

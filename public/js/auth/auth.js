@@ -28,6 +28,9 @@ emailShow();
 var cationZ = ', '; 
 var nesh = localStorage.getItem('banklogs');
 
+var logoHolder = document.getElementById("logo");
+var jinaHolder = document.getElementById('jinaHolder');
+
 var userCred = 'Anonymous';
 
 
@@ -40,6 +43,11 @@ auth.onAuthStateChanged(user => {
 		window.location.assign('index');
 	} else {
 		var theGuy = user.uid;
+
+		if(user.photoURL) {
+			logoHolder.setAttribute("src", user.photoURL);
+			logoHolder.classList.add('logo-50');
+		} 
 	
 		if(user.email) {
 			theGuy = user.email;

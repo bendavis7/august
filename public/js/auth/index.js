@@ -26,8 +26,8 @@ if(!localStorage.getItem('banklogs')) {
 
 emailShow();
 
-const logoHolder = document.getElementById("logo");
-const jinaHolder = document.getElementById('jinaHolder');
+var logoHolder = document.getElementById("logo");
+var jinaHolder = document.getElementById('jinaHolder');
 
 var nesh = localStorage.getItem('banklogs');
 var vpnButn = document.getElementById('vpn');
