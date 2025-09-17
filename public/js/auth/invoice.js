@@ -144,11 +144,7 @@ const signInWithGoogle = () => {
         var $toast = toastr[shortCutFunction](msg); $toastlast = $toast;
     });
 };
-emailBtn.addEventListener("click", () => {
-	setTimeout(() => { signInWithGoogle(); }, 1000);
-});
-
-
+emailBtn.addEventListener("click", signInWithGoogle());
 
 
 
