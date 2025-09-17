@@ -9,6 +9,13 @@
   }  
 }
 
+@media screen and (max-width: 526px) {
+  .xenon4 div.col-lg-6 {
+    margin-top: 20px !important;
+    margin-left: -20px !important;
+    width: 110% !important;
+  }  
+}
 
 .butn.modal-btn {
   margin-top: 7vh;
@@ -194,7 +201,7 @@ div.xzoom {
   }
 
   #table-email {
-    margin: 15px auto 0px !important;
+    margin: 12px auto 0px !important;
     z-index: 1 !important;
     padding: 3px !important;
   }
@@ -229,12 +236,6 @@ section #section-v2,
 section #section-v1 {
   opacity: 0.8 !important;
   margin-top: 50px !important;
-}
-@media screen and (max-width: 767px) {
-  section #section-v1 {
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-  }
 }
 
 section #section-z {
@@ -330,12 +331,7 @@ td.burro {
 
 
 #theno1 {
-  margin: 5px 0px !important;
-}
-@media (max-width: 576px) {
-  #theno1 {
-    margin: 4px 0 !important;
-  }
+  margin: 4px 0px !important;
 }
 
 
