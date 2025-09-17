@@ -80,17 +80,9 @@ function emptyCart() {
 function showThis() {
     login.onAuthStateChanged(user => { 		
 		if(user) {
-            if(user.email) {
-                setTimeout(() => {
-                    window.location.assign('download');
-                }, 1000);
-            } else {
-                var shortCutFunction = 'success'; var msg = `You're not logged in .. <br> with an email address .. <hr class="hr15-bot">`; 
-                toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
-                setTimeout(() => { 
-                     $('#profileModal').modal('hide'); 
-                }, 5000);
-            }
+            setTimeout(() => {
+                window.location.assign('download');
+            }, 1000);
 		} 
 	});
 }
