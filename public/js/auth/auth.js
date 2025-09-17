@@ -33,7 +33,6 @@ var jinaHolder = document.getElementById('jinaHolder');
 
 var userCred = 'Anonymous';
 
-
 if(localStorage.getItem('cationZ')) {
 	cationZ = localStorage.getItem('cationZ');
 } 
