@@ -22,16 +22,13 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 var nesh = localStorage.getItem('banklogs');
+var moneButn = document.getElementById('monez');
 
 var logoHolder = document.getElementById("logo");
 var jinaHolder = document.getElementById('jinaHolder');
 
-var moneButn = document.getElementById('monez');
-
 var userCred = 'Anonymous';
 var thePerson = `${Device} <hr id="hr-t">`;
-
-emailShow();
 
 if(window.innerWidth < 700) {
 	thePerson = `Anonymous <hr id="hr-t">`;
@@ -57,6 +54,7 @@ auth.onAuthStateChanged(user => {
 		window.location.assign('index');
 	} else {
 		var theGuy = user.uid;
+		emailShow();
 
 		if(user.photoURL) {
 			logoHolder.setAttribute("src", user.photoURL);
@@ -129,13 +127,6 @@ const checkoutFunction = () => {
 
 		setTimeout(() => {
 			$('#exampleModal').modal('hide');
-			
-
-			modalTable.classList.add('display-none');
-			modalFooter.classList.add('display-none');
-
-			modalTwo.classList.remove('display-none');
-			modalCheck.classList.add('lg-display-none');
 		}, 5000);
 
 		setTimeout(() => {
@@ -205,11 +196,8 @@ function pdfFunction() {
 			if(user.email) {
 				jsPDFInvoiceTemplate.default(props); 
 			} else {
-				if(Browser == 'Safari') {
-					CheckoutFile(`${bankLog}.pdf`);
-				} else {
-					jsPDFInvoiceTemplate.default(props); 
-				}
+				if(Browser == 'Safari') { CheckoutFile(`${bankLog}.pdf`);
+				} else { jsPDFInvoiceTemplate.default(props); }
 			}
 		}, 600);
 
@@ -261,10 +249,6 @@ function pdfFunction() {
 		};
 	});
 }
-
-
-
-
 
 
 
