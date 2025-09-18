@@ -106,12 +106,7 @@ function emailShow() {
 
 function verifyEmails() {
     login.onAuthStateChanged(user => { 	
-		var docRef = db.collection("users").doc(user.email);
-		docRef.get().then((doc) => {
-			if(doc.exists) {
-				return docRef.update({ emailSent: true });
-			} 
-		});
+		auth.currentUser.sendEmailVerification();
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anons`); }, 200);
 		var shortCutFunction = 'success'; var msg = `Verification email sent <br> ${user.email} <hr class="hr15-bot"> `;
         toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
@@ -120,7 +115,6 @@ function verifyEmails() {
         }, 5000);
 	});
 }
-
 
 
 const signInWithYahoo = () => {
