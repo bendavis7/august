@@ -80,22 +80,22 @@ function emailShow() {
 	auth.onAuthStateChanged(user => { 
 		$("html, body").animate({ scrollTop: 0 }, 600);
 
-		if(nesh && (JSON.parse(nesh).length) > 0) {
-			let items3 = (JSON.parse(nesh)); var total = 0;
-			items3.map(data=>{ 
-				var price4 = data.price.replace('Price: ','').replace(',','').replace('$',''); 
-				total = total + (price4 * 1); 
-			}); total = '$' + total;
+		// if(nesh && (JSON.parse(nesh).length) > 0) {
+		// 	let items3 = (JSON.parse(nesh)); var total = 0;
+		// 	items3.map(data=>{ 
+		// 		var price4 = data.price.replace('Price: ','').replace(',','').replace('$',''); 
+		// 		total = total + (price4 * 1); 
+		// 	}); total = '$' + total;
 			
-			yahooBtn.innerHTML = ` Checkout ${total} `;
-			yahooBtn.addEventListener("click", () => {
-				setTimeout(() => {
-					window.location.assign('download');
-				}, 1000);
-			});
-		} else {
+		// 	yahooBtn.innerHTML = ` Checkout ${total} `;
+		// 	yahooBtn.addEventListener("click", () => {
+		// 		setTimeout(() => {
+		// 			window.location.assign('checkout');
+		// 		}, 1000);
+		// 	});
+		// } else {
 			yahooBtn.addEventListener("click", signInWithYahoo);
-		}
+		// }
 	});
 }
 

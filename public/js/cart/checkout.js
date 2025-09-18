@@ -12,6 +12,7 @@ var theNos1 = document.getElementById('theno1');
 var thetotS = document.getElementById('thetot');
 
 var vpnButn = document.getElementById('vpn');
+var vpnButn1 = document.getElementById('vpn1');
 
 const login = firebase.auth(); 
 
@@ -152,7 +153,9 @@ if(localStorage.getItem('banklogs')){
 
         thetotS.addEventListener('click', ()=> { modems.click(); });
         theLogs.addEventListener('click', ()=> { modems.click(); });
+
         vpnButn.addEventListener('click', ()=> { modems.click(); });
+        vpnButn1.addEventListener('click', ()=> { modems.click(); });
     } else {
         setTimeout(() => { emptyCart(); }, 2000);
     }
@@ -165,7 +168,7 @@ function emptyCart() {
         var shortCutFunction = 'success'; var msg = `Your cart is empty... <br> add bank logs to cart. <hr class="hr15-bot">`; 
         toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
         setTimeout(() => { 
-            window.location.assign('index'); 
+            window.location.assign('home'); 
         }, 5000);
 	});
 }
@@ -202,50 +205,6 @@ for(j=0; j< jobs.length; j++) {
     
     var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 47).toFixed(0)).toLocaleString();
     theJob.innerHTML = '$'+ thePr;
-}
-
-
-
-
-
-
-
-function removeCartItem(event) {
-    var buttonClicked = event.target
-    var cartItem = buttonClicked.parentElement.parentElement;
-    var price = cartItem.children[3].innerText;
-    var balance = cartItem.children[1].innerText;
-    var account = cartItem.children[2].innerText;
-    var website = cartItem.children[9].innerText;
-    var image = cartItem.children[0].children[0].src;
-    var info1 = cartItem.children[5].innerText;
-    var info2 = cartItem.children[6].innerText;
-    var info3 = cartItem.children[7].innerText;
-    var info4 = cartItem.children[8].innerText;
-
-    removeItemFromCart(price, balance, account,website,image,info1,info2,info3,info4);
-    buttonClicked.parentElement.parentElement.remove();
-}
-
-
-function removeItemFromCart(price, balance,account,website,image,info1,info2,info3,info4){
-    let item = {
-        price: price,
-        balance: balance,
-        account: account,
-        website: website,
-        image: image,
-        info1: info1,
-        info2: info2,
-        info3: info3,
-        info4: info4
-    }
-    function checkAdult(items) {
-        return JSON.stringify(items) !== JSON.stringify(item)
-    }
-    localStorage.setItem('banklogs', JSON.stringify(items.filter(checkAdult)));
-    items = items.filter(checkAdult);
-    window.location.reload()
 }
 
 

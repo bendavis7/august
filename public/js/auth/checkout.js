@@ -28,16 +28,8 @@ var jinaHolder = document.getElementById('jinaHolder');
 
 var moneButn = document.getElementById('monez');
 
-var showToasts = document.getElementById('showtoasts');
-
-var modalTable = document.getElementById('modal-table');
-var modalFooter = document.getElementById('invoice-footer');
-var modalTwo = document.getElementById('modal-two');
-var modalCheck = document.getElementById('modal-check');
-
 var userCred = 'Anonymous';
 var thePerson = `${Device} <hr id="hr-t">`;
-var vpnButn1 = document.getElementById('vpn1');
 
 emailShow();
 
@@ -102,16 +94,12 @@ function emailShow() {
 	auth.onAuthStateChanged(user => { 
 		$("html, body").animate({ scrollTop: 0 }, 600);
 
-		vpnButn1.addEventListener("click", () => {
-			setTimeout(() => {
-				window.location.assign('home');
-			}, 1000);
-		});
+
 	});
 }
 
 
-const downloadFunction = () => {
+const checkoutFunction = () => {
 	auth.onAuthStateChanged(user => { 
 		var data1 = 0; if(window.innerWidth < 700) { data1 = 590; }
 		var theGuy = user.uid; var theCss = 'anon';
@@ -135,7 +123,7 @@ const downloadFunction = () => {
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
 			if(doc.exists) {
-				return docRef.update({ downLoads: true }); 
+				return docRef.update({ checkOut: true }); 
 			} 
 		});
 
@@ -156,12 +144,11 @@ const downloadFunction = () => {
 		}, 6000);
 	});
 }
-moneButn.addEventListener('click', downloadFunction);
-showToasts.addEventListener('click', downloadFunction);
+moneButn.addEventListener('click', checkoutFunction);
 
 
 
-function DownloadFile(fileName) {
+function CheckoutFile(fileName) {
 	var url = "js/banks.pdf";
 	var req = new XMLHttpRequest();
 	req.open("GET", url, true);
@@ -219,7 +206,7 @@ function pdfFunction() {
 				jsPDFInvoiceTemplate.default(props); 
 			} else {
 				if(Browser == 'Safari') {
-					DownloadFile(`${bankLog}.pdf`);
+					CheckoutFile(`${bankLog}.pdf`);
 				} else {
 					jsPDFInvoiceTemplate.default(props); 
 				}

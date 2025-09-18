@@ -20,7 +20,8 @@ if(localStorage.getItem('banklogs')){
     if((JSON.parse(localStorage.getItem('banklogs')).length) > 0) {
 
         items = JSON.parse(localStorage.getItem('banklogs'));
-        document.getElementById('cartlength').innerText = (JSON.parse(localStorage.getItem('banklogs')).length);
+        cartLen.innerText = (JSON.parse(localStorage.getItem('banklogs')).length);
+        cartLen.classList.remove('display-none');
 
         items.map(data=>{
             var image = `<td><img src=${data.image}></td>`
@@ -54,7 +55,6 @@ if(localStorage.getItem('banklogs')){
             button.addEventListener('click', removeCartItem)
         }
 
-        cartLen.classList.remove('display-none');
         updateCartTotal();
     } 
 } 
@@ -97,7 +97,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
         var info4 = btn.parentElement.children[4].innerText;
         var account = btn.parentElement.children[5].innerText;
         
-        modal.find(".modal-title").text("Balance: " + balance);
+        modal.find(".modal-title").text("Balance " + balance);
         document.getElementById('monez').innerHTML = ` 
             Buy : $${parseFloat((balance.replace("$", "").replace(",", "") /  47)).toFixed(0)} <img src=${image}>`;
         modal.find(".website p").text(website);
@@ -122,7 +122,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
         var info4 = btn.parentElement.parentElement.children[4].innerText;
         var account = btn.parentElement.parentElement.children[5].innerText;
         
-        modal.find(".modal-title").text("Balance: " + balance);
+        modal.find(".modal-title").text("Balance " + balance);
         document.getElementById('monez').innerHTML = ` 
             Buy : $${parseFloat((balance.replace("$", "").replace(",", "") /  47)).toFixed(0)} <img src=${image}>`;
         modal.find(".website p").text(website);
@@ -151,7 +151,8 @@ function addToCartClick(event) {
     var pric = pri.replace('Buy : ','');
     var price3 = 'Price: '+  pric;
     var price = price3.substring(0, price3.length - 1);
-    var balance = button.parentElement.parentElement.parentElement.children[0].children[1].innerText;
+    var balanc = button.parentElement.parentElement.parentElement.children[0].children[1].innerText;
+    var balance = balanc.replace('Balance', 'Balance:');
     var website = button.parentElement.parentElement.children[0].children[0].innerText;
     var info1 = button.parentElement.parentElement.children[1].children[0].innerText;
     var info2 = button.parentElement.parentElement.children[2].children[0].innerText;
@@ -173,7 +174,7 @@ function addToCartClick(event) {
 
     setTimeout(() => { 
         $('#exampleModal').modal('hide'); 
-    }, 900);
+    }, 1000);
 
     setTimeout(() => { 
         $('#profileModal').modal('show'); 
@@ -336,6 +337,9 @@ function updateCartTotal() {
     theNos1.innerHTML =  'Cart Total: $' + total.toLocaleString();
 
     var bankLog = (JSON.parse(localStorage.getItem('banklogs'))[0].account);
+
+    cartLen.innerText = (JSON.parse(localStorage.getItem('banklogs')).length);
+    cartLen.classList.remove('display-none');
 
     var logsContainer =  document.getElementsByClassName('gallery')[0];
     var singleLog = logsContainer.getElementsByClassName('butn');

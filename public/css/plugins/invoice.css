@@ -70,9 +70,9 @@
 }
 @media (min-width: 1072px) {
   #invoice-div.col-12 {
-    -ms-flex: 0 0 32.7%;
-    flex: 0 0 32.7%;
-    max-width: 32.7%;
+    -ms-flex: 0 0 32.5%;
+    flex: 0 0 32.5%;
+    max-width: 32.5%;
   }
 }
 @media (min-width: 1270px) {
