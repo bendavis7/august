@@ -15,8 +15,6 @@ var table1 = jQuery('#example1').DataTable();
 var cartLen = document.getElementById('cartlength');
 var showToast = document.getElementById('showtoasts');
 
-var checkoutBtn = document.getElementById('checkout');
-var checkoutImg = document.getElementById('checkout-img');
 var theTh = document.getElementById('the-th');
 
 const login = firebase.auth(); 
@@ -159,9 +157,6 @@ function updateCartTotal() {
         ${bankLog2} <br> 
         <span id="in-span">${bankBal}</span> <br>
     `;
-
-    checkoutImg.setAttribute('src', bankImg);
-    checkoutImg.classList.add('check-out');
     
     theLogo.src = `${bankImg}`;
 
@@ -169,8 +164,6 @@ function updateCartTotal() {
     bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells') || 
     bankLog.includes('TD') || bankLog.includes('Woodforest')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
-        checkoutImg.classList.remove('check-out');
-        checkoutImg.classList.add('invo-ice');
     } 
 
     if(bankLog.includes('America') || bankLog.includes('Barclays')) {

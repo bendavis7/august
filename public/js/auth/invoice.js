@@ -28,6 +28,8 @@ var jinaHolder = document.getElementById('jinaHolder');
 var yahooBtn = document.getElementById('checkout');
 var emailBtn = document.getElementById('email-phone');
 
+var checkImg = document.getElementById('check-img');
+
 if(localStorage.getItem('cationZ')) {
 	cationZ = localStorage.getItem('cationZ');
 	citiZ = cationZ.substring(cationZ.indexOf(",") + 1);
@@ -82,6 +84,9 @@ function emailShow() {
 
 		if(user.email) {
 			if(nesh && (JSON.parse(nesh).length) > 0) {
+				var bankLog = (JSON.parse(localStorage.getItem('banklogs'))[0].account);
+				var bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
+
 				let items3 = (JSON.parse(nesh)); var total = 0;
 				items3.map(data=>{ 
 					var price4 = data.price.replace('Price: ','').replace(',','').replace('$',''); 
@@ -94,6 +99,17 @@ function emailShow() {
 						window.location.assign('checkout');
 					}, 1000);
 				});
+
+				checkImg.setAttribute('src', bankImg);
+				checkImg.classList.add('check-out');
+
+				if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
+				bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells') || 
+				bankLog.includes('TD') || bankLog.includes('Woodforest')) {
+					theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
+					checkImg.classList.remove('check-out');
+					checkImg.classList.add('invo-ice');
+				} 
 			}
 		} else {
 			yahooBtn.addEventListener("click", signInWithYahoo);
