@@ -169,26 +169,11 @@ blink {
   color: rgb(170, 208, 228) !important;
 }
 
-#the-shot {
-  border: 2px solid rgb(85, 162, 200, 0.7) !important;
-  box-shadow: 1px 1px 2px 1px rgba(0, 115, 173, 0.5) !important;
-}
 .modal-content {
   border: 1.4px solid rgba(0, 115, 173, 0.5);
 }
 .nohr {
   border: 0.5px solid rgba(0, 115, 173, 0.2);
-}
-#photo2 {
-  background: rgba(0, 115, 173, 0.1) !important;
-  border: 0.7px solid rgba(0, 115, 173, 0.2);
-}
-
-.ticketz .modal-body label {
-  color: #0073ad !important;
-}
-.change {
-  border: 1.4px solid rgba(0, 115, 173, 0.03) !important;
 }
 
 .progress-bar-striped {
@@ -202,7 +187,6 @@ blink {
   background-color: #0073ad;
 }
 #profileModal .modal-content,
-#uploadModal .modal-content,
 #exampleModal .modal-content {
   background: rgba(12, 58, 92, 0.5) !important;
   border: 2px solid rgba(0, 115, 173, 0.5) !important;
@@ -211,9 +195,7 @@ blink {
 #modalsend {
   background: rgba(0, 115, 173, 0.25) !important;
 }
-.bg-bro {
-  background-color: rgba(0, 115, 173, 1);
-}
+
 
 .modal-btn,
 .lesnar,
@@ -237,7 +219,6 @@ blink {
 .account {
   border: 1.4px solid rgba(0, 115, 173, 0.3);
 }
-#uploadModal .modal-header .close img,
 #exampleModal .modal-header .close img,
 .btn-remove {
   border: 1.4px solid rgba(0, 115, 173, 0.7);

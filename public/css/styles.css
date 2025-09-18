@@ -168,25 +168,12 @@ blink {
 #jinaHolder2 {
   color: rgb(215, 233, 192) !important;
 }
-#the-shot {
-  border: 2px solid rgb(174, 210, 129, 0.7) !important;
-  box-shadow: 1px 1px 2px 1px rgba(134, 188, 66, 0.5) !important;
-}
+
 .modal-content {
   border: 1.4px solid rgba(134, 188, 66, 0.5);
 }
 .nohr {
   border: 0.5px solid rgba(134, 188, 66, 0.2);
-}
-#photo2 {
-  background: rgba(134, 188, 66, 0.1) !important;
-  border: 0.7px solid rgba(134, 188, 66, 0.2);
-}
-.ticketz .modal-body label {
-  color: #86bc42 !important;
-}
-.change {
-  border: 1.4px solid rgba(134, 188, 66, 0.03) !important;
 }
 
 .progress-bar-striped {
@@ -231,7 +218,6 @@ blink {
   transition: all 0.7s ease;
 }
 #profileModal .modal-content,
-#uploadModal .modal-content,
 #exampleModal .modal-content {
   background: rgba(57, 82, 56, 0.5) !important;
   border: 2px solid rgba(134, 188, 66, 0.5) !important;
@@ -239,9 +225,6 @@ blink {
 }
 #modalsend {
   background: rgba(134, 188, 66, 0.25) !important;
-}
-.bg-bro {
-  background-color: rgba(134, 188, 66, 1);
 }
 
 .modal-btn,
@@ -266,7 +249,6 @@ blink {
 .account {
   border: 1.4px solid rgba(134, 188, 66, 0.3);
 }
-#uploadModal .modal-header .close img,
 #exampleModal .modal-header .close img,
 .btn-remove {
   border: 1.4px solid rgba(134, 188, 66, 0.7);
