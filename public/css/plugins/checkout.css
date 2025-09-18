@@ -238,6 +238,15 @@ section #section-v1 {
   margin-top: 50px !important;
 }
 
+@media screen and (max-width: 407px) {
+  section #section-v2,
+  section #section-v1 {
+    opacity: 0.8 !important;
+    margin-top: 25px !important;
+  }
+
+}
+
 section #section-z {
   margin: 20px auto 10px !important; 
   opacity: 0.8 !important;

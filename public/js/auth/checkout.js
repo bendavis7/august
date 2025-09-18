@@ -92,18 +92,26 @@ function emailShow() {
 	auth.onAuthStateChanged(user => { 
 		$("html, body").animate({ scrollTop: 0 }, 600);
 
+		var theGuys = user.uid;
+		if(user.email) { theGuys = user.email }
 
+		var docRef = db.collection("users").doc(theGuys);
+		docRef.get().then((doc) => { 
+			if(!doc.exists || !doc.data().checkOut) {
+				setTimeout(() => {
+					document.getElementById('modem').click();
+				}, 4000);
+			}
+		});
 	});
 }
 
 
 const checkoutFunction = () => {
 	auth.onAuthStateChanged(user => { 
-		var data1 = 0; if(window.innerWidth < 700) { data1 = 590; }
 		var theGuy = user.uid; var theCss = 'anon';
 		var nextLine = `For a smooth purchase  <br> Get an email invoice .. `;
 		if(user.email) { 
-			auth.currentUser.sendEmailVerification(); 
 			theGuy = user.email; theCss = 'large'; 
 			nextLine = `Logins will be sent to: <br> ${user.email} `; 
 		} 
@@ -130,7 +138,7 @@ const checkoutFunction = () => {
 		}, 5000);
 
 		setTimeout(() => {
-			$("html, body").animate({ scrollTop: data1 },  1000); 
+			$("html, body").animate({ scrollTop: 0 }, 1500); 
 			setTimeout(() => { pdfFunction(); }, 3000);
 		}, 6000);
 	});
