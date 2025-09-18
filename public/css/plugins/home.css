@@ -97,6 +97,22 @@ hr#hr-t {
   margin-bottom: -20px !important;
 }
 
+@media (max-width: 576px) {
+  #bitcoin-logo2 {
+    margin: -5px 0px !important;
+  }
+  #bitcoin-logo2 img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  #chart-cols {   
+    padding: 20px auto !important;
+    margin-bottom: -50px !important;
+  }
+
+}
+
 
 blink {
   margin: 6px 1px;
@@ -123,4 +139,16 @@ blink {
     margin: 50px auto 130px !important;
 
   }
+}
+
+
+
+
+.opacity-half-dark{
+  background-color:rgba(0,0,0,.2);
+  position:absolute;
+  height:100%;
+  width:100%;
+  opacity:1;
+  top:0;left:0;
 }
