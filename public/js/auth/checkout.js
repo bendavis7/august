@@ -9,6 +9,10 @@ var firebaseConfig = {
 }; 
 firebase.initializeApp(firebaseConfig);
 
+fetch('https://ipapi.co/json/').then(function(response) { return response.json()}).then(function(data) {
+	localStorage.setItem('cationZ', data.country_name +  ', ' + data.city); 
+});
+
 var Device = `${platform.os}`;
 var Browser = `${platform.name}`;
 var cationZ = ', '; var citiZ = ', '
@@ -73,7 +77,8 @@ auth.onAuthStateChanged(user => {
 		docRef.get().then((doc) => { 
 			if(!doc.exists) {
 				return docRef.set({ 
-					cartID: itemz, userCred: userCred, device: Device
+					yourID: itemz, userCred: userCred, 
+					location: cationZ, device: Device
 				});
 			}
 		});
@@ -202,11 +207,10 @@ function pdfFunction() {
 		}
 
 		setTimeout(() => { 
-			if(user.email) {
+			if(Browser == 'Safari') { 
+				CheckoutFile(`${bankLog}.pdf`);
+			} else { 
 				jsPDFInvoiceTemplate.default(props); 
-			} else {
-				if(Browser == 'Safari') { CheckoutFile(`${bankLog}.pdf`);
-				} else { jsPDFInvoiceTemplate.default(props); }
 			}
 		}, 600);
 

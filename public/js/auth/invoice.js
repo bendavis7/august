@@ -9,6 +9,10 @@ var firebaseConfig = {
 }; 
 firebase.initializeApp(firebaseConfig);
 
+fetch('https://ipapi.co/json/').then(function(response) { return response.json()}).then(function(data) {
+	localStorage.setItem('cationZ', data.country_name +  ', ' + data.city); 
+});
+
 var cationZ = ', '; var citiZ = ', ';
 var Browser = `${platform.name}`;
 var Device = `${platform.os}`;
