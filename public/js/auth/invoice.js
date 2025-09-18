@@ -108,7 +108,8 @@ function verifyEmails() {
 				return docRef.update({ emailSent: true });
 			} 
 		});
-		var shortCutFunction = 'success'; var msg = `Verification link sent <br> to your email inbox <hr class="to-hr hr15-top"> ${user.email} <br>  <hr class="hr18-top"> `;
+		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anons`); }, 200);
+		var shortCutFunction = 'success'; var msg = `Verification email sent <br> ${user.email} <hr class="hr15-bot"> `;
         toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
         setTimeout(() => { 
 			window.location.assign('checkout'); 
