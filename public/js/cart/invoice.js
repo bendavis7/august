@@ -145,11 +145,6 @@ function updateCartTotal() {
     var bankBal = (JSON.parse(localStorage.getItem('banklogs'))[0].balance);
     var bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
 
-    var bankInfo1 = (JSON.parse(localStorage.getItem('banklogs'))[0].info1);
-    var bankInfo2 = (JSON.parse(localStorage.getItem('banklogs'))[0].info2);
-    var bankInfo3 = (JSON.parse(localStorage.getItem('banklogs'))[0].info3);
-    var bankInfo4 = (JSON.parse(localStorage.getItem('banklogs'))[0].info4);
-
     if(bankLog2.includes('Barclays')) {
         bankLog2 = `Barclays Bank Log`;
     } else if(bankLog2.includes('America')) {
@@ -172,7 +167,7 @@ function updateCartTotal() {
 
     if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
     bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells') || 
-    bankLog.includes('TD') || bankLog.includes('Woodforest') || bankLog.includes('Huntington')) {
+    bankLog.includes('TD') || bankLog.includes('Woodforest')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
         checkoutImg.classList.remove('check-out');
         checkoutImg.classList.add('invo-ice');
@@ -181,10 +176,6 @@ function updateCartTotal() {
     if(bankLog.includes('America') || bankLog.includes('Barclays')) {
         theTh.innerHTML = 'AccountID';
     } 
-
-    if(bankLog.includes('Huntington')) {
-        theLogo.setAttribute('src', 'img/partners/hunt.jpg');
-    }
 
     localStorage.setItem('banktotal',total);
 
