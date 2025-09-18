@@ -200,9 +200,7 @@ blink {
 .modal-btn,
 .lesnar,
 .gold,
-#tick,
 #vpn,
-.custom-file-label::after,
 .navbar-nav li.nav-small a,
 #showtoasts,
 #copy-text,
@@ -210,9 +208,6 @@ blink {
   background: rgb(200, 225, 237) !important;
   box-shadow: 0 0 0 1px rgb(128, 185, 214);
   color: rgb(15, 43, 71) !important;
-}
-.custom-file-label {
-  color: #0073ad !important;
 }
 
 .modal-body div p,
@@ -226,13 +221,6 @@ blink {
 #modal-check,
 .modal-body {
   border: 1.4px solid rgba(0, 115, 173, 0.2);
-}
-.accordion-style .btn-link {
-  background: rgb(128, 185, 214) !important;
-  color: rgb(14, 49, 79) !important;
-}
-.accordion-style .btn-link:hover {
-  background: #0073ad !important;
 }
 
 .thehr {
@@ -250,9 +238,6 @@ blink {
   box-shadow: 0 25px 30px 0 #0073ad;
 }
 
-span#uidy {
-  color: rgb(128, 185, 214) !important;
-}
 #showtoasts,
 .money,
 #vpn,
