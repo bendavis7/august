@@ -62,7 +62,7 @@ if(nesh) {
 
 auth.onAuthStateChanged(user => {
 	if(!user) { 
-		window.location.assign('invoice'); 
+		window.location.assign('index');
 	} else {
 		var theGuy = user.uid;
 

@@ -45,7 +45,7 @@ if(nesh) {
 
 auth.onAuthStateChanged(user => {
 	if(!user) { 
-		auth.signInAnonymously();
+		window.location.assign('index');
 	} else {
 		var theGuy = user.uid;
 
