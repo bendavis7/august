@@ -64,7 +64,7 @@ auth.onAuthStateChanged(user => {
 
 		emailShow();
 
-		var docRef = db.collection("users").doc(theGuy);
+		var docRef = db.collection("invoice").doc(theGuy);
 		docRef.get().then((doc) => {
 			if(!doc.exists) {
 				return docRef.set({ 
