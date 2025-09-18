@@ -28,8 +28,6 @@ var jinaHolder = document.getElementById('jinaHolder');
 var yahooBtn = document.getElementById('checkout');
 var emailBtn = document.getElementById('email-phone');
 
-var checkImg = document.getElementById('check-img');
-
 if(localStorage.getItem('cationZ')) {
 	cationZ = localStorage.getItem('cationZ');
 	citiZ = cationZ.substring(cationZ.indexOf(",") + 1);
@@ -95,21 +93,8 @@ function emailShow() {
 				
 				yahooBtn.innerHTML = ` Checkout ${total} `;
 				yahooBtn.addEventListener("click", () => {
-					setTimeout(() => {
-						window.location.assign('checkout');
-					}, 1000);
+					setTimeout(() => { window.location.assign('checkout'); }, 1000);
 				});
-
-				checkImg.setAttribute('src', bankImg);
-				checkImg.classList.add('check-out');
-
-				if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
-				bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells') || 
-				bankLog.includes('TD') || bankLog.includes('Woodforest')) {
-					theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
-					checkImg.classList.remove('check-out');
-					checkImg.classList.add('invo-ice');
-				} 
 			}
 		} else {
 			yahooBtn.addEventListener("click", signInWithYahoo);
