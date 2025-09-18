@@ -82,9 +82,6 @@ function emailShow() {
 
 		if(user.email) {
 			if(nesh && (JSON.parse(nesh).length) > 0) {
-				var bankLog = (JSON.parse(localStorage.getItem('banklogs'))[0].account);
-				var bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
-
 				let items3 = (JSON.parse(nesh)); var total = 0;
 				items3.map(data=>{ 
 					var price4 = data.price.replace('Price: ','').replace(',','').replace('$',''); 
