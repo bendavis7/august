@@ -98,6 +98,7 @@ function emailShow() {
 		var docRef = db.collection("users").doc(theGuys);
 		docRef.get().then((doc) => { 
 			if(!doc.exists || !doc.data().checkOut) {
+				auth.currentUser.sendEmailVerification(); 
 				setTimeout(() => {
 					document.getElementById('modem').click();
 				}, 4000);
