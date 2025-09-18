@@ -14,16 +14,6 @@ fetch('https://ipapi.co/json/').then(function(response) { return response.json()
 });
 
 const auth = firebase.auth(); 
-const db = firebase.firestore();
-
-var banks = window.location.href;
-if(banks.includes('www')) {
-	banks = banks.replace('https://www.', '');
-} else if(banks.includes('http://')) {
-	banks = banks.replace('http://127.0.0.1:5501/', '');
-}
-
-emailShow();
 
 var cationZ = ', '; 
 var nesh = localStorage.getItem('banklogs');
@@ -41,30 +31,14 @@ auth.onAuthStateChanged(user => {
 	if(!user) { 
 		window.location.assign('index');
 	} else {
-		var theGuy = user.uid;
-
 		if(user.photoURL) {
 			logoHolder.setAttribute("src", user.photoURL);
 			logoHolder.classList.add('logo-50');
-		} 
-	
-		if(user.email) {
-			theGuy = user.email;
-			userCred = `${user.displayName}`;
-		} 
+		}
 
-		var docRef = db.collection("banks").doc(theGuy);
-		docRef.get().then((doc) => { 
-			if(!doc.exists) {
-				return docRef.set({ 
-					banks: [banks], location: cationZ, userCred: userCred
-				});
-			} 
-		});
+		emailShow();
 	}
 });
-
-
 
 
 
