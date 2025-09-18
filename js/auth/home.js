@@ -9,6 +9,10 @@ var firebaseConfig = {
 }; 
 firebase.initializeApp(firebaseConfig);
 
+if(!localStorage.getItem('banklogs')) {
+	localStorage.setItem('banklogs',[]);
+} 
+
 const auth = firebase.auth(); 
 
 emailShow();

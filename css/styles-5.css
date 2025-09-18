@@ -171,26 +171,14 @@ blink {
   color: rgb(253, 231, 171) !important;
 }
 
-#the-shot {
-  border: 2px solid rgb(252, 207, 86, 0.7) !important;
-  box-shadow: 1px 1px 2px 1px rgba(250, 183, 2, 0.5) !important;
-}
+
 .modal-content {
   border: 1.4px solid rgba(250, 183, 2, 0.5);
 }
 .nohr {
   border: 0.5px solid rgba(250, 183, 2, 0.2);
 }
-#photo2 {
-  background: rgba(250, 183, 2, 0.1) !important;
-  border: 0.7px solid rgba(250, 183, 2, 0.2);
-}
-.ticketz .modal-body label {
-  color: #fab702 !important;
-}
-.change {
-  border: 1.4px solid rgba(250, 183, 2, 0.03) !important;
-}
+
 .progress-bar-striped {
 	border: 0.7px solid rgba(250, 183, 2, 0.5) !important;
   box-shadow: 0 0 0 0.7px rgba(250, 183, 2, 0.7) !important;
@@ -201,7 +189,6 @@ blink {
   background-color: #fab702;
 }
 #profileModal .modal-content,
-#uploadModal .modal-content,
 #exampleModal .modal-content {
   background: rgba(95, 80, 35, 0.5) !important;
   border: 2px solid rgba(250, 183, 2, 0.5) !important;
@@ -210,16 +197,11 @@ blink {
 #modalsend {
   background: rgba(250, 183, 2, 0.25) !important;
 }
-.bg-bro {
-  background-color: rgba(250, 183, 2, 1);
-}
 
 .modal-btn,
 #vpn,
-#tick,
 .lesnar,
 .gold,
-.custom-file-label::after,
 .navbar-nav li.nav-small a,
 #showtoasts,
 #copy-text,
@@ -228,15 +210,11 @@ blink {
   box-shadow: 0 0 0 1px rgb(253, 219, 129);
   color: rgb(57, 55, 43) !important;
 }
-.custom-file-label {
-  color: #fab702 !important;
-}
 
 .modal-body div p,
 .account {
   border: 1.4px solid rgba(250, 183, 2, 0.3);
 }
-#uploadModal .modal-header .close img,
 #exampleModal .modal-header .close img,
 .btn-remove {
   border: 1.4px solid rgba(250, 183, 2, 0.7);
@@ -245,13 +223,7 @@ blink {
 .modal-body {
   border: 1.4px solid rgba(250, 183, 2, 0.2);
 }
-.accordion-style .btn-link {
-  background: rgb(253, 219, 129) !important;
-  color: rgb(72, 65, 40) !important;
-}
-.accordion-style .btn-link:hover {
-  background: #fab702 !important;
-}
+
 
 .thehr {
   border: 1px solid rgba(250, 183, 2, 0.3);
@@ -268,9 +240,7 @@ blink {
   box-shadow: 0 25px 30px 0 #fab702;
 }
 
-span#uidy {
-  color: rgb(253, 219, 129) !important;
-}
+
 #showtoasts,
 .money,
 #vpn,
@@ -423,22 +393,13 @@ span#span {
 }
 
 #my-invoice {
-  border: 5px solid rgb(247, 182, 2, 0.5) !important;
+  border: 4px solid rgb(247, 182, 2, 0.5) !important;
 }
-#the-life {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 2px solid rgb(250, 206, 86, 0.7) !important;
-  box-shadow: 0 0 0 3px #fdedc0 !important;
-}
+
 #checkout,
 #email-phone {
   background:linear-gradient(to bottom, #fff 0%, #f9c802 100%) !important;
 }
-
-#form-div p {
-  color: #856a1b !important;
-}
-
 
 ::-webkit-scrollbar-thumb {
   background: rgb(251, 197, 53);

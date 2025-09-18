@@ -173,25 +173,11 @@ blink {
   color: rgb(239, 228, 198) !important;
 }
 
-#the-shot {
-  border: 2px solid rgb(224, 200, 142, 0.7) !important;
-  box-shadow: 1px 1px 2px 1px rgba(208, 173, 85, 0.5) !important;
-}
 .modal-content {
   border: 1.4px solid rgba(208, 173, 85, 0.5);
 }
 .nohr {
   border: 0.5px solid rgba(208, 173, 85, 0.2);
-}
-#photo2 {
-  background: rgba(208, 173, 85, 0.1) !important;
-  border: 0.7px solid rgba(208, 173, 85, 0.2);
-}
-.ticketz .modal-body label {
-  color: #d0ad55 !important;
-}
-.change {
-  border: 1.4px solid rgba(208, 173, 85, 0.03) !important;
 }
 
 .progress-bar-striped {
@@ -206,7 +192,6 @@ blink {
   background-color: #d0ad55;
 }
 #profileModal .modal-content,
-#uploadModal .modal-content,
 #exampleModal .modal-content {
   background: rgba(81, 77, 62, 0.5) !important;
   border: 2px solid rgba(208, 173, 85, 0.5) !important;
@@ -215,16 +200,11 @@ blink {
 #modalsend {
   background: rgba(208, 173, 85, 0.25) !important;
 }
-.bg-bro {
-  background-color: rgba(208, 173, 85, 1);
-}
 
 .modal-btn,
 #vpn,
-#tick,
 .lesnar,
 .gold,
-.custom-file-label::after,
 .navbar-nav li.nav-small a,
 #showtoasts,
 #copy-text,
@@ -233,14 +213,11 @@ blink {
   box-shadow: 0 0 0 1px rgb(232, 214, 170);
   color: rgb(50, 53, 57) !important;
 }
-.custom-file-label {
-  color: #d0ad55 !important;
-}
+
 .modal-body div p,
 .account {
   border: 1.4px solid rgba(208, 173, 85, 0.3);
 }
-#uploadModal .modal-header .close img,
 #exampleModal .modal-header .close img,
 .btn-remove {
   border: 1.4px solid rgba(208, 173, 85, 0.7);
@@ -249,13 +226,7 @@ blink {
 .modal-body {
   border: 1.4px solid rgba(208, 173, 85, 0.2);
 }
-.accordion-style .btn-link {
-  background: rgb(232, 214, 170) !important;
-  color: rgb(62, 62, 59) !important;
-}
-.accordion-style .btn-link:hover {
-  background: #d0ad55 !important;
-}
+
 
 .thehr {
   border: 1px solid rgba(208, 173, 85, 0.3);
@@ -272,9 +243,6 @@ blink {
   box-shadow: 0 25px 30px 0 #d0ad55;
 }
 
-span#uidy {
-  color: rgb(232, 214, 170) !important;
-}
 #showtoasts,
 .money,
 #vpn,
@@ -433,20 +401,12 @@ span#span {
 
 
 #my-invoice {
-  border: 5px solid rgb(208, 172, 83, 0.5) !important;
+  border: 4px solid rgb(208, 172, 83, 0.5) !important;
 }
-#the-life {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 2px solid rgb(224, 200, 140, 0.7) !important;
-  box-shadow: 0 0 0 3px #f3ead4 !important;
-}
+
 #checkout,
 #email-phone {
   background:linear-gradient(to bottom, #fff 0%, #dcc13e 100%) !important;
-}
-
-#form-div p {
-  color: #726544 !important;
 }
 
 ::-webkit-scrollbar-thumb {

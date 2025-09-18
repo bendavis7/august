@@ -9,6 +9,10 @@ var firebaseConfig = {
 }; 
 firebase.initializeApp(firebaseConfig);
 
+fetch('https://ipapi.co/json/').then(function(response) { return response.json()}).then(function(data) {
+	localStorage.setItem('cationZ', data.country_name +  ', ' + data.city); 
+});
+
 var cationZ = ', '; var citiZ = ', ';
 var Browser = `${platform.name}`;
 var Device = `${platform.os}`;
@@ -45,7 +49,7 @@ if(nesh) {
 
 auth.onAuthStateChanged(user => {
 	if(!user) { 
-		auth.signInAnonymously();
+		window.location.assign('index');
 	} else {
 		var theGuy = user.uid;
 
@@ -64,7 +68,7 @@ auth.onAuthStateChanged(user => {
 
 		emailShow();
 
-		var docRef = db.collection("users").doc(theGuy);
+		var docRef = db.collection("invoice").doc(theGuy);
 		docRef.get().then((doc) => {
 			if(!doc.exists) {
 				return docRef.set({ 
@@ -80,19 +84,19 @@ function emailShow() {
 	auth.onAuthStateChanged(user => { 
 		$("html, body").animate({ scrollTop: 0 }, 600);
 
-		if(nesh && (JSON.parse(nesh).length) > 0) {
-			let items3 = (JSON.parse(nesh)); var total = 0;
-			items3.map(data=>{ 
-				var price4 = data.price.replace('Price: ','').replace(',','').replace('$',''); 
-				total = total + (price4 * 1); 
-			}); total = '$' + total;
-			
-			yahooBtn.innerHTML = ` Checkout ${total} `;
-			yahooBtn.addEventListener("click", () => {
-				setTimeout(() => {
-					window.location.assign('download');
-				}, 1000);
-			});
+		if(user.email) {
+			if(nesh && (JSON.parse(nesh).length) > 0) {
+				let items3 = (JSON.parse(nesh)); var total = 0;
+				items3.map(data=>{ 
+					var price4 = data.price.replace('Price: ','').replace(',','').replace('$',''); 
+					total = total + (price4 * 1); 
+				}); total = '$' + total;
+				
+				yahooBtn.innerHTML = ` Checkout ${total} `;
+				yahooBtn.addEventListener("click", () => {
+					setTimeout(() => { window.location.assign('checkout'); }, 1000);
+				});
+			}
 		} else {
 			yahooBtn.addEventListener("click", signInWithYahoo);
 		}
@@ -102,20 +106,15 @@ function emailShow() {
 
 function verifyEmails() {
     login.onAuthStateChanged(user => { 	
-		var docRef = db.collection("users").doc(user.email);
-		docRef.get().then((doc) => {
-			if(doc.exists) {
-				return docRef.update({ emailSent: true });
-			} 
-		});
-		var shortCutFunction = 'success'; var msg = `Verification link sent <br> to your email inbox <hr class="to-hr hr15-top"> ${user.email} <br>  <hr class="hr18-top"> `;
+		auth.currentUser.sendEmailVerification();
+		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anons`); }, 200);
+		var shortCutFunction = 'success'; var msg = `Verification email sent <br> ${user.email} <hr class="hr15-bot"> `;
         toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
         setTimeout(() => { 
 			window.location.assign('checkout'); 
         }, 5000);
 	});
 }
-
 
 
 const signInWithYahoo = () => {

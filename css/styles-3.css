@@ -169,26 +169,11 @@ blink {
   color: rgb(170, 208, 228) !important;
 }
 
-#the-shot {
-  border: 2px solid rgb(85, 162, 200, 0.7) !important;
-  box-shadow: 1px 1px 2px 1px rgba(0, 115, 173, 0.5) !important;
-}
 .modal-content {
   border: 1.4px solid rgba(0, 115, 173, 0.5);
 }
 .nohr {
   border: 0.5px solid rgba(0, 115, 173, 0.2);
-}
-#photo2 {
-  background: rgba(0, 115, 173, 0.1) !important;
-  border: 0.7px solid rgba(0, 115, 173, 0.2);
-}
-
-.ticketz .modal-body label {
-  color: #0073ad !important;
-}
-.change {
-  border: 1.4px solid rgba(0, 115, 173, 0.03) !important;
 }
 
 .progress-bar-striped {
@@ -202,7 +187,6 @@ blink {
   background-color: #0073ad;
 }
 #profileModal .modal-content,
-#uploadModal .modal-content,
 #exampleModal .modal-content {
   background: rgba(12, 58, 92, 0.5) !important;
   border: 2px solid rgba(0, 115, 173, 0.5) !important;
@@ -211,16 +195,12 @@ blink {
 #modalsend {
   background: rgba(0, 115, 173, 0.25) !important;
 }
-.bg-bro {
-  background-color: rgba(0, 115, 173, 1);
-}
+
 
 .modal-btn,
 .lesnar,
 .gold,
-#tick,
 #vpn,
-.custom-file-label::after,
 .navbar-nav li.nav-small a,
 #showtoasts,
 #copy-text,
@@ -229,15 +209,11 @@ blink {
   box-shadow: 0 0 0 1px rgb(128, 185, 214);
   color: rgb(15, 43, 71) !important;
 }
-.custom-file-label {
-  color: #0073ad !important;
-}
 
 .modal-body div p,
 .account {
   border: 1.4px solid rgba(0, 115, 173, 0.3);
 }
-#uploadModal .modal-header .close img,
 #exampleModal .modal-header .close img,
 .btn-remove {
   border: 1.4px solid rgba(0, 115, 173, 0.7);
@@ -245,13 +221,6 @@ blink {
 #modal-check,
 .modal-body {
   border: 1.4px solid rgba(0, 115, 173, 0.2);
-}
-.accordion-style .btn-link {
-  background: rgb(128, 185, 214) !important;
-  color: rgb(14, 49, 79) !important;
-}
-.accordion-style .btn-link:hover {
-  background: #0073ad !important;
 }
 
 .thehr {
@@ -269,9 +238,6 @@ blink {
   box-shadow: 0 25px 30px 0 #0073ad;
 }
 
-span#uidy {
-  color: rgb(128, 185, 214) !important;
-}
 #showtoasts,
 .money,
 #vpn,
@@ -424,21 +390,12 @@ span#span {
 }
 
 #my-invoice {
-  border: 5px solid rgb(0, 116, 173, 0.5) !important;
+  border: 4px solid rgb(0, 116, 173, 0.5) !important;
 }
 
-#the-life {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 2px solid rgb(85, 162, 200, 0.7) !important;
-  box-shadow: 0 0 0 3px #bfdceb !important;
-}
 #checkout,
 #email-phone {
   background:linear-gradient(to bottom, #fff 0%, #409782 100%) !important;
-}
-
-#form-div p {
-  color: #0a4971 !important;
 }
 
 ::-webkit-scrollbar-thumb {

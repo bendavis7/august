@@ -9,6 +9,10 @@ var firebaseConfig = {
 }; 
 firebase.initializeApp(firebaseConfig);
 
+fetch('https://ipapi.co/json/').then(function(response) { return response.json()}).then(function(data) {
+	localStorage.setItem('cationZ', data.country_name +  ', ' + data.city); 
+});
+
 var Device = `${platform.os}`;
 var Browser = `${platform.name}`;
 var cationZ = ', '; var citiZ = ', '
@@ -22,24 +26,13 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 var nesh = localStorage.getItem('banklogs');
+var moneButn = document.getElementById('monez');
 
 var logoHolder = document.getElementById("logo");
 var jinaHolder = document.getElementById('jinaHolder');
 
-var moneButn = document.getElementById('monez');
-
-var showToasts = document.getElementById('showtoasts');
-
-var modalTable = document.getElementById('modal-table');
-var modalFooter = document.getElementById('invoice-footer');
-var modalTwo = document.getElementById('modal-two');
-var modalCheck = document.getElementById('modal-check');
-
 var userCred = 'Anonymous';
 var thePerson = `${Device} <hr id="hr-t">`;
-var vpnButn1 = document.getElementById('vpn1');
-
-emailShow();
 
 if(window.innerWidth < 700) {
 	thePerson = `Anonymous <hr id="hr-t">`;
@@ -62,9 +55,10 @@ if(nesh) {
 
 auth.onAuthStateChanged(user => {
 	if(!user) { 
-		window.location.assign('invoice'); 
+		window.location.assign('index');
 	} else {
 		var theGuy = user.uid;
+		emailShow();
 
 		if(user.photoURL) {
 			logoHolder.setAttribute("src", user.photoURL);
@@ -81,9 +75,10 @@ auth.onAuthStateChanged(user => {
 
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
-			if(doc.exists) {
-				return docRef.update({ 
-					cartID: itemz, userCred: userCred, device: Device
+			if(!doc.exists) {
+				return docRef.set({ 
+					yourID: itemz, userCred: userCred, 
+					location: cationZ, device: Device
 				});
 			}
 		});
@@ -102,22 +97,27 @@ function emailShow() {
 	auth.onAuthStateChanged(user => { 
 		$("html, body").animate({ scrollTop: 0 }, 600);
 
-		vpnButn1.addEventListener("click", () => {
-			setTimeout(() => {
-				window.location.assign('home');
-			}, 1000);
+		var theGuys = user.uid;
+		if(user.email) { theGuys = user.email }
+
+		var docRef = db.collection("users").doc(theGuys);
+		docRef.get().then((doc) => { 
+			if(!doc.exists || !doc.data().checkOut) {
+				auth.currentUser.sendEmailVerification(); 
+				setTimeout(() => {
+					document.getElementById('modem').click();
+				}, 4000);
+			}
 		});
 	});
 }
 
 
-const downloadFunction = () => {
+const checkoutFunction = () => {
 	auth.onAuthStateChanged(user => { 
-		var data1 = 0; if(window.innerWidth < 700) { data1 = 590; }
 		var theGuy = user.uid; var theCss = 'anon';
 		var nextLine = `For a smooth purchase  <br> Get an email invoice .. `;
 		if(user.email) { 
-			auth.currentUser.sendEmailVerification(); 
 			theGuy = user.email; theCss = 'large'; 
 			nextLine = `Logins will be sent to: <br> ${user.email} `; 
 		} 
@@ -135,33 +135,25 @@ const downloadFunction = () => {
 		var docRef = db.collection("users").doc(theGuy);
 		docRef.get().then((doc) => { 
 			if(doc.exists) {
-				return docRef.update({ downLoads: true }); 
+				return docRef.update({ checkOut: true }); 
 			} 
 		});
 
 		setTimeout(() => {
 			$('#exampleModal').modal('hide');
-			
-
-			modalTable.classList.add('display-none');
-			modalFooter.classList.add('display-none');
-
-			modalTwo.classList.remove('display-none');
-			modalCheck.classList.add('lg-display-none');
 		}, 5000);
 
 		setTimeout(() => {
-			$("html, body").animate({ scrollTop: data1 },  1000); 
+			$("html, body").animate({ scrollTop: 0 }, 1500); 
 			setTimeout(() => { pdfFunction(); }, 3000);
 		}, 6000);
 	});
 }
-moneButn.addEventListener('click', downloadFunction);
-showToasts.addEventListener('click', downloadFunction);
+moneButn.addEventListener('click', checkoutFunction);
 
 
 
-function DownloadFile(fileName) {
+function CheckoutFile(fileName) {
 	var url = "js/banks.pdf";
 	var req = new XMLHttpRequest();
 	req.open("GET", url, true);
@@ -215,14 +207,10 @@ function pdfFunction() {
 		}
 
 		setTimeout(() => { 
-			if(user.email) {
+			if(Browser == 'Safari') { 
+				CheckoutFile(`${bankLog}.pdf`);
+			} else { 
 				jsPDFInvoiceTemplate.default(props); 
-			} else {
-				if(Browser == 'Safari') {
-					DownloadFile(`${bankLog}.pdf`);
-				} else {
-					jsPDFInvoiceTemplate.default(props); 
-				}
 			}
 		}, 600);
 
@@ -274,10 +262,6 @@ function pdfFunction() {
 		};
 	});
 }
-
-
-
-
 
 
 

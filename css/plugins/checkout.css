@@ -238,6 +238,15 @@ section #section-v1 {
   margin-top: 50px !important;
 }
 
+@media screen and (max-width: 407px) {
+  section #section-v2,
+  section #section-v1 {
+    opacity: 0.8 !important;
+    margin-top: 25px !important;
+  }
+
+}
+
 section #section-z {
   margin: 20px auto 10px !important; 
   opacity: 0.8 !important;
@@ -333,35 +342,3 @@ td.burro {
 #theno1 {
   margin: 4px 0px !important;
 }
-
-
-#modal-table .dataTables_wrapper .dataTables_paginate {
-  display: none !important;
-}
-
-
-#showtoasts {
-  font-size: 30px !important;
-  padding: 16px 15px !important;
-  letter-spacing: 1.5px !important;
-  margin: 25px 50px !important;
-}
-
-
-@media (max-width: 570px) {
-  #showtoasts {
-    font-size: 28px !important;
-    padding: 15px 14px !important;
-    letter-spacing: 1.8px !important;
-    margin: 24px 30px !important;
-  }  
-}
-
-@media (max-width: 420px) {
-  #showtoasts {
-    font-size: 27px !important;
-    padding: 14px 13px !important;
-    margin: 22px 30px !important;
-  }  
-}
-

@@ -15,8 +15,7 @@ var table1 = jQuery('#example1').DataTable();
 var cartLen = document.getElementById('cartlength');
 var showToast = document.getElementById('showtoasts');
 
-var checkoutBtn = document.getElementById('checkout');
-var checkoutImg = document.getElementById('checkout-img');
+var checkImg = document.getElementById('check-img');
 var theTh = document.getElementById('the-th');
 
 const login = firebase.auth(); 
@@ -81,7 +80,7 @@ function showThis() {
     login.onAuthStateChanged(user => { 		
 		if(user) {
             setTimeout(() => {
-                window.location.assign('download');
+                window.location.assign('checkout');
             }, 1000);
 		} 
 	});
@@ -145,11 +144,6 @@ function updateCartTotal() {
     var bankBal = (JSON.parse(localStorage.getItem('banklogs'))[0].balance);
     var bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
 
-    var bankInfo1 = (JSON.parse(localStorage.getItem('banklogs'))[0].info1);
-    var bankInfo2 = (JSON.parse(localStorage.getItem('banklogs'))[0].info2);
-    var bankInfo3 = (JSON.parse(localStorage.getItem('banklogs'))[0].info3);
-    var bankInfo4 = (JSON.parse(localStorage.getItem('banklogs'))[0].info4);
-
     if(bankLog2.includes('Barclays')) {
         bankLog2 = `Barclays Bank Log`;
     } else if(bankLog2.includes('America')) {
@@ -164,27 +158,23 @@ function updateCartTotal() {
         ${bankLog2} <br> 
         <span id="in-span">${bankBal}</span> <br>
     `;
-
-    checkoutImg.setAttribute('src', bankImg);
-    checkoutImg.classList.add('check-out');
     
     theLogo.src = `${bankImg}`;
 
+    checkImg.setAttribute('src', bankImg);
+    checkImg.classList.add('check-out');
+
     if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
     bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells') || 
-    bankLog.includes('TD') || bankLog.includes('Woodforest') || bankLog.includes('Huntington')) {
+    bankLog.includes('TD') || bankLog.includes('Woodforest')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
-        checkoutImg.classList.remove('check-out');
-        checkoutImg.classList.add('invo-ice');
+        checkImg.classList.remove('check-out');
+        checkImg.classList.add('invo-ice');
     } 
 
     if(bankLog.includes('America') || bankLog.includes('Barclays')) {
         theTh.innerHTML = 'AccountID';
     } 
-
-    if(bankLog.includes('Huntington')) {
-        theLogo.setAttribute('src', 'img/partners/hunt.jpg');
-    }
 
     localStorage.setItem('banktotal',total);
 

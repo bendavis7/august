@@ -18,72 +18,80 @@ var firebaseConfig = {
 // };
 firebase.initializeApp(firebaseConfig);
 
-const auth = firebase.auth(); 
-
 if(!localStorage.getItem('banklogs')) {
 	localStorage.setItem('banklogs',[]);
 } 
 
-emailShow();
 
-var logoHolder = document.getElementById("logo");
-var jinaHolder = document.getElementById('jinaHolder');
+const signAnony = document.getElementById('signAnony');
+const signYahoo = document.getElementById('signYahoo');
 
-var nesh = localStorage.getItem('banklogs');
-var vpnButn = document.getElementById('vpn');
+const signEmail = document.getElementById('signEmail');
+const signPhone = document.getElementById('signPhone');
+const signGoogle = document.getElementById('signGoogle');
 
-var userCred = 'Anonymous';
+
+const auth = firebase.auth();
 
 auth.onAuthStateChanged(user => {
-	if(!user) { 
-		auth.signInAnonymously();
-	} else {
-		var theGuy = user.uid;
-
-		if(user.photoURL) {
-			logoHolder.setAttribute("src", user.photoURL);
-			logoHolder.classList.add('logo-50');
-		} 
-		
+	if(user) {
 		if(user.email) {
-			jinaHolder.value = user.displayName;
-			theGuy = user.email;
-			userCred = `${user.displayName}`;
-		} 
-	} 
+			window.location.assign('home');
+		}
+	}
 });
 
 
+const signInAnony = () => {
+	auth.signInAnonymously().then(() => {
+		window.location.assign('home');
+    }).catch(error => {
+		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
+        var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;
+        toastr.options =  { closeButton: true, debug: false, newestOnTop: true, progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null };
+        var $toast = toastr[shortCutFunction](msg); $toastlast = $toast;
+    });
+};
+signAnony.addEventListener("click", signInAnony);
 
 
-function emailShow() {
-	auth.onAuthStateChanged(user => { 
-		$("html, body").animate({ scrollTop: 0 }, 600);
-		
-		if(nesh && (JSON.parse(nesh).length) > 0) {
-			let items3 = (JSON.parse(nesh)); var total = 0;
-			items3.map(data=>{ 
-				var price4 = data.price.replace('Price: ','').replace(',','').replace('$',''); 
-				total = total + (price4 * 1); 
-			}); total = '$' + total;
-			
-			vpnButn.addEventListener('click', () => {
-				$('#profileModal').modal('show'); 
-			});
-			vpnButn.innerHTML = `
-				Cart: ${total} <i class="fas fa-angle-down"></i>
-			`;
-			vpnButn.classList.add('yellow');
-		} else {
-			vpnButn.addEventListener('click', () => {
-				setTimeout(() => {
-					window.location.assign('invoice');
-				}, 1000);
-			})
-		}
-	});
-}
+const signInWithPhone = () => {
+	setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
+	var shortCutFunction = 'success';var msg = `Use email to sign in.. <br> Phone login unavailable. <hr class="to-hr hr15-top">`;
+	toastr.options =  { closeButton: true, debug: false, newestOnTop: true, timeOut: 4000, progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null };
+	var $toast = toastr[shortCutFunction](msg); $toastlast = $toast;
+};
+signPhone.addEventListener('click', signInWithPhone);
 
+
+const signInWithYahoo = () => {
+	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+	auth.signInWithPopup(yahooProvider).then(() => {
+		auth.currentUser.sendEmailVerification();
+		window.location.assign('home');
+    }).catch(error => {
+		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
+        var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;
+        toastr.options =  { closeButton: true, debug: false, newestOnTop: true, progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null };
+        var $toast = toastr[shortCutFunction](msg); $toastlast = $toast;
+    });
+};
+signYahoo.addEventListener('click', signInWithYahoo);
+
+const signInWithGoogle = () => {
+	const googleProvider = new firebase.auth.GoogleAuthProvider;
+	auth.signInWithPopup(googleProvider).then(() => {
+		auth.currentUser.sendEmailVerification();
+		window.location.assign('home');
+    }).catch(error => {
+		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
+        var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;
+        toastr.options =  { closeButton: true, debug: false, newestOnTop: true, progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null };
+        var $toast = toastr[shortCutFunction](msg); $toastlast = $toast;
+    });
+};
+signGoogle.addEventListener("click", signInWithGoogle);
+signEmail.addEventListener("click", signInWithGoogle);
 
 
 
@@ -101,51 +109,28 @@ if(!window.location.href.includes('5502')) {
 }
 
 
-var canvas = document.getElementById("canvas"); var ctx = canvas.getContext("2d"); var radius = canvas.height / 2;
-ctx.translate(radius, radius); radius = radius * 1;  setInterval(drawClock, 1000);
 
-function drawClock() {
-	drawFace(ctx, radius); 	drawNumbers(ctx, radius);	drawTime(ctx, radius);
-}
+if(!window.location.href.includes('5502')) {
+	function disableCtrlKeyCombination(e){
+		var forbiddenKeys = new Array('a', 'n', 'c', 'x', 'i', 'v', 'j' , 'w', 'i');
+		var key; var isCtrl;
+		if(window.event){
+			key = window.event.keyCode;
+			if(window.event.ctrlKey) { isCtrl = true; } 
+			else { isCtrl = false; }
+		} else {
+			key = e.which; 
+			if(e.ctrlKey) { isCtrl = true; }
+			else { isCtrl = false; }
+		}
 
-function drawFace(ctx, radius) {
-	var grad;	ctx.beginPath();	ctx.arc(0, 0, radius, 0, 2 * Math.PI);	ctx.fillStyle = 'white';	ctx.fill();
-	grad = ctx.createRadialGradient(0, 0, radius * 0.05, 0, 0, radius * 2.5);	
-	grad.addColorStop(0, '#121d33');	grad.addColorStop(0.5, 'rgba(0,0,0,0)');	grad.addColorStop(1, '#121d33');
-	ctx.strokeStyle = grad;	ctx.lineWidth = radius * 0;	ctx.stroke();	ctx.beginPath();
-	ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);	ctx.fillStyle = '#121d33';	ctx.fill();
-}
-
-function drawNumbers(ctx, radius) {
-	var ang;	var num;	ctx.font = radius * 0.33 + "px arial";	ctx.textBaseline = "middle";	ctx.textAlign = "center";
-	for (num = 1; num < 13; num++) {
-		ang = num * Math.PI / 6;	ctx.rotate(ang);	ctx.translate(0, -radius * 0.87);	ctx.rotate(-ang);
-		ctx.fillText(num.toString(), 0, 0);	ctx.rotate(ang);	ctx.translate(0, radius * 0.87);	ctx.rotate(-ang);
+		if(isCtrl) {
+			for(i=0; i<forbiddenKeys.length; i++) {
+				if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+					alert('Key combination CTRL + '+String.fromCharCode(key) +' has been disabled.');
+					return false;
+				}
+			}
+		} return true;
 	}
 }
-
-function drawTime(ctx, radius) {
-	var now = new Date();
-	var hour = now.getHours();
-	var minute = now.getMinutes();
-	var second = now.getSeconds();
-	hour = hour % 12;
-	hour = (hour * Math.PI / 6) + (minute * Math.PI / (6 * 60)) +	(second * Math.PI / (360 * 60));
-	drawHand(ctx, hour, radius * 0.5, radius * 0.07);
-	minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
-	drawHand(ctx, minute, radius * 0.8, radius * 0.07);
-	second = (second * Math.PI / 30);
-	drawHand(ctx, second, radius * 0.9, radius * 0.02);
-}
-
-function drawHand(ctx, pos, length, width) {
-	ctx.beginPath();
-	ctx.lineWidth = width;
-	ctx.lineCap = "round";
-	ctx.moveTo(0, 0);
-	ctx.rotate(pos);
-	ctx.lineTo(0, -length);
-	ctx.stroke();
-	ctx.rotate(-pos);
-}
-
