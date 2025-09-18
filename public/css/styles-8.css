@@ -393,20 +393,12 @@ span#span {
 }
 
 #my-invoice {
-  border: 5px solid rgba(22, 162, 136, 0.5) !important;
+  border: 4px solid rgba(22, 162, 136, 0.5) !important;
 }
-#the-life {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 2px solid rgb(100, 193, 176, 0.7) !important;
-  box-shadow: 0 0 0 3px #c5e8e1 !important;
-}
+
 #checkout,
 #email-phone {
   background:linear-gradient(to bottom, #fff 0%, #50b966 100%) !important;
-}
-
-#form-div p {
-  color: #15605e !important;
 }
 
 ::-webkit-scrollbar-thumb {

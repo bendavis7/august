@@ -3294,7 +3294,7 @@ hr#hr {
   display: flex;
   justify-content: center;
   
-  margin: 2px !important;
+  margin: 3px !important;
   background: rgba(255, 255, 255, 0.5) !important;
 }
 #voice-body-div p {
