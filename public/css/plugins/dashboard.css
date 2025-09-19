@@ -42,3 +42,9 @@ div.col-lg-2 {
 blink {
   margin: 6px 1px;
 }
+
+
+section #section-z {
+  margin: 20px auto !important; 
+  opacity: 0.8 !important;
+}
