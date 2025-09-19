@@ -144,24 +144,20 @@ function updateCartTotal() {
     var bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
 
     var bankInfo1 = (JSON.parse(localStorage.getItem('banklogs'))[0].info1);
+    bankInfo1 = bankInfo1.replace('+', '');
     var bankInfo2 = (JSON.parse(localStorage.getItem('banklogs'))[0].info2);
     var bankInfo3 = (JSON.parse(localStorage.getItem('banklogs'))[0].info3);
     var bankInfo4 = (JSON.parse(localStorage.getItem('banklogs'))[0].info4);
 
     if(bankLog2.includes('Barclays')) {
-        bankLog2 = `Barclays Bank Log`;
+        bankLog2 = `Barclays Banklog`;
     } else if(bankLog2.includes('America')) {
-        bankLog2 = `Bank of America ID`
+        bankLog2 = `Bank of America`
     }
 
     document.getElementById('jinaHolder2').innerHTML = `
         ${bankLog} - ${bankBal}
     `;
-
-    // wildPar.innerHTML = `
-    //     ${bankLog2} <br> 
-    //     <span id="in-span">${bankBal}</span> <br>
-    // `;
 
     weldPar.innerHTML = `
         ${bankInfo1} <br>
