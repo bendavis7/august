@@ -16,6 +16,10 @@
         "destination": "/invoice.html"
       },
       {
+        "source": "/dashboard",
+        "destination": "/dashboard.html"
+      },
+      {
         "source": "/home",
         "destination": "/home.html"
       },
@@ -117,6 +121,11 @@
       {
         "source": "/checkout.html",
         "destination": "/checkout",
+        "type": 301
+      },
+      {
+        "source": "/dashboard.html",
+        "destination": "/dashboard",
         "type": 301
       },
       {

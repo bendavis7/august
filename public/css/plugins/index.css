@@ -93,7 +93,7 @@ body {
 }
 @media screen and (max-width: 506px) {
   .bro-text p:after{
-    margin: 3px auto !important;
+    margin: 10px auto !important;
   }
   .bro-text p {
     font-size: 19px !important;

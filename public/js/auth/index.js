@@ -27,7 +27,6 @@ const signAnony = document.getElementById('signAnony');
 const signYahoo = document.getElementById('signYahoo');
 
 const signEmail = document.getElementById('signEmail');
-const signPhone = document.getElementById('signPhone');
 const signGoogle = document.getElementById('signGoogle');
 
 
@@ -53,15 +52,6 @@ const signInAnony = () => {
     });
 };
 signAnony.addEventListener("click", signInAnony);
-
-
-const signInWithPhone = () => {
-	setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
-	var shortCutFunction = 'success';var msg = `Use email to sign in.. <br> Phone login unavailable. <hr class="to-hr hr15-top">`;
-	toastr.options =  { closeButton: true, debug: false, newestOnTop: true, timeOut: 4000, progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null };
-	var $toast = toastr[shortCutFunction](msg); $toastlast = $toast;
-};
-signPhone.addEventListener('click', signInWithPhone);
 
 
 const signInWithYahoo = () => {
