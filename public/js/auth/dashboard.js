@@ -23,8 +23,6 @@ var jinaHolder = document.getElementById('jinaHolder');
 var nesh = localStorage.getItem('banklogs');
 var vpnButn = document.getElementById('vpn');
 
-var thePerson =  `Anonymous <hr id="hr-t">`;
-
 auth.onAuthStateChanged(user => {
 	if(!user) { 
 		window.location.assign('index');
@@ -33,18 +31,7 @@ auth.onAuthStateChanged(user => {
 			logoHolder.setAttribute("src", user.photoURL);
 			logoHolder.classList.add('logo-50');
 		} 
-		
-		if(user.email) {
-			thePerson = `${user.displayName}. <hr id="hr-t">`;
-		}
-
-		if(nesh) { 
-			items = JSON.parse(nesh); 
-			for (var i = 0; i < (JSON.parse(nesh)).length; i++) {
-				var userz = `table-id${items.indexOf(items[i])}`;
-				document.getElementById(`${userz}`).innerHTML = `${thePerson}`; 
-			}
-		} 
+	
 	} 
 });
 
@@ -72,7 +59,7 @@ function emailShow() {
 		} else {
 			vpnButn.addEventListener('click', () => {
 				setTimeout(() => {
-					window.location.assign('invoice');
+					window.location.assign('home');
 				}, 1000);
 			})
 		}

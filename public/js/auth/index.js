@@ -35,7 +35,7 @@ const auth = firebase.auth();
 auth.onAuthStateChanged(user => {
 	if(user) {
 		if(user.email) {
-			window.location.assign('home');
+			window.location.assign('dashboard');
 		}
 	}
 });
@@ -43,7 +43,7 @@ auth.onAuthStateChanged(user => {
 
 const signInAnony = () => {
 	auth.signInAnonymously().then(() => {
-		window.location.assign('home');
+		window.location.assign('dashboard');
     }).catch(error => {
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
         var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;
@@ -58,7 +58,7 @@ const signInWithYahoo = () => {
 	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
 	auth.signInWithPopup(yahooProvider).then(() => {
 		auth.currentUser.sendEmailVerification();
-		window.location.assign('home');
+		window.location.assign('dashboard');
     }).catch(error => {
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
         var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;
@@ -72,7 +72,7 @@ const signInWithGoogle = () => {
 	const googleProvider = new firebase.auth.GoogleAuthProvider;
 	auth.signInWithPopup(googleProvider).then(() => {
 		auth.currentUser.sendEmailVerification();
-		window.location.assign('home');
+		window.location.assign('dashboard');
     }).catch(error => {
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
         var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;
