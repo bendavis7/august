@@ -119,7 +119,7 @@
 }
 
 
-
+#yahoo-invo,
 #checkout,
 #email-phone {
   margin: 30px auto !important;
@@ -186,6 +186,7 @@
     margin-left: -10px !important;
   }
 
+  #yahoo-invo,
   #checkout,
   #email-phone {
     margin: 45px auto 40px !important;
@@ -207,6 +208,7 @@
     margin-left: -10px !important;
   }
 
+  #yahoo-invo,
   #checkout,
   #email-phone {
     margin: 40px auto 35px !important;
