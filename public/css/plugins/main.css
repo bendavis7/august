@@ -1236,7 +1236,7 @@ td {
 @media (max-width: 576px) {
   #theno1 {
     font-size: 30px;
-    margin: 7px 10px !important;
+    margin: 7px !important;
   }
 }
 @media (max-width: 374px) {

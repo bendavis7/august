@@ -222,6 +222,10 @@ blink {
 .modal-body {
   border: 1.4px solid rgba(71, 88, 143, 0.2);
 }
+#profileModal .modal-header {
+  border-bottom: 1.4px solid rgba(71, 88, 143, 0.4);
+  border-radius: 0 !important;
+}
 
 .thehr {
   border: 1px solid rgba(71, 88, 143, 0.3);
