@@ -9,8 +9,6 @@ var wildPar = document.getElementById('wild');
 
 var theLogo = document.getElementById('logo');
 
-var googlBtn = document.getElementById('google');
-
 var table1 = jQuery('#example1').DataTable();
 
 var cartLen = document.getElementById('cartlength');
@@ -160,10 +158,10 @@ function updateCartTotal() {
         ${bankLog} - ${bankBal}
     `;
 
-    wildPar.innerHTML = `
-        ${bankLog2} <br> 
-        <span id="in-span">${bankBal}</span> <br>
-    `;
+    // wildPar.innerHTML = `
+    //     ${bankLog2} <br> 
+    //     <span id="in-span">${bankBal}</span> <br>
+    // `;
 
     weldPar.innerHTML = `
         ${bankInfo1} <br>
