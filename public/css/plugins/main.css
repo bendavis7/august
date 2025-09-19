@@ -2176,7 +2176,7 @@ ul.countdown li p {
 @media screen and (max-width: 767px) {
   .vpn-section .butn#vpn1,
   .vpn-section .butn#vpn {
-    margin: 70px auto 140px !important;
+    margin: 70px auto 100px !important;
 
     padding: 18px 15px !important;
     font-size: 30.5px !important;
@@ -3063,7 +3063,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    margin: -3px 5px 5px !important;
+    margin: -3px 7px 1px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 23px !important;
@@ -3071,7 +3071,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_length {
-    margin: 7px 10px !important;
+    margin: 7px 7px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 23px !important;
@@ -3104,25 +3104,15 @@ button.butn.in-cart,
 
 @media screen and (max-width: 407px) {
   .dataTables_wrapper .dataTables_filter {
-    font-size: 21.5px !important;
+    font-size: 21px !important;
   }
   .dataTables_wrapper .dataTables_length {
-    font-size: 21.5px !important;
+    font-size: 21px !important;
   }
 }
 
 
 @media screen and (max-width: 380px) {
-  .dataTables_wrapper .dataTables_filter {
-    font-size: 20.5px !important;
-  }
-  .dataTables_wrapper .dataTables_length {
-    font-size: 20.5px !important;
-  }
-}
-
-
-@media screen and (max-width: 374px) {
   .dataTables_wrapper .dataTables_filter {
     font-size: 20px !important;
   }

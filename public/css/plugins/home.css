@@ -66,7 +66,7 @@ td.burro {
 
 
 #bitcoin-logo2 {
-  margin: -10px 0px !important;
+  margin: -12px 0px !important;
   border-radius: 0 !important;
 }
 #bitcoin-logo2 img {
@@ -76,7 +76,7 @@ td.burro {
 
 @media (max-width: 576px) {
   #bitcoin-logo2 {
-    margin: -5px 0px !important;
+    margin: -7px 0px !important;
   }
   #bitcoin-logo2 img {
     width: 60px !important;
@@ -87,17 +87,6 @@ td.burro {
 
 hr#hr-t {
   margin-top: 15px !important;
-}
-
-
-@media (max-width: 576px) {
-  #bitcoin-logo2 {
-    margin: -5px 0px !important;
-  }
-  #bitcoin-logo2 img {
-    width: 60px !important;
-    height: 60px !important;
-  }
 }
 
 
@@ -129,5 +118,30 @@ blink {
   .thecont{
     margin-top: 90px;
     margin-bottom: 0;
+  }
+}
+
+
+
+.owl-dots {
+  margin-top: 10px !important;
+}
+
+.vpn-section .butn#vpn1,
+.vpn-section .butn#vpn {
+  margin: 40px auto 70px !important;
+}
+@media screen and (max-width: 867px) and (min-width: 767px) {
+  .vpn-section .butn#vpn1,
+  .vpn-section .butn#vpn {
+    margin: 70px auto 140px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .vpn-section .butn#vpn1,
+  .vpn-section .butn#vpn {
+    margin: 50px auto 130px !important;
+
   }
 }

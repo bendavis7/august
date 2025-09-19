@@ -33,7 +33,7 @@ div.col-lg-2 {
 @media (max-width: 576px) {
   #chart-cols {   
     padding: 20px auto !important;
-    margin-bottom: -50px !important;
+    margin-bottom: -30px !important;
   }
 
 }

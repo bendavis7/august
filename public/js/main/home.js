@@ -39,7 +39,170 @@
 
 
 
+    $('#chime-carousel').owlCarousel({
+      loop: true, autoplay: true, responsiveClass: true, 
+      dots: true, nav: false, smartSpeed: 500, 
+      autoplayHoverPause: false, 
+      stagePadding: 0, slideTransition: 'linear', 
+      autoplayTimeout: 5000, autoplaySpeed: 10000,
+      navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+      responsive: {
+        0: { items: 1.2, margin: -10, dotsEach: 3 },
+        768: { items: 2, margin: -10, dotsEach: 3 },
+        992: { items: 4, margin: -10, dotsEach: 3 },
+      }
+    });
+
+    $('#bank-carousel').owlCarousel({
+      loop: true, autoplay: true, responsiveClass: true, 
+      dots: true, nav: false, smartSpeed: 500, 
+      autoplayHoverPause: false, 
+      stagePadding: 0, slideTransition: 'linear', 
+      autoplayTimeout: 5000, autoplaySpeed: 10000,
+      navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+      responsive: {
+        0: { items: 1.2, margin: -10, dotsEach: 6 },
+        768: { items: 2, margin: -10, dotsEach: 6 },
+        992: { items: 4, margin: -10, dotsEach: 6 },
+      }
+    });
+
+    $('#wire-carousel').owlCarousel({
+      loop: true, autoplay: true, responsiveClass: true, 
+      dots: true, nav: false, smartSpeed: 500, 
+      autoplayHoverPause: false, 
+      stagePadding: 0, slideTransition: 'linear', 
+      autoplayTimeout: 5000, autoplaySpeed: 10000,
+      navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+      responsive: {
+        0: { items: 1.2, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
+        992: { items: 4, margin: -10, dotsEach: 4 },
+      }
+    });
+
+    $('#hunt-carousel').owlCarousel({
+      loop: true, autoplay: true, responsiveClass: true, 
+      dots: true, nav: false, smartSpeed: 500, 
+      autoplayHoverPause: false, 
+      stagePadding: 0, slideTransition: 'linear', 
+      autoplayTimeout: 5000, autoplaySpeed: 10000,
+      navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+      responsive: {
+        0: { items: 1.2, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
+        992: { items: 4, margin: -10, dotsEach: 4 },
+      }
+    });
+
+    $('#navy-carousel').owlCarousel({
+      loop: true, autoplay: true, responsiveClass: true, 
+      dots: true, nav: false, smartSpeed: 500, 
+      autoplayHoverPause: false, 
+      stagePadding: 0, slideTransition: 'linear', 
+      autoplayTimeout: 5000, autoplaySpeed: 10000,
+      navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+      responsive: {
+        0: { items: 1.2, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
+        992: { items: 4, margin: -10, dotsEach: 4 },
+      }
+    });
+
+    $('#wells-carousel').owlCarousel({
+      loop: true, autoplay: true, responsiveClass: true, 
+      dots: true, nav: false, smartSpeed: 500, 
+      autoplayHoverPause: false, 
+      stagePadding: 0, slideTransition: 'linear', 
+      autoplayTimeout: 5000, autoplaySpeed: 10000,
+      navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+      responsive: {
+        0: { items: 1.2, margin: -10, dotsEach: 2 },
+        768: { items: 2, margin: -10, dotsEach: 2 },
+        992: { items: 4, margin: -10, dotsEach: 2 },
+      }
+    });
+
+
+    $('#wood-carousel').owlCarousel({
+      loop: true, autoplay: true, responsiveClass: true, 
+      dots: true, nav: false, smartSpeed: 500, 
+      autoplayHoverPause: false, 
+      stagePadding: 0, slideTransition: 'linear', 
+      autoplayTimeout: 5000, autoplaySpeed: 10000,
+      navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+      responsive: {
+        0: { items: 1.2, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
+        992: { items: 4, margin: -10, dotsEach: 4 },
+      }
+    });
+
+    $('#paypal-carousel').owlCarousel({
+      loop: true, autoplay: true, responsiveClass: true, 
+      dots: true, nav: false, smartSpeed: 500, 
+      autoplayHoverPause: false, 
+      stagePadding: 0, slideTransition: 'linear', 
+      autoplayTimeout: 5000, autoplaySpeed: 10000,
+      navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+      responsive: {
+        0: { items: 1.2, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
+        992: { items: 4, margin: -10, dotsEach: 4 },
+      }
+    });
+
+    $('#ach-carousel').owlCarousel({
+      loop: true, autoplay: true, responsiveClass: true, 
+      dots: true, nav: false, smartSpeed: 500, 
+      autoplayHoverPause: false, 
+      stagePadding: 0, slideTransition: 'linear', 
+      autoplayTimeout: 5000, autoplaySpeed: 10000,
+      navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+      responsive: {
+        0: { items: 1.2, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
+        992: { items: 4, margin: -10, dotsEach: 4 },
+      }
+    });
+
+    $('#coin-carousel').owlCarousel({
+      loop: true, autoplay: true, responsiveClass: true, 
+      dots: true, nav: false, smartSpeed: 500, 
+      autoplayHoverPause: false, 
+      stagePadding: 0, slideTransition: 'linear', 
+      autoplayTimeout: 5000, autoplaySpeed: 10000,
+      navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+      responsive: {
+        0: { items: 1.2, margin: -10, dotsEach: 4 },
+        768: { items: 2, margin: -10, dotsEach: 4 },
+        992: { items: 4, margin: -10, dotsEach: 4 },
+      }
+    });
+
+
     });
 }
 )(jQuery);
 
+
+
+jQuery(document).ready(function($){
+	var $timeline_block = $('.cd-time-block');
+
+	//hide timeline blocks which are outside the viewport
+	$timeline_block.each(function(){
+		if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+			$(this).find('.cd-time-img, .cd-time-content').addClass('is-hidden');
+		}
+	});
+
+	//on scolling, show/animate timeline blocks when enter the viewport
+	$(window).on('scroll', function(){
+		$timeline_block.each(function(){
+			if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-time-img').hasClass('is-hidden') ) {
+				$(this).find('.cd-time-img, .cd-time-content').removeClass('is-hidden').addClass('bounce-in');
+			}
+		});
+	});
+});
