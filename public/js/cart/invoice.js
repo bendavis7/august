@@ -4,6 +4,7 @@ var thetotS = document.getElementById('thetot');
 var theNos1 = document.getElementById('theno1');
 
 var logs = localStorage.getItem('banklogs');
+var weldPar = document.getElementById('weld');
 var wildPar = document.getElementById('wild');
 
 var theLogo = document.getElementById('logo');
@@ -144,6 +145,11 @@ function updateCartTotal() {
     var bankBal = (JSON.parse(localStorage.getItem('banklogs'))[0].balance);
     var bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
 
+    var bankInfo1 = (JSON.parse(localStorage.getItem('banklogs'))[0].info1);
+    var bankInfo2 = (JSON.parse(localStorage.getItem('banklogs'))[0].info2);
+    var bankInfo3 = (JSON.parse(localStorage.getItem('banklogs'))[0].info3);
+    var bankInfo4 = (JSON.parse(localStorage.getItem('banklogs'))[0].info4);
+
     if(bankLog2.includes('Barclays')) {
         bankLog2 = `Barclays Bank Log`;
     } else if(bankLog2.includes('America')) {
@@ -157,6 +163,16 @@ function updateCartTotal() {
     wildPar.innerHTML = `
         ${bankLog2} <br> 
         <span id="in-span">${bankBal}</span> <br>
+    `;
+
+    weldPar.innerHTML = `
+        ${bankInfo1} <br>
+        ${bankInfo2} <br>
+
+        <hr class="nohr">
+
+        ${bankInfo3} <br>
+        ${bankInfo4} <br>
     `;
     
     theLogo.src = `${bankImg}`;

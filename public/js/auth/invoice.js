@@ -29,7 +29,8 @@ var nesh = localStorage.getItem('banklogs');
 var logoHolder = document.getElementById("logo");
 var jinaHolder = document.getElementById('jinaHolder');
 
-var yahooBtn = document.getElementById('checkout');
+var yahooBtn = document.getElementById('yahoo-invo');
+var checkoutBtn = document.getElementById('checkout');
 var emailBtn = document.getElementById('email-phone');
 
 if(localStorage.getItem('cationZ')) {
@@ -91,13 +92,11 @@ function emailShow() {
 				total = total + (price4 * 1); 
 			}); total = '$' + total;
 			
-			yahooBtn.innerHTML = ` Checkout ${total} `;
-			yahooBtn.addEventListener("click", () => {
+			checkoutBtn.innerHTML = ` Checkout ${total} `;
+			checkoutBtn.addEventListener("click", () => {
 				setTimeout(() => { window.location.assign('checkout'); }, 1000);
 			});
-		} else {
-			yahooBtn.addEventListener("click", signInWithYahoo);
-		}
+		} 
 	});
 }
 
@@ -127,6 +126,7 @@ const signInWithYahoo = () => {
         var $toast = toastr[shortCutFunction](msg); $toastlast = $toast;
     });
 };
+yahooBtn.addEventListener("click", signInWithYahoo);
 
 
 const signInWithGoogle = () => {
