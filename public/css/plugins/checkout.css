@@ -201,7 +201,7 @@ div.xzoom {
   }
 
   #table-email {
-    margin: 12px auto 0px !important;
+    margin: 15px auto 0px !important;
     z-index: 1 !important;
     padding: 3px !important;
   }
@@ -284,7 +284,7 @@ section #section-x {
 @media screen and (max-width: 767px) {
   .vpn-section .butn#vpn1,
   .vpn-section .butn#vpn {
-    margin: 65px auto 80px !important;
+    margin: 65px auto !important;
 
   }
 }
