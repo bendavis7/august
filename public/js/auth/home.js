@@ -72,7 +72,7 @@ function emailShow() {
 		} else {
 			vpnButn.addEventListener('click', () => {
 				setTimeout(() => {
-					window.location.assign('invoice');
+					window.location.assign('dashboard');
 				}, 1000);
 			})
 		}
