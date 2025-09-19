@@ -915,7 +915,7 @@ select {
 
 td {
   font-size: 17.4px !important;
-  line-height: 37px !important;
+  line-height: 38px !important;
   color: #121d33;
   font-weight: 500 !important;
 }
@@ -923,14 +923,14 @@ td {
 @media screen and (max-width: 508px) {
   td {
     font-size: 17.9px !important;
-    line-height: 39px !important;
+    line-height: 40px !important;
   }
 }
 
 @media screen and (max-width: 408px) {
   td {
     font-size: 17.8px !important;
-    line-height: 36px !important;
+    line-height: 38px !important;
   }
 }
 
@@ -3063,7 +3063,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    margin: -3px 7px 1px !important;
+    margin: 0px 10px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 23px !important;
@@ -3071,7 +3071,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_length {
-    margin: 7px 7px !important;
+    margin: 10px 5px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 23px !important;
@@ -3095,29 +3095,29 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    font-size: 22px !important;
+    font-size: 23px !important;
   }
   .dataTables_wrapper .dataTables_length {
-    font-size: 22px !important;
+    font-size: 23px !important;
   }
 }
 
 @media screen and (max-width: 407px) {
   .dataTables_wrapper .dataTables_filter {
-    font-size: 21px !important;
+    font-size: 22px !important;
   }
   .dataTables_wrapper .dataTables_length {
-    font-size: 21px !important;
+    font-size: 22px !important;
   }
 }
 
 
 @media screen and (max-width: 380px) {
   .dataTables_wrapper .dataTables_filter {
-    font-size: 20px !important;
+    font-size: 21px !important;
   }
   .dataTables_wrapper .dataTables_length {
-    font-size: 20px !important;
+    font-size: 21px !important;
   }
 }
 

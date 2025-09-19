@@ -8,7 +8,6 @@ var cartLen = document.getElementById('cartlength');
 var jinaHolders2 = document.getElementById('jinaHolder2');
 
 var theTh = document.getElementById('th-id');
-var theNos1 = document.getElementById('theno1');
 var thetotS = document.getElementById('thetot');
 
 var vpnButn = document.getElementById('vpn');
@@ -223,10 +222,6 @@ function updateCartTotal() {
     const bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
     var modalAmount = document.getElementById('modal-amount');
 
-    theNos1.innerHTML =  `
-        Cart Total: 
-        $<span class="countup">${parseInt(total).toLocaleString()}</span>
-    `;
     vpnButn.innerHTML = `
         Cart: $<span class="countup">${parseInt(total).toLocaleString()}</span> <i class="fas fa-angle-down"></i>
     `;
