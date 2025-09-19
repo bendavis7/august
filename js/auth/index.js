@@ -27,7 +27,6 @@ const signAnony = document.getElementById('signAnony');
 const signYahoo = document.getElementById('signYahoo');
 
 const signEmail = document.getElementById('signEmail');
-const signPhone = document.getElementById('signPhone');
 const signGoogle = document.getElementById('signGoogle');
 
 
@@ -36,7 +35,7 @@ const auth = firebase.auth();
 auth.onAuthStateChanged(user => {
 	if(user) {
 		if(user.email) {
-			window.location.assign('home');
+			window.location.assign('dashboard');
 		}
 	}
 });
@@ -44,7 +43,7 @@ auth.onAuthStateChanged(user => {
 
 const signInAnony = () => {
 	auth.signInAnonymously().then(() => {
-		window.location.assign('home');
+		window.location.assign('dashboard');
     }).catch(error => {
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
         var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;
@@ -55,20 +54,11 @@ const signInAnony = () => {
 signAnony.addEventListener("click", signInAnony);
 
 
-const signInWithPhone = () => {
-	setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
-	var shortCutFunction = 'success';var msg = `Use email to sign in.. <br> Phone login unavailable. <hr class="to-hr hr15-top">`;
-	toastr.options =  { closeButton: true, debug: false, newestOnTop: true, timeOut: 4000, progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null };
-	var $toast = toastr[shortCutFunction](msg); $toastlast = $toast;
-};
-signPhone.addEventListener('click', signInWithPhone);
-
-
 const signInWithYahoo = () => {
 	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
 	auth.signInWithPopup(yahooProvider).then(() => {
 		auth.currentUser.sendEmailVerification();
-		window.location.assign('home');
+		window.location.assign('dashboard');
     }).catch(error => {
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
         var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;
@@ -82,7 +72,7 @@ const signInWithGoogle = () => {
 	const googleProvider = new firebase.auth.GoogleAuthProvider;
 	auth.signInWithPopup(googleProvider).then(() => {
 		auth.currentUser.sendEmailVerification();
-		window.location.assign('home');
+		window.location.assign('dashboard');
     }).catch(error => {
 		setTimeout(() => { document.getElementsByClassName('toast')[0].classList.add(`anon`); }, 200);
         var shortCutFunction = 'success';var msg = `${error.message} <br> <hr class="to-hr hr15-top">`;

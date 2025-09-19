@@ -8,7 +8,6 @@ var cartLen = document.getElementById('cartlength');
 var jinaHolders2 = document.getElementById('jinaHolder2');
 
 var theTh = document.getElementById('th-id');
-var theNos1 = document.getElementById('theno1');
 var thetotS = document.getElementById('thetot');
 
 var vpnButn = document.getElementById('vpn');
@@ -168,7 +167,7 @@ function emptyCart() {
         var shortCutFunction = 'success'; var msg = `Your cart is empty... <br> add bank logs to cart. <hr class="hr15-bot">`; 
         toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
         setTimeout(() => { 
-            window.location.assign('home'); 
+            window.location.assign('dashboard'); 
         }, 5000);
 	});
 }
@@ -223,10 +222,6 @@ function updateCartTotal() {
     const bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
     var modalAmount = document.getElementById('modal-amount');
 
-    theNos1.innerHTML =  `
-        Cart Total: 
-        $<span class="countup">${parseInt(total).toLocaleString()}</span>
-    `;
     vpnButn.innerHTML = `
         Cart: $<span class="countup">${parseInt(total).toLocaleString()}</span> <i class="fas fa-angle-down"></i>
     `;

@@ -1,29 +1,28 @@
 let items = [];
 
+var table1 = jQuery('#example1').DataTable();
+var theLogo = document.getElementById('logo');
 var thetotS = document.getElementById('thetot');
 var theNos1 = document.getElementById('theno1');
-
 var logs = localStorage.getItem('banklogs');
-var weldPar = document.getElementById('weld');
-var wildPar = document.getElementById('wild');
 
-var theLogo = document.getElementById('logo');
-
-var table1 = jQuery('#example1').DataTable();
-
-var cartLen = document.getElementById('cartlength');
-var showToast = document.getElementById('showtoasts');
-
-var checkImg = document.getElementById('check-img');
-var theTh = document.getElementById('the-th');
+var Ths1 = document.getElementById('ths-1');
+var Ths2 = document.getElementById('ths-2');
+var Ths3 = document.getElementById('ths-3');
+var Ths4 = document.getElementById('ths-4');
 
 const login = firebase.auth(); 
 
-if(localStorage.getItem('banklogs')){
+var cartLen = document.getElementById('cartlength');
+var showToast = document.getElementById('showtoasts');
+var theTh = document.getElementById('the-th');
+
+if(localStorage.getItem('banklogs')) {
     if((JSON.parse(localStorage.getItem('banklogs')).length) > 0) {
+
         items = JSON.parse(localStorage.getItem('banklogs'));
         document.getElementById('cartlength').innerText = (JSON.parse(localStorage.getItem('banklogs')).length);
-    
+
         items.map(data=>{
             var image = `<td><img src=${data.image}></td>`
             var balance = `<td class="btn-balance">${data.balance}</td>`
@@ -50,36 +49,23 @@ if(localStorage.getItem('banklogs')){
             ]).draw();
         });
 
-        cartLen.classList.remove('display-none');
-        updateCartTotal();
 
         var removeFromCartButtons = document.getElementsByClassName('btn-remove');
         for(var i = 0; i <removeFromCartButtons.length; i++){
             var button = removeFromCartButtons[i];
             button.addEventListener('click', removeCartItem)
         }
-    } else {
-        setTimeout(() => { emptyCart(); }, 2000);
-    }
-} else {
-    setTimeout(() => { emptyCart(); }, 2000);
-}
+        cartLen.classList.remove('display-none');
+        updateCartTotal();
+    } 
+} 
 
-function emptyCart() {
-    login.onAuthStateChanged(user => { 		
-        var shortCutFunction = 'success'; var msg = `Your cart is empty... <br> add bank logs to cart. <hr class="hr15-bot">`; 
-        toastr.options =  {closeButton: true, debug: false, newestOnTop: true, timeOut: 4000,progressBar: true,positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null}; var $toast = toastr[shortCutFunction](msg);$toastlast = $toast; 
-        setTimeout(() => { 
-            window.location.assign('chime'); 
-        }, 5000);
-	});
-}
 
 function showThis() {
     login.onAuthStateChanged(user => { 		
 		if(user) {
             setTimeout(() => {
-                window.location.assign('checkout');
+                window.location.assign('invoice');
             }, 1000);
 		} 
 	});
@@ -105,6 +91,7 @@ function removeCartItem(event) {
     buttonClicked.parentElement.parentElement.remove();
 }
 
+
 function removeItemFromCart(price, balance,account,website,image,info1,info2,info3,info4){
     let item = {
         price: price,
@@ -126,7 +113,6 @@ function removeItemFromCart(price, balance,account,website,image,info1,info2,inf
 }
 
 
-
 function updateCartTotal() {
     let items3 = (JSON.parse(localStorage.getItem('banklogs')));
     var total = 0;
@@ -135,62 +121,36 @@ function updateCartTotal() {
         total = total + (price4 * 1);
     });
 
-    theNos1.innerHTML =  'Cart Total: $' + total.toLocaleString();
     thetotS.innerHTML = `Total:  <span>$${total.toLocaleString()}</span>`;
+    theNos1.innerHTML =  'Cart Total: $' + total.toLocaleString();
 
-    var bankLog = (JSON.parse(localStorage.getItem('banklogs'))[0].account);
-    var bankLog2 = bankLog.split('[')[0] + ' Login';
-    var bankBal = (JSON.parse(localStorage.getItem('banklogs'))[0].balance);
-    var bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
 
-    var bankInfo1 = (JSON.parse(localStorage.getItem('banklogs'))[0].info1);
-    var bankInfo2 = (JSON.parse(localStorage.getItem('banklogs'))[0].info2);
-    var bankInfo3 = (JSON.parse(localStorage.getItem('banklogs'))[0].info3);
-    var bankInfo4 = (JSON.parse(localStorage.getItem('banklogs'))[0].info4);
-
-    if(bankLog2.includes('Barclays')) {
-        bankLog2 = `Barclays Bank Log`;
-    } else if(bankLog2.includes('America')) {
-        bankLog2 = `Bank of America ID`
-    }
-
-    document.getElementById('jinaHolder2').innerHTML = `
-        ${bankLog} - ${bankBal}
-    `;
-
-    // wildPar.innerHTML = `
-    //     ${bankLog2} <br> 
-    //     <span id="in-span">${bankBal}</span> <br>
-    // `;
-
-    weldPar.innerHTML = `
-        ${bankInfo1} <br>
-        ${bankInfo2} <br>
-
-        <hr class="nohr">
-
-        ${bankInfo3} <br>
-        ${bankInfo4} <br>
-    `;
-    
+    const bankLog = (JSON.parse(localStorage.getItem('banklogs'))[0].account);
+    const bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
     theLogo.src = `${bankImg}`;
-
-    checkImg.setAttribute('src', bankImg);
-    checkImg.classList.add('check-out');
+    document.getElementById('jinaHolder2').innerHTML = `${bankLog} Account`;
 
     if(bankLog.includes('Chime') || bankLog.includes('PNC') || bankLog.includes('M&T') ||
     bankLog.includes('Navy') || bankLog.includes('BBVA') || bankLog.includes('Wells') || 
     bankLog.includes('TD') || bankLog.includes('Woodforest')) {
         theLogo.classList.add('bit-img'); theLogo.classList.add('logo-50');
-        checkImg.classList.remove('check-out');
-        checkImg.classList.add('invo-ice');
     } 
 
     if(bankLog.includes('America') || bankLog.includes('Barclays')) {
         theTh.innerHTML = 'AccountID';
     } 
 
-    localStorage.setItem('banktotal',total);
+    if(JSON.parse(localStorage.getItem('banklogs')).length > 1) {
+        document.getElementById('profileModal').classList.add('modal-cart');
+        if(window.innerWidth > 700) {
+            Ths1.innerHTML = 'Banklogs'; Ths2.innerHTML = 'Banklogs';
+            Ths3.innerHTML = 'Banklogs'; Ths4.innerHTML = 'Banklogs';
+        }
+    }
+
+    if(bankLog.includes('America') || bankLog.includes('Barclays')) {
+        document.getElementById('th-id').innerHTML = 'AccountID';
+    } 
 
 
     var id = setInterval(frame, 1000);
@@ -213,5 +173,3 @@ function updateCartTotal() {
         }
     }
 }
-
-

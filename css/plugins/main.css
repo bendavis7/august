@@ -915,7 +915,7 @@ select {
 
 td {
   font-size: 17.4px !important;
-  line-height: 37px !important;
+  line-height: 38px !important;
   color: #121d33;
   font-weight: 500 !important;
 }
@@ -923,7 +923,7 @@ td {
 @media screen and (max-width: 508px) {
   td {
     font-size: 17.9px !important;
-    line-height: 42px !important;
+    line-height: 40px !important;
   }
 }
 
@@ -1014,11 +1014,11 @@ td {
   color: white !important;
 }
 #bitcoin-logo {
-  margin: 10px 5px;
+  margin: 12px 5px;
 }
 #bitcoin-logo img {
-  width: 50px !important;
-  height: 50px !important;
+  width: 47px !important;
+  height: 47px !important;
   border-radius: 50% !important;
 }
 
@@ -1027,8 +1027,8 @@ td {
     margin: 10px;
   }
   #bitcoin-logo img {
-    width: 60px !important;
-    height: 60px !important;
+    width: 57px !important;
+    height: 57px !important;
     border-radius: 50% !important;
   }
 }
@@ -1236,6 +1236,7 @@ td {
 @media (max-width: 576px) {
   #theno1 {
     font-size: 30px;
+    margin: 7px !important;
   }
 }
 @media (max-width: 374px) {
@@ -2176,7 +2177,7 @@ ul.countdown li p {
 @media screen and (max-width: 767px) {
   .vpn-section .butn#vpn1,
   .vpn-section .butn#vpn {
-    margin: 70px auto 140px !important;
+    margin: 70px auto 100px !important;
 
     padding: 18px 15px !important;
     font-size: 30.5px !important;
@@ -3020,7 +3021,7 @@ button.butn.in-cart,
 
 #clients {
   padding: 4px 0 !important;
-  margin: 5px 0 10px !important;
+  margin: 5px 0 !important;
   opacity: 0.85 !important;
 }
 @media screen and (min-width: 874px) {
@@ -3063,7 +3064,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    margin: 0px 5px 5px !important;
+    margin: 0px 10px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 23px !important;
@@ -3071,7 +3072,7 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_length {
-    margin: 10px 10px !important;
+    margin: 10px 5px !important;
     letter-spacing: 1px !important;
     word-spacing: 1px !important;
     font-size: 23px !important;
@@ -3095,39 +3096,29 @@ button.butn.in-cart,
   }
 
   .dataTables_wrapper .dataTables_filter {
-    font-size: 22px !important;
+    font-size: 23px !important;
   }
   .dataTables_wrapper .dataTables_length {
-    font-size: 22px !important;
+    font-size: 23px !important;
   }
 }
 
 @media screen and (max-width: 407px) {
   .dataTables_wrapper .dataTables_filter {
-    font-size: 21.5px !important;
+    font-size: 22px !important;
   }
   .dataTables_wrapper .dataTables_length {
-    font-size: 21.5px !important;
+    font-size: 22px !important;
   }
 }
 
 
 @media screen and (max-width: 380px) {
   .dataTables_wrapper .dataTables_filter {
-    font-size: 20.5px !important;
+    font-size: 21px !important;
   }
   .dataTables_wrapper .dataTables_length {
-    font-size: 20.5px !important;
-  }
-}
-
-
-@media screen and (max-width: 374px) {
-  .dataTables_wrapper .dataTables_filter {
-    font-size: 20px !important;
-  }
-  .dataTables_wrapper .dataTables_length {
-    font-size: 20px !important;
+    font-size: 21px !important;
   }
 }
 
@@ -3233,6 +3224,7 @@ hr#hr-t {
   width: 100% !important;
 }
 
+p#weld,
 p#wild {
   letter-spacing: 0.7px !important;
   color: lightcyan !important;
@@ -3307,7 +3299,6 @@ hr#hr {
 #modal-check {
   border-radius: 0 !important;
   border-width: 1px !important;
-  border-bottom-width: 0.7px !important;
 }
 
 

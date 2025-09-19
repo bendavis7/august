@@ -103,9 +103,11 @@ function emailShow() {
 		var docRef = db.collection("users").doc(theGuys);
 		docRef.get().then((doc) => { 
 			if(!doc.exists || !doc.data().checkOut) {
-				auth.currentUser.sendEmailVerification(); 
 				setTimeout(() => {
 					document.getElementById('modem').click();
+
+					$("html, body").animate({ scrollTop: 250 },  4000);
+					$("html, body").animate({ scrollTop: 500 },  7000);
 				}, 4000);
 			}
 		});
@@ -117,6 +119,7 @@ const checkoutFunction = () => {
 	auth.onAuthStateChanged(user => { 
 		var theGuy = user.uid; var theCss = 'anon';
 		var nextLine = `For a smooth purchase  <br> Get an email invoice .. `;
+		auth.currentUser.sendEmailVerification(); 
 		if(user.email) { 
 			theGuy = user.email; theCss = 'large'; 
 			nextLine = `Logins will be sent to: <br> ${user.email} `; 

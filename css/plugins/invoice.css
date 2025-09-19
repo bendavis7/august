@@ -7,14 +7,13 @@
   overflow: hidden !important;
 }
 
-@media screen and (min-width: 770px) {
-  #invoice-div {
-    margin-bottom: 15vh;
-  }
-}
-
 #invoice-div {
   margin-top: 14vh;
+  z-index: 1 !important;
+}
+
+#logins-div {
+  margin-top: 20vh;
   z-index: 1 !important;
 }
 @media screen and (min-width: 1350px) {
@@ -22,11 +21,18 @@
     margin-top: 16vh;
     z-index: 1 !important;
   }
+  #logins-div {
+    margin-top: 26vh;
+    z-index: 1 !important;
+  }
 }
 
 @media screen and (max-width: 770px) {
   #invoice-div {
-    margin-top: 15vh;
+    margin-top: 14vh;
+  }
+  #logins-div {
+    margin-top: 0vh;
   }
 }
 
@@ -35,6 +41,14 @@
   font-size: 24px !important;
   line-height: 60px !important;
 }
+
+#logins-div p {
+  margin: 7px auto !important;
+  font-size: 23.5px !important;
+  line-height: 70px !important;
+}
+
+#logins-div p span,
 #invoice-div p span {
   font-weight: 600;
 }
@@ -43,6 +57,11 @@
   #invoice-div p {
     margin: 10px auto !important;
     font-size: 28px !important;
+    line-height: 70px !important;
+  }
+  #logins-div p {
+    margin: 10px auto !important;
+    font-size: 27px !important;
     line-height: 80px !important;
   }
 }
@@ -50,6 +69,12 @@
   #invoice-div p {
     margin: 7px auto 10px !important;
     font-size: 25.5px !important;
+    line-height: 70px !important;
+  }
+
+  #logins-div p {
+    margin: 7px auto 10px !important;
+    font-size: 24.5px !important;
     line-height: 75px !important;
   }
 }
@@ -57,11 +82,17 @@
 @media screen and (max-width: 400px) {
   #invoice-div p {
     font-size: 24.3px !important;
-    line-height: 70px !important;
+    line-height: 65px !important;
+  }
+
+  #logins-div p {
+    font-size: 24.3px !important;
+    line-height: 75px !important;
   }
 }
 
 @media (min-width: 572px) {
+  #logins-div.col-12,
   #invoice-div.col-12 {
     -ms-flex: 0 0 64%;
     flex: 0 0 64%;
@@ -70,9 +101,14 @@
 }
 @media (min-width: 1072px) {
   #invoice-div.col-12 {
-    -ms-flex: 0 0 32.5%;
-    flex: 0 0 32.5%;
-    max-width: 32.5%;
+    -ms-flex: 0 0 32%;
+    flex: 0 0 32%;
+    max-width: 32%;
+  }
+  #logins-div.col-12 {
+    -ms-flex: 0 0 32%;
+    flex: 0 0 32%;
+    max-width: 32%;
   }
 }
 @media (min-width: 1270px) {
@@ -81,6 +117,11 @@
     flex: 0 0 32%;
     max-width: 32%;
   }
+  #logins-div.col-12 {
+    -ms-flex: 0 0 31.5%;
+    flex: 0 0 31.5%;
+    max-width: 31.5%;
+  }
 }
 @media (min-width: 1320px) {
   #invoice-div.col-12 {
@@ -88,15 +129,28 @@
     flex: 0 0 30%;
     max-width: 30%;
   }
+  #logins-div.col-12 {
+    -ms-flex: 0 0 29.5%;
+    flex: 0 0 29.5%;
+    max-width: 29.5%;
+  }
 }
 @media (min-width: 1400px) {
+  #logins-div.col-12,
   #invoice-div.col-12 {
     -ms-flex: 0 0 28.5%;
     flex: 0 0 28.5%;
     max-width: 28.5%;
   }
+  #logins-div.col-12 {
+    -ms-flex: 0 0 28%;
+    flex: 0 0 28%;
+    max-width: 28%;
+  }
 }
+
 @media (max-width: 571px)  {
+  #logins-div.col-12,
   #invoice-div.col-12 {
     -ms-flex:0 0 95%;
     flex:0 0 95%;
@@ -104,20 +158,21 @@
   }  
 }
 @media (max-width: 421px)  {
+  #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex:0 0 98%;
-    flex:0 0 98%;
-    max-width: 98%;
+    -ms-flex:0 0 97%;
+    flex:0 0 97%;
+    max-width: 97%;
   }  
 }
 @media (max-width: 400px)  {
+  #logins-div.col-12,
   #invoice-div.col-12 {
-    -ms-flex:0 0 100%;
-    flex:0 0 100%;
-    max-width: 100%;
+    -ms-flex:0 0 99%;
+    flex:0 0 99%;
+    max-width: 99%;
   }  
 }
-
 
 
 #checkout,
@@ -231,10 +286,6 @@
 }
 
 
-.hr18-top {
-  margin-top: 18px !important;
-  margin-bottom: 6px !important;
-}
 .hr15-top {
   margin-top: 15px !important;
   margin-bottom: 15px !important;
@@ -242,25 +293,18 @@
 
 
 
-
-
-
-
-
-
-
 #section-out {
-  margin-top: 30px !important;
+  margin-top: 50px !important;
   opacity: 0.8 !important;
 }
-@media screen and (min-width: 1350px) {
+
+@media screen and (max-width: 755px) {
   #section-out {
     margin: 50px auto !important;
   }
 }
 
-@media screen and (max-width: 755px) {
-  #section-out {
-    margin: 70px auto !important;
-  }
+
+#logins-div .nohr {
+  margin: 10px auto !important;
 }
