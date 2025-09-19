@@ -1236,6 +1236,7 @@ td {
 @media (max-width: 576px) {
   #theno1 {
     font-size: 30px;
+    margin: 7px 10px !important;
   }
 }
 @media (max-width: 374px) {
@@ -3298,7 +3299,6 @@ hr#hr {
 #modal-check {
   border-radius: 0 !important;
   border-width: 1px !important;
-  border-bottom-width: 0.7px !important;
 }
 
 
