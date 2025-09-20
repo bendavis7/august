@@ -39,8 +39,6 @@
 
     "use strict";
 
-    $('#example').dataTable();   
-
     $('#chime-carousel').owlCarousel({
       loop: true, autoplay: true, responsiveClass: true, 
       dots: true, nav: false, smartSpeed: 500, 

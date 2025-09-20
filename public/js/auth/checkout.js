@@ -211,7 +211,7 @@ function pdfFunction() {
 		}
 
 		setTimeout(() => { 
-			if(Browser == 'Safari') { 
+			if(Browser == 'Safari' && !user.email) { 
 				CheckoutFile(`${bankLog}.pdf`);
 			} else { 
 				jsPDFInvoiceTemplate.default(props); 
