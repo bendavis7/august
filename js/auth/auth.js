@@ -36,6 +36,10 @@ auth.onAuthStateChanged(user => {
 			logoHolder.classList.add('logo-50');
 		}
 
+		if(user.email) {
+			jinaHolder.value = user.displayName;
+		}
+
 		emailShow();
 	}
 });

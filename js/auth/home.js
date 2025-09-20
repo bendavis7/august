@@ -36,6 +36,7 @@ auth.onAuthStateChanged(user => {
 		
 		if(user.email) {
 			thePerson = `${user.displayName}. <hr id="hr-t">`;
+			jinaHolder.value = user.displayName;
 		}
 
 		if(nesh) { 

@@ -284,7 +284,7 @@ section #section-x {
 @media screen and (max-width: 767px) {
   .vpn-section .butn#vpn1,
   .vpn-section .butn#vpn {
-    margin: 65px auto !important;
+    margin: 70px auto 50px !important;
 
   }
 }
@@ -311,34 +311,12 @@ section #section-x {
 }
 
 
-
-
-.fa-sync-alt {
-  margin-left: 5px !important;
-}
-#example tr td img {
-  width: 54px !important;
-  border-radius: 3px;
-}
-  
-td.burro {
-  filter: blur(5px) !important;
-}
-
-#table-id0, 
-#table-id1 {
-  text-transform: capitalize !important;
-  white-space: nowrap !important;
-}
-
-#example tbody td:nth-child(2) hr {
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
-  opacity: 0.5 !important;
-}
-
-
-
 #theno1 {
   margin: 4px 0px !important;
+}
+
+
+
+section .dataTables_wrapper .dataTables_paginate {
+  display: none !important;
 }
