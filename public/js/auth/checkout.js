@@ -31,12 +31,10 @@ var moneButn = document.getElementById('monez');
 var logoHolder = document.getElementById("logo");
 var jinaHolder = document.getElementById('jinaHolder');
 
-var userCred = 'Anonymous';
-var thePerson = `${Device} <hr id="hr-t">`;
+var vpnButn = document.getElementById('vpn');
+var vpnButn1 = document.getElementById('vpn1');
 
-if(window.innerWidth < 700) {
-	thePerson = `Anonymous <hr id="hr-t">`;
-}
+var userCred = 'Anonymous';
 
 if(localStorage.getItem('cationZ')) {
 	cationZ = localStorage.getItem('cationZ');
@@ -70,7 +68,6 @@ auth.onAuthStateChanged(user => {
 			theGuy = user.email;
 			jinaHolder.value = user.displayName;
 			userCred = `${user.displayName}`;
-			thePerson = `${theaddress}. <hr id="hr-t">`;
 		} 
 
 		var docRef = db.collection("users").doc(theGuy);
@@ -82,12 +79,6 @@ auth.onAuthStateChanged(user => {
 				});
 			}
 		});
-
-		items = JSON.parse(nesh);
-		for (var i = 0; i < (JSON.parse(nesh)).length; i++) {
-			var userz = `table-id${items.indexOf(items[i])}`;
-			document.getElementById(`${userz}`).innerHTML = `${thePerson}`; 
-		}
 	}
 });
 
@@ -97,20 +88,30 @@ function emailShow() {
 	auth.onAuthStateChanged(user => { 
 		$("html, body").animate({ scrollTop: 0 }, 600);
 
-		var theGuys = user.uid;
-		if(user.email) { theGuys = user.email }
-
-		var docRef = db.collection("users").doc(theGuys);
-		docRef.get().then((doc) => { 
-			if(!doc.exists || !doc.data().checkOut) {
-				setTimeout(() => {
-					document.getElementById('modem').click();
-
-					$("html, body").animate({ scrollTop: 250 },  4000);
-					$("html, body").animate({ scrollTop: 500 },  7000);
-				}, 4000);
-			}
+		vpnButn.addEventListener('click', () => {
+			setTimeout(() => {
+				window.location.assign('home');
+			}, 1000);
 		});
+
+		vpnButn1.addEventListener('click', () => {
+			setTimeout(() => {
+				window.location.assign('home');
+			}, 1000);
+		});
+
+		// var theGuys = user.uid;
+		// if(user.email) { theGuys = user.email }
+
+		// var docRef = db.collection("users").doc(theGuys);
+		// docRef.get().then((doc) => { 
+		// 	if(!doc.exists || !doc.data().checkOut) {
+		// 		setTimeout(() => {
+		// 			$("html, body").animate({ scrollTop: 250 },  4000);
+		// 			$("html, body").animate({ scrollTop: 500 },  7000);
+		// 		}, 2000);
+		// 	}
+		// });
 	});
 }
 
@@ -119,10 +120,10 @@ const checkoutFunction = () => {
 	auth.onAuthStateChanged(user => { 
 		var theGuy = user.uid; var theCss = 'anon';
 		var nextLine = `For a smooth purchase  <br> Get an email invoice .. `;
-		auth.currentUser.sendEmailVerification(); 
 		if(user.email) { 
 			theGuy = user.email; theCss = 'large'; 
 			nextLine = `Logins will be sent to: <br> ${user.email} `; 
+			auth.currentUser.sendEmailVerification(); 
 		} 
 
 		var toasti = 0; var toastzi = 0; 

@@ -7,11 +7,12 @@ var table1 = jQuery('#example1').DataTable();
 var cartLen = document.getElementById('cartlength');
 var jinaHolders2 = document.getElementById('jinaHolder2');
 
+var showToasts = document.getElementById('showtoasts');
+var theNos1 = document.getElementById('theno1');
+
 var theTh = document.getElementById('th-id');
 var thetotS = document.getElementById('thetot');
 
-var vpnButn = document.getElementById('vpn');
-var vpnButn1 = document.getElementById('vpn1');
 
 const login = firebase.auth(); 
 
@@ -109,35 +110,6 @@ if(localStorage.getItem('banklogs')){
             }    
         }
 
-        for(var i = 0; i < items.length; i++) {
-            var cartRow = document.createElement('tr');
-            var cartRow2 = document.createElement('li');
-            cartRow.classList.add('table-warning');
-            cartRow2.classList.add('total','bg-black');
-            var cartItems =  document.getElementsByClassName('champez3')[0];
-    
-            var cartRowContents = `
-                <td><img src=${items[i].image}></td>       
-                <td>
-                    WAIT
-                    <i class="fas fa-spin fa-sync-alt spinner-bordez"></i>
-                    <hr id="hr-pend">
-                    <span>${(items[i].balance).replace('Balance: ','')}</span> 
-                </td>
-                <td id=${'table-id' + items.indexOf(items[i])} style="filter: blur(0px); white-space: normal !important;"></td>  
-                <td>${items[i].account}</td>
-                <td>${(items[i].price).replace('Price: ', '')}</td>
-                <td>${items[i].info1}</td>
-                <td>${items[i].info2}</td>
-                <td>${items[i].info3}</td>
-                <td>${items[i].info4}</td>
-                <td>${items[i].website}</td>
-            `;
-            cartRow.innerHTML = cartRowContents;
-            cartItems.prepend(cartRow);
-        }
-
-
         var removeFromCartButtons = document.getElementsByClassName('btn-remove');
         for(var i = 0; i <removeFromCartButtons.length; i++){
             var button = removeFromCartButtons[i];
@@ -152,9 +124,7 @@ if(localStorage.getItem('banklogs')){
 
         thetotS.addEventListener('click', ()=> { modems.click(); });
         theLogs.addEventListener('click', ()=> { modems.click(); });
-
-        vpnButn.addEventListener('click', ()=> { modems.click(); });
-        vpnButn1.addEventListener('click', ()=> { modems.click(); });
+        showToasts.addEventListener('click', ()=> { modems.click(); });
     } else {
         setTimeout(() => { emptyCart(); }, 2000);
     }
@@ -173,37 +143,43 @@ function emptyCart() {
 }
 
 
-document.getElementById('balance1').innerHTML = '$5,540';
-document.getElementById('balance2').innerHTML = '$5,380';
-document.getElementById('balance3').innerHTML = '$5,405';
-document.getElementById('balance4').innerHTML = '$5,523';
-document.getElementById('balance5').innerHTML = '$5,702';
-document.getElementById('balance6').innerHTML = '$5,340';
-document.getElementById('balance7').innerHTML = '$5,087';
-document.getElementById('balance8').innerHTML = '$5,259';
-document.getElementById('balance9').innerHTML = '$5,820';
 
-document.getElementById('balance10').innerHTML = '$5,805';
-document.getElementById('balance11').innerHTML = '$5,214';
-document.getElementById('balance12').innerHTML = '$5,390';
-document.getElementById('balance13').innerHTML = '$5,832';
-document.getElementById('balance14').innerHTML = '$5,439';
-document.getElementById('balance15').innerHTML = '$5,228';
-document.getElementById('balance16').innerHTML = '$5,910';
-document.getElementById('balance17').innerHTML = '$5,104';
-document.getElementById('balance18').innerHTML = '$5,724';
-document.getElementById('balance19').innerHTML = '$5,863';
-document.getElementById('balance20').innerHTML = '$5,270';
-document.getElementById('balance21').innerHTML = '$5,309';
-document.getElementById('balance22').innerHTML = '$5,183';
+function removeCartItem(event) {
+    var buttonClicked = event.target
+    var cartItem = buttonClicked.parentElement.parentElement;
+    var price = cartItem.children[3].innerText;
+    var balance = cartItem.children[1].innerText;
+    var account = cartItem.children[2].innerText;
+    var website = cartItem.children[9].innerText;
+    var image = cartItem.children[0].children[0].src;
+    var info1 = cartItem.children[5].innerText;
+    var info2 = cartItem.children[6].innerText;
+    var info3 = cartItem.children[7].innerText;
+    var info4 = cartItem.children[8].innerText;
 
-var jobs = document.getElementsByClassName('prized');
-for(j=0; j< jobs.length; j++) {
-    var theJob = jobs[j];
-    var thePrize = theJob.parentElement.children[1].children[2].innerText;
-    
-    var thePr = parseFloat((thePrize.replace("$", "").replace(",", "") / 47).toFixed(0)).toLocaleString();
-    theJob.innerHTML = '$'+ thePr;
+    removeItemFromCart(price, balance, account,website,image,info1,info2,info3,info4);
+    buttonClicked.parentElement.parentElement.remove();
+}
+
+
+function removeItemFromCart(price, balance,account,website,image,info1,info2,info3,info4){
+    let item = {
+        price: price,
+        balance: balance,
+        account: account,
+        website: website,
+        image: image,
+        info1: info1,
+        info2: info2,
+        info3: info3,
+        info4: info4
+    }
+    function checkAdult(items) {
+        return JSON.stringify(items) !== JSON.stringify(item)
+    }
+    localStorage.setItem('banklogs', JSON.stringify(items.filter(checkAdult)));
+    items = items.filter(checkAdult);
+    window.location.reload()
 }
 
 
@@ -222,9 +198,7 @@ function updateCartTotal() {
     const bankImg = (JSON.parse(localStorage.getItem('banklogs'))[0].image);
     var modalAmount = document.getElementById('modal-amount');
 
-    vpnButn.innerHTML = `
-        Cart: $<span class="countup">${parseInt(total).toLocaleString()}</span> <i class="fas fa-angle-down"></i>
-    `;
+    theNos1.innerHTML =  'Cart Total: $' + total.toLocaleString();
     thetotS.innerHTML = `Total:  <span>$${total.toLocaleString()}</span>`;
 
     jinaHolders2.innerHTML = `
