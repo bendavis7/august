@@ -31,7 +31,10 @@ auth.onAuthStateChanged(user => {
 			logoHolder.setAttribute("src", user.photoURL);
 			logoHolder.classList.add('logo-50');
 		} 
-	
+
+		if(user.email) {
+			jinaHolder.value = user.displayName;
+		}
 	} 
 });
 
